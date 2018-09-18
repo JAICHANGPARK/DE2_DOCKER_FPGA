@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Mon Sep 17 23:41:38 2018
+Quartus II Version : 9.0 Build 235 06/17/2009 SP 2 SJ Web Edition
+Revision Name : timerlab
+Top-level Entity Name : timerlab
+Family : Cyclone II
+Total logic elements : 182
+    Total combinational functions : 179
+    Dedicated logic registers : 125
+Total registers : 125
+Total pins : 191
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

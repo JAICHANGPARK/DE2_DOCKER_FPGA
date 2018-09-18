@@ -1,0 +1,66 @@
+--------------------------------------------------------------------------------------
+Timing Analyzer Summary
+--------------------------------------------------------------------------------------
+
+Type           : Worst-case tco
+Slack          : N/A
+Required Time  : None
+Actual Time    : 8.585 ns
+From           : mLCD_DATA[0]
+To             : LCD_DATA[0]
+From Clock     : CLOCK_50
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Worst-case tpd
+Slack          : N/A
+Required Time  : None
+Actual Time    : 9.765 ns
+From           : SW[16]
+To             : LEDR[16]
+From Clock     : --
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Clock Setup: 'CLOCK_50'
+Slack          : N/A
+Required Time  : None
+Actual Time    : 49.19 MHz ( period = 20.328 ns )
+From           : decimal_counter:count3|A[3]
+To             : mLCD_DATA[3]
+From Clock     : CLOCK_50
+To Clock       : CLOCK_50
+Failed Paths   : 0
+
+Type           : Clock Setup: 'KEY[3]'
+Slack          : N/A
+Required Time  : None
+Actual Time    : 320.62 MHz ( period = 3.119 ns )
+From           : decimal_counter:count0|A[0]
+To             : decimal_counter:count0|OVERFLOW
+From Clock     : KEY[3]
+To Clock       : KEY[3]
+Failed Paths   : 0
+
+Type           : Clock Hold: 'CLOCK_50'
+Slack          : Not operational: Clock Skew > Data Delay
+Required Time  : None
+Actual Time    : N/A
+From           : clock_divider:cdiv|divide_by_50:d6|count[4]
+To             : clock_divider:cdiv|divide_by_50:d6|Q
+From Clock     : CLOCK_50
+To Clock       : CLOCK_50
+Failed Paths   : 1
+
+Type           : Total number of failed paths
+Slack          : 
+Required Time  : 
+Actual Time    : 
+From           : 
+To             : 
+From Clock     : 
+To Clock       : 
+Failed Paths   : 1
+
+--------------------------------------------------------------------------------------
+

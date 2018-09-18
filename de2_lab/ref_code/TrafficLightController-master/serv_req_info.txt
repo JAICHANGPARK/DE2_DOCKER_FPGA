@@ -1,0 +1,23 @@
+<internal_error>
+	<executable>quartus.exe</executable>
+	<sub_system>unknown</sub_system>
+	<file>unknown</file>
+	<line>0</line>
+	<callstack>
+	0x00f62150: DB_HDB + 0x92150 (?stack_pop_front@HDB_NAME_MGR@@AAIXXZ + 0x50)
+	0x00f68707: DB_HDB + 0x98707 (?close_cap_inst_for_delete@HDB_NAME_MGR@@QAIXXZ + 0x67)
+	0x00f3cdc3: DB_HDB + 0x6cdc3 (?close_all_cap_inst@HDB_CMP_ACTION_PT_INSTANCE@@SI_NXZ + 0xd3)
+	0x012d55e2: DB_DBMUI + 0x55e2 (?close_hdb_all_cap_inst@DBMUI_MANAGER@@QAI_NPBD@Z + 0xf2)
+	0x10026d9f: GCL_AFC + 0x26d9f (?do_broadcast@AFC_NOTIFY_MGR@@QAIXPAUNOTIFY_MSG_PARAMS@1@_N@Z + 0xcf)
+	0x1002a518: GCL_AFC + 0x2a518 (?broadcast_notify@AFC_NOTIFY_MGR@@UAIXIIJ_N@Z + 0x58)
+	0x012d5f02: DB_DBMUI + 0x5f02 (?clear_cached_info@DBMUI_MANAGER@@AAIX_N@Z + 0x62)
+	0x012d604a: DB_DBMUI + 0x604a (?set_revision_info@DBMUI_MANAGER@@QAIXPBD0@Z + 0xba)
+	</callstack>
+	<error>Current editor: STED, RPW</error>
+	<date>Wed May 27 10:08:34 2015</date>
+	<version>Quartus II Version 9.0 Build 132 02/25/2009 SJ Full Version</version>
+	<full_error>Access Violation at 0X00F62150
+Current editor: STED, RPW
+Quartus II Version 9.0 Build 132 02/25/2009 SJ Full Version </full_error>
+</internal_error>
+

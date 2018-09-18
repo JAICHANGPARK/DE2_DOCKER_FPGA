@@ -1,0 +1,6 @@
+|andgate
+sw1 => led~0.IN0
+sw2 => led~0.IN1
+led <= led~0.DB_MAX_OUTPUT_PORT_TYPE
+
+

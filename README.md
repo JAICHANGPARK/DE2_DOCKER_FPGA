@@ -1,6 +1,9 @@
-# DE2_DOCKER_VHDL_FPGA
+# DE2_DOCKER_FPGA
 
 
+## Languages
+1. VHDL
+2. Verilog
 
 - Altera DE2
 

@@ -1,0 +1,74 @@
+|my_traffic_light
+clk => clkdiv:U1.mclk
+vehicle => ~NO_FANOUT~
+led[0] <= StateDiag~5.DB_MAX_OUTPUT_PORT_TYPE
+led[1] <= StateDiag~4.DB_MAX_OUTPUT_PORT_TYPE
+led[2] <= led~0.DB_MAX_OUTPUT_PORT_TYPE
+led_side[0] <= StateDiag~7.DB_MAX_OUTPUT_PORT_TYPE
+led_side[1] <= StateDiag~6.DB_MAX_OUTPUT_PORT_TYPE
+led_side[2] <= led~0.DB_MAX_OUTPUT_PORT_TYPE
+btn[3] => clkdiv:U1.clr
+ld[2] <= comb~0.DB_MAX_OUTPUT_PORT_TYPE
+main[0] <= StateDiag~1.DB_MAX_OUTPUT_PORT_TYPE
+main[1] <= StateDiag~0.DB_MAX_OUTPUT_PORT_TYPE
+main[2] <= led~0.DB_MAX_OUTPUT_PORT_TYPE
+side[0] <= StateDiag~3.DB_MAX_OUTPUT_PORT_TYPE
+side[1] <= StateDiag~2.DB_MAX_OUTPUT_PORT_TYPE
+side[2] <= side~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|my_traffic_light|clkdiv:U1
+mclk => q[24].CLK
+mclk => q[23].CLK
+mclk => q[22].CLK
+mclk => q[21].CLK
+mclk => q[20].CLK
+mclk => q[19].CLK
+mclk => q[18].CLK
+mclk => q[17].CLK
+mclk => q[16].CLK
+mclk => q[15].CLK
+mclk => q[14].CLK
+mclk => q[13].CLK
+mclk => q[12].CLK
+mclk => q[11].CLK
+mclk => q[10].CLK
+mclk => q[9].CLK
+mclk => q[8].CLK
+mclk => q[7].CLK
+mclk => q[6].CLK
+mclk => q[5].CLK
+mclk => q[4].CLK
+mclk => q[3].CLK
+mclk => q[2].CLK
+mclk => q[1].CLK
+mclk => q[0].CLK
+clr => q[24].ACLR
+clr => q[23].ACLR
+clr => q[22].ACLR
+clr => q[21].ACLR
+clr => q[20].ACLR
+clr => q[19].ACLR
+clr => q[18].ACLR
+clr => q[17].ACLR
+clr => q[16].ACLR
+clr => q[15].ACLR
+clr => q[14].ACLR
+clr => q[13].ACLR
+clr => q[12].ACLR
+clr => q[11].ACLR
+clr => q[10].ACLR
+clr => q[9].ACLR
+clr => q[8].ACLR
+clr => q[7].ACLR
+clr => q[6].ACLR
+clr => q[5].ACLR
+clr => q[4].ACLR
+clr => q[3].ACLR
+clr => q[2].ACLR
+clr => q[1].ACLR
+clr => q[0].ACLR
+clk190 <= q[18].DB_MAX_OUTPUT_PORT_TYPE
+clk3 <= q[24].DB_MAX_OUTPUT_PORT_TYPE
+
+

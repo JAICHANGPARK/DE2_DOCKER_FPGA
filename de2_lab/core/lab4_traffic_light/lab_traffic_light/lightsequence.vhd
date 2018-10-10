@@ -1,0 +1,41 @@
+Library ieee;
+USE ieee.std_logic_1164.ALL;
+
+entity lightsequence is
+	port (VS, TL, CLK, TS : in std_logic;
+		  S : buffer std_logic_vector(0 to 1)
+		 );
+end lightsequence;
+
+architecture sample of lightsequence is
+
+begin 
+	process(VS, TL, CLK, TS)
+	begin 
+	if CLK ='1' and CLK'event then
+		case S is
+			when "00" => if(TL = '1' or VS = '0') then 
+							S <= "00";
+						 elsif(TL = '0' or VS = '1') then 
+							S <= "01";
+						 end if;
+			when "01" => if(TS = '1') then 
+							S <= "01";
+						 elsif(TS = '0') then 
+							S <= "11";
+						 end if;			 
+			when "11" => if(TL = '1' or VS = '1') then 
+							S <= "11";
+						 elsif(TL = '0' or VS = '0') then 
+							S <= "10";
+						 end if;
+			when "10" => if(TS = '1') then 
+							S <= "10";
+						 elsif(TS = '0') then 
+							S <= "00";
+						 end if;
+			when others => S <= "00";
+		end case;
+	end if;
+	end process;
+end sample;

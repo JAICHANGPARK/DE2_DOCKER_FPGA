@@ -1,0 +1,61 @@
+Library ieee;
+USE ieee.std_logic_1164.ALL;
+
+entity tracfficlight is
+	port (s : in std_logic_vector(0 to 1);
+		  main, side : out natural range 0 to 7;
+		  led : out std_logic_vector(2 downto 0); 
+		  led_side : out std_logic_vector(2 downto 0); 
+		  long, short : out std_logic
+		  );
+end tracfficlight;
+
+architecture behavior of tracfficlight is
+type statestype is (firststate, secondstate, thirdstate, fourthstate);
+signal state, nextstate : statestype := firststate;
+
+begin 
+	Readstate:process(s)
+	begin
+		case s is
+			when "00" => state <= firststate;
+			when "01" => state <= secondstate;
+			when "10" => state <= thirdstate;
+			when "11" => state <= fourthstate;
+			when others => state <= firststate;
+		end case;
+	end process;
+	StateDiag:process(state)
+	begin
+		case state is
+			when firststate => 
+				main <= 2#001#;
+				side <= 2#100#;
+				led  <= "001";
+				led_side <= "100";
+				long <= '1';
+				short <= '0';
+			when secondstate => 
+				main <= 2#010#;
+				side <= 2#100#;
+				led  <= "010";
+				led_side <= "100";
+				long <= '0';
+				short <= '1';
+			when thirdstate => 
+				main <= 2#100#;
+				side <= 2#001#;
+				led  <= "100";
+				led_side <= "001";
+				long <= '1';
+				short <= '0';
+			when fourthstate => 
+				main <= 2#100#;
+				side <= 2#010#;
+				led  <= "100";
+				led_side <= "010";
+				long <= '0';
+				short <= '1';
+		end case;
+	end process;
+end behavior;

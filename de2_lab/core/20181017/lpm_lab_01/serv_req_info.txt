@@ -1,0 +1,15 @@
+<internal_error>
+	<executable>quartus_map.exe</executable>
+	<sub_system>DEV</sub_system>
+	<file>/quartus/ddb/dev/dev_pkg_info.cpp</file>
+	<line>205</line>
+	<callstack>
+	0x0272ac32: DDB_DEV + 0x2ac32 (??1DEV_PKG_INFO@@QAE@XZ + 0x22)
+	</callstack>
+	<error>this-&gt;m_body != NULL</error>
+	<date>Wed Oct 17 02:42:43 2018</date>
+	<version>Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition</version>
+	<full_error>this-&gt;m_body != NULL
+Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition </full_error>
+</internal_error>
+

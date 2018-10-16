@@ -1,0 +1,68 @@
+GED
+
+	Undo Commands
+	     1.	Properties
+	     2.	Resize
+	     3.	Delete
+	     4.	Properties
+	     5.	Move
+	     6.	Move
+	     7.	Properties
+	     8.	Insert Node
+	     9.	Delete
+	    10.	Delete Insert
+	    11.	Properties
+	    12.	Move
+	    13.	Paste
+	    14.	Move
+	    15.	Move
+	    16.	Move
+	    17.	Move
+	    18.	Properties
+	    19.	Properties
+	    20.	Properties
+	    21.	Properties
+	    22.	Properties
+	    23.	Properties
+	    24.	Properties
+	    25.	Properties
+	    26.	Insert Symbol
+	    27.	Insert Symbol
+	    28.	Insert Symbol
+	    29.	Insert Symbol
+	    30.	Insert Symbol
+	    31.	Insert Symbol
+	    32.	Insert Symbol
+	    33.	Properties
+	    34.	Insert Node
+	    35.	Insert Symbol
+	    36.	Properties
+	    37.	Insert Node
+	    38.	Delete
+	    39.	Resize
+	    40.	Properties
+	    41.	Move
+	    42.	Delete
+	    43.	Insert Bus
+	    44.	Move
+	    45.	Move
+	    46.	Paste
+	    47.	Properties
+	    48.	Insert Bus
+	    49.	Properties
+	    50.	Move
+	    51.	Insert Symbol
+	    52.	Move
+	    53.	Move
+	    54.	Move
+	    55.	Move
+	    56.	Move
+	    57.	Paste
+
+
+RPW
+
+	Undo Commands
+	     1.	||Compilation Report||Flow Summary
+
+

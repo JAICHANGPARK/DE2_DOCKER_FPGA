@@ -1,0 +1,65 @@
+<internal_error>
+	<executable>quartus.exe</executable>
+	<sub_system>ATCL</sub_system>
+	<file>/quartus/ccl/atcl/atcl_root.cpp</file>
+	<line>334</line>
+	<callstack>
+	0x00702225: CCL_ERR + 0x2225 (?err_report_internal_error@@YIXPBD00H@Z + 0x15)
+	0x0033ef4b: ccl_atcl + 0xef4b (?atcl_create_interpreter@@YAPAUTcl_Interp@@XZ + 0x13b)
+	0x00685b9a: ccl_mem + 0x5b9a (mem_out_of_memory + 0xb0a)
+	</callstack>
+	<error>    C:/altera/90sp2/quartus/bin/tcl8.4 C:/altera/90sp2/quartus/lib/tcl8.4 C:/altera/90sp2/quartus/lib/tcl8.4 C:/altera/90sp2/lib/tcl8.4 C:/altera/90sp2/quartus/library C:/altera/90sp2/library C:/altera/90sp2/tcl8.4.11/library C:/altera/tcl8.4.11/library
+
+C:/altera/90sp2/quartus/bin/tcl8.4/init.tcl: couldn&apos;t read file &quot;C:/altera/90sp2/quartus/bin/tcl8.4/init.tcl&quot;: not enough memory
+couldn&apos;t read file &quot;C:/altera/90sp2/quartus/bin/tcl8.4/init.tcl&quot;: not enough memory
+    while executing
+&quot;source C:/altera/90sp2/quartus/bin/tcl8.4/init.tcl&quot;
+    (&quot;uplevel&quot; body line 1)
+    invoked from within
+&quot;uplevel #0 [list source $tclfile]&quot;
+
+
+This probably means that Tcl wasn&apos;t installed properly.
+</error>
+	<date>Wed Oct 17 03:07:33 2018</date>
+	<version>Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition</version>
+	<full_error>Error: &quot;ATCL&quot;: Can&apos;t find a usable init.tcl in the following directories: 
+    C:/altera/90sp2/quartus/bin/tcl8.4 C:/altera/90sp2/quartus/lib/tcl8.4 C:/altera/90sp2/quartus/lib/tcl8.4 C:/altera/90sp2/lib/tcl8.4 C:/altera/90sp2/quartus/library C:/altera/90sp2/library C:/altera/90sp2/tcl8.4.11/library C:/altera/tcl8.4.11/library
+
+C:/altera/90sp2/quartus/bin/tcl8.4/init.tcl: couldn&apos;t read file &quot;C:/altera/90sp2/quartus/bin/tcl8.4/init.tcl&quot;: not enough memory
+couldn&apos;t read file &quot;C:/altera/90sp2/quartus/bin/tcl8.4/init.tcl&quot;: not enough memory
+    while executing
+&quot;source C:/altera/90sp2/quartus/bin/tcl8.4/init.tcl&quot;
+    (&quot;uplevel&quot; body line 1)
+    invoked from within
+&quot;uplevel #0 [list source $tclfile]&quot;
+
+
+This probably means that Tcl wasn&apos;t installed properly.
+
+Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition </full_error>
+</internal_error>
+
+<internal_error>
+	<executable>quartus_fit.exe</executable>
+	<sub_system>QFIT</sub_system>
+	<file>/quartus/comp/qfit/qfit_cmd.cpp</file>
+	<line>2641</line>
+	<callstack>
+	0x0041186f: quartus_fit + 0x1186f
+	0x013ad59e: db_cdb + 0x1d59e (?cdb_get_signalprobe_manager@@YIPAVCDB_SIGNALPROBE_MANAGER@@XZ + 0x12e)
+	0x01391f8a: db_cdb + 0x1f8a (?get_output_count@CDB_NET_NODE@@QBIIXZ + 0xba)
+	0x013add31: db_cdb + 0x1dd31 (?cdb_get_signalprobe_manager@@YIPAVCDB_SIGNALPROBE_MANAGER@@XZ + 0x8c1)
+	0x03283163: db_cdb_mgr + 0x3163 (?get_signalprobe_info@CDB_CHIP_DB_ENTRY@@QAIPAVCDB_SIGNALPROBE_INFO@@XZ + 0x13)
+	0x00407b65: quartus_fit + 0x7b65
+	0x00411bf7: quartus_fit + 0x11bf7
+	0x00cf92e3: ccl_cfg_ini + 0x92e3 (?cfg_get_value@@YI?AV?$basic_string@DU?$char_traits@D@_Dinkum_std@@V?$MEM_STL_ALLOCATOR@D@@@_Dinkum_std@@PBD@Z + 0x53)
+	</callstack>
+	<error></error>
+	<date>Wed Oct 17 03:39:15 2018</date>
+	<version>Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition</version>
+	<full_error>Cannot load library db_amm.dll: 응용 프로그램의 side-by-side 구성이 잘못되어 응용 프로그램을 시작하지 못했습니다. 자세한 내용은 응용 프로그램 이벤트 로그를 참조하거나 명령줄 sxstrace.exe 도구를 사용하십시오.
+
+Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition </full_error>
+</internal_error>
+

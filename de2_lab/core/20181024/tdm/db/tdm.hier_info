@@ -1,0 +1,514 @@
+|tdm
+led <= ctr_q[2].DB_MAX_OUTPUT_PORT_TYPE
+clock => count4:inst3.clk
+clock => shift4:inst6.clk
+clock => shift4:inst5.clk
+clock => shift4:inst2.clk
+clock => shift4:inst4.clk
+clock => shift4r:inst7.clk
+clock => shift4r:inst8.clk
+clock => shift4r:inst9.clk
+clock => shift4r:inst10.clk
+key_0 => count4:inst3.reset
+key_0 => shift4:inst6.reset
+key_0 => 100.IN0
+key_0 => shift4:inst2.reset
+key_0 => shift4:inst4.reset
+key_0 => shift4r:inst7.reset
+key_0 => shift4r:inst8.reset
+key_0 => shift4r:inst9.reset
+key_0 => shift4r:inst10.reset
+b1 <= data[1].DB_MAX_OUTPUT_PORT_TYPE
+p1[0] => shift4:inst6.parallel[0]
+p1[1] => shift4:inst6.parallel[1]
+p1[2] => shift4:inst6.parallel[2]
+p1[3] => shift4:inst6.parallel[3]
+a1 <= data[0].DB_MAX_OUTPUT_PORT_TYPE
+p0[0] => shift4:inst5.parallel[0]
+p0[1] => shift4:inst5.parallel[1]
+p0[2] => shift4:inst5.parallel[2]
+p0[3] => shift4:inst5.parallel[3]
+tx_out <= mux_4ch:inst1.y
+p2[0] => shift4:inst2.parallel[0]
+p2[1] => shift4:inst2.parallel[1]
+p2[2] => shift4:inst2.parallel[2]
+p2[3] => shift4:inst2.parallel[3]
+p3[0] => shift4:inst4.parallel[0]
+p3[1] => shift4:inst4.parallel[1]
+p3[2] => shift4:inst4.parallel[2]
+p3[3] => shift4:inst4.parallel[3]
+out0[0] <= latch4:inst12.q[0]
+out0[1] <= latch4:inst12.q[1]
+out0[2] <= latch4:inst12.q[2]
+out0[3] <= latch4:inst12.q[3]
+out1[0] <= latch4:inst13.q[0]
+out1[1] <= latch4:inst13.q[1]
+out1[2] <= latch4:inst13.q[2]
+out1[3] <= latch4:inst13.q[3]
+out2[0] <= latch4:inst14.q[0]
+out2[1] <= latch4:inst14.q[1]
+out2[2] <= latch4:inst14.q[2]
+out2[3] <= latch4:inst14.q[3]
+out3[0] <= latch4:inst15.q[0]
+out3[1] <= latch4:inst15.q[1]
+out3[2] <= latch4:inst15.q[2]
+out3[3] <= latch4:inst15.q[3]
+
+
+|tdm|count4:inst3
+clk => LPM_COUNTER:clock_divider.CLOCK
+reset => LPM_COUNTER:clock_divider.ACLR
+ctr_q[0] <= LPM_COUNTER:clock_divider.Q[0]
+ctr_q[1] <= LPM_COUNTER:clock_divider.Q[1]
+ctr_q[2] <= LPM_COUNTER:clock_divider.Q[2]
+ctr_q[3] <= LPM_COUNTER:clock_divider.Q[3]
+
+
+|tdm|count4:inst3|LPM_COUNTER:clock_divider
+clock => cntr_k9i:auto_generated.clock
+clk_en => ~NO_FANOUT~
+cnt_en => ~NO_FANOUT~
+updown => ~NO_FANOUT~
+aclr => cntr_k9i:auto_generated.aclr
+aset => ~NO_FANOUT~
+aconst => ~NO_FANOUT~
+aload => ~NO_FANOUT~
+sclr => ~NO_FANOUT~
+sset => ~NO_FANOUT~
+sconst => ~NO_FANOUT~
+sload => ~NO_FANOUT~
+data[0] => ~NO_FANOUT~
+data[1] => ~NO_FANOUT~
+data[2] => ~NO_FANOUT~
+data[3] => ~NO_FANOUT~
+cin => ~NO_FANOUT~
+q[0] <= cntr_k9i:auto_generated.q[0]
+q[1] <= cntr_k9i:auto_generated.q[1]
+q[2] <= cntr_k9i:auto_generated.q[2]
+q[3] <= cntr_k9i:auto_generated.q[3]
+cout <= <GND>
+eq[0] <= <GND>
+eq[1] <= <GND>
+eq[2] <= <GND>
+eq[3] <= <GND>
+eq[4] <= <GND>
+eq[5] <= <GND>
+eq[6] <= <GND>
+eq[7] <= <GND>
+eq[8] <= <GND>
+eq[9] <= <GND>
+eq[10] <= <GND>
+eq[11] <= <GND>
+eq[12] <= <GND>
+eq[13] <= <GND>
+eq[14] <= <GND>
+eq[15] <= <GND>
+
+
+|tdm|count4:inst3|LPM_COUNTER:clock_divider|cntr_k9i:auto_generated
+aclr => counter_reg_bit1a[3].ACLR
+aclr => counter_reg_bit1a[2].ACLR
+aclr => counter_reg_bit1a[1].ACLR
+aclr => counter_reg_bit1a[0].ACLR
+clock => counter_reg_bit1a[3].CLK
+clock => counter_reg_bit1a[2].CLK
+clock => counter_reg_bit1a[1].CLK
+clock => counter_reg_bit1a[0].CLK
+q[0] <= counter_reg_bit1a[0].REGOUT
+q[1] <= counter_reg_bit1a[1].REGOUT
+q[2] <= counter_reg_bit1a[2].REGOUT
+q[3] <= counter_reg_bit1a[3].REGOUT
+
+
+|tdm|shift4:inst6
+parallel[0] => LPM_SHIFTREG:four_bit_shift.DATA[0]
+parallel[1] => LPM_SHIFTREG:four_bit_shift.DATA[1]
+parallel[2] => LPM_SHIFTREG:four_bit_shift.DATA[2]
+parallel[3] => LPM_SHIFTREG:four_bit_shift.DATA[3]
+serial_in => ~NO_FANOUT~
+load => LPM_SHIFTREG:four_bit_shift.LOAD
+clk => LPM_SHIFTREG:four_bit_shift.CLOCK
+reset => LPM_SHIFTREG:four_bit_shift.ACLR
+serial_out <= LPM_SHIFTREG:four_bit_shift.SHIFTOUT
+
+
+|tdm|shift4:inst6|LPM_SHIFTREG:four_bit_shift
+clock => dffs[3].CLK
+clock => dffs[2].CLK
+clock => dffs[1].CLK
+clock => dffs[0].CLK
+enable => dffs[3].ENA
+enable => dffs[2].ENA
+enable => dffs[1].ENA
+enable => dffs[0].ENA
+aset => ~NO_FANOUT~
+q[0] <= q[0]~3.DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= q[1]~2.DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= q[2]~1.DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= q[3]~0.DB_MAX_OUTPUT_PORT_TYPE
+shiftout <= dffs[0].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tdm|decode4l:inst
+d1 => Mux3.IN4
+d1 => Mux2.IN4
+d1 => Mux1.IN4
+d1 => Mux0.IN4
+d0 => Mux3.IN5
+d0 => Mux2.IN5
+d0 => Mux1.IN5
+d0 => Mux0.IN5
+y0 <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+y1 <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+y2 <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+y3 <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tdm|shift4:inst5
+parallel[0] => LPM_SHIFTREG:four_bit_shift.DATA[0]
+parallel[1] => LPM_SHIFTREG:four_bit_shift.DATA[1]
+parallel[2] => LPM_SHIFTREG:four_bit_shift.DATA[2]
+parallel[3] => LPM_SHIFTREG:four_bit_shift.DATA[3]
+serial_in => ~NO_FANOUT~
+load => LPM_SHIFTREG:four_bit_shift.LOAD
+clk => LPM_SHIFTREG:four_bit_shift.CLOCK
+reset => LPM_SHIFTREG:four_bit_shift.ACLR
+serial_out <= LPM_SHIFTREG:four_bit_shift.SHIFTOUT
+
+
+|tdm|shift4:inst5|LPM_SHIFTREG:four_bit_shift
+clock => dffs[3].CLK
+clock => dffs[2].CLK
+clock => dffs[1].CLK
+clock => dffs[0].CLK
+enable => dffs[3].ENA
+enable => dffs[2].ENA
+enable => dffs[1].ENA
+enable => dffs[0].ENA
+aset => ~NO_FANOUT~
+q[0] <= q[0]~3.DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= q[1]~2.DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= q[2]~1.DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= q[3]~0.DB_MAX_OUTPUT_PORT_TYPE
+shiftout <= dffs[0].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tdm|mux_4ch:inst1
+s[0] => Mux0.IN1
+s[1] => Mux0.IN0
+d[0] => Mux0.IN5
+d[1] => Mux0.IN4
+d[2] => Mux0.IN3
+d[3] => Mux0.IN2
+y <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tdm|shift4:inst2
+parallel[0] => LPM_SHIFTREG:four_bit_shift.DATA[0]
+parallel[1] => LPM_SHIFTREG:four_bit_shift.DATA[1]
+parallel[2] => LPM_SHIFTREG:four_bit_shift.DATA[2]
+parallel[3] => LPM_SHIFTREG:four_bit_shift.DATA[3]
+serial_in => ~NO_FANOUT~
+load => LPM_SHIFTREG:four_bit_shift.LOAD
+clk => LPM_SHIFTREG:four_bit_shift.CLOCK
+reset => LPM_SHIFTREG:four_bit_shift.ACLR
+serial_out <= LPM_SHIFTREG:four_bit_shift.SHIFTOUT
+
+
+|tdm|shift4:inst2|LPM_SHIFTREG:four_bit_shift
+clock => dffs[3].CLK
+clock => dffs[2].CLK
+clock => dffs[1].CLK
+clock => dffs[0].CLK
+enable => dffs[3].ENA
+enable => dffs[2].ENA
+enable => dffs[1].ENA
+enable => dffs[0].ENA
+aset => ~NO_FANOUT~
+q[0] <= q[0]~3.DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= q[1]~2.DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= q[2]~1.DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= q[3]~0.DB_MAX_OUTPUT_PORT_TYPE
+shiftout <= dffs[0].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tdm|shift4:inst4
+parallel[0] => LPM_SHIFTREG:four_bit_shift.DATA[0]
+parallel[1] => LPM_SHIFTREG:four_bit_shift.DATA[1]
+parallel[2] => LPM_SHIFTREG:four_bit_shift.DATA[2]
+parallel[3] => LPM_SHIFTREG:four_bit_shift.DATA[3]
+serial_in => ~NO_FANOUT~
+load => LPM_SHIFTREG:four_bit_shift.LOAD
+clk => LPM_SHIFTREG:four_bit_shift.CLOCK
+reset => LPM_SHIFTREG:four_bit_shift.ACLR
+serial_out <= LPM_SHIFTREG:four_bit_shift.SHIFTOUT
+
+
+|tdm|shift4:inst4|LPM_SHIFTREG:four_bit_shift
+clock => dffs[3].CLK
+clock => dffs[2].CLK
+clock => dffs[1].CLK
+clock => dffs[0].CLK
+enable => dffs[3].ENA
+enable => dffs[2].ENA
+enable => dffs[1].ENA
+enable => dffs[0].ENA
+aset => ~NO_FANOUT~
+q[0] <= q[0]~3.DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= q[1]~2.DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= q[2]~1.DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= q[3]~0.DB_MAX_OUTPUT_PORT_TYPE
+shiftout <= dffs[0].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tdm|latch4:inst12
+d[0] => LPM_LATCH:four_bit_latch.DATA[0]
+d[1] => LPM_LATCH:four_bit_latch.DATA[1]
+d[2] => LPM_LATCH:four_bit_latch.DATA[2]
+d[3] => LPM_LATCH:four_bit_latch.DATA[3]
+enable => LPM_LATCH:four_bit_latch.GATE
+q[0] <= LPM_LATCH:four_bit_latch.Q[0]
+q[1] <= LPM_LATCH:four_bit_latch.Q[1]
+q[2] <= LPM_LATCH:four_bit_latch.Q[2]
+q[3] <= LPM_LATCH:four_bit_latch.Q[3]
+
+
+|tdm|latch4:inst12|LPM_LATCH:four_bit_latch
+data[0] => latches[0].DATAIN
+data[1] => latches[1].DATAIN
+data[2] => latches[2].DATAIN
+data[3] => latches[3].DATAIN
+gate => latches[3].LATCH_ENABLE
+gate => latches[2].LATCH_ENABLE
+gate => latches[1].LATCH_ENABLE
+gate => latches[0].LATCH_ENABLE
+aclr => ~NO_FANOUT~
+aset => ~NO_FANOUT~
+aconst => ~NO_FANOUT~
+q[0] <= latches[0].DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= latches[1].DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= latches[2].DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= latches[3].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tdm|decode4c:inst11
+d1 => x3~0.IN0
+d1 => x2~0.IN0
+d1 => x1~0.IN0
+d1 => x0~0.IN0
+d0 => x3~0.IN1
+d0 => x1~0.IN1
+d0 => x2~0.IN1
+d0 => x0~0.IN1
+x0 <= x0~0.DB_MAX_OUTPUT_PORT_TYPE
+x1 <= x1~0.DB_MAX_OUTPUT_PORT_TYPE
+x2 <= x2~0.DB_MAX_OUTPUT_PORT_TYPE
+x3 <= x3~0.DB_MAX_OUTPUT_PORT_TYPE
+y0 <= x0~0.DB_MAX_OUTPUT_PORT_TYPE
+y1 <= x1~0.DB_MAX_OUTPUT_PORT_TYPE
+y2 <= x2~0.DB_MAX_OUTPUT_PORT_TYPE
+y3 <= x3~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tdm|shift4r:inst7
+serial_in => lpm_shiftreg:four_bit_shift.shiftin
+clk => lpm_shiftreg:four_bit_shift.clock
+reset => lpm_shiftreg:four_bit_shift.aclr
+enable => lpm_shiftreg:four_bit_shift.enable
+q_out[0] <= lpm_shiftreg:four_bit_shift.q[0]
+q_out[1] <= lpm_shiftreg:four_bit_shift.q[1]
+q_out[2] <= lpm_shiftreg:four_bit_shift.q[2]
+q_out[3] <= lpm_shiftreg:four_bit_shift.q[3]
+
+
+|tdm|shift4r:inst7|LPM_SHIFTREG:four_bit_shift
+clock => dffs[3].CLK
+clock => dffs[2].CLK
+clock => dffs[1].CLK
+clock => dffs[0].CLK
+enable => dffs[3].ENA
+enable => dffs[2].ENA
+enable => dffs[1].ENA
+enable => dffs[0].ENA
+aset => ~NO_FANOUT~
+q[0] <= dffs[0].DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= dffs[1].DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= dffs[2].DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= dffs[3].DB_MAX_OUTPUT_PORT_TYPE
+shiftout <= shiftout~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tdm|latch4:inst13
+d[0] => LPM_LATCH:four_bit_latch.DATA[0]
+d[1] => LPM_LATCH:four_bit_latch.DATA[1]
+d[2] => LPM_LATCH:four_bit_latch.DATA[2]
+d[3] => LPM_LATCH:four_bit_latch.DATA[3]
+enable => LPM_LATCH:four_bit_latch.GATE
+q[0] <= LPM_LATCH:four_bit_latch.Q[0]
+q[1] <= LPM_LATCH:four_bit_latch.Q[1]
+q[2] <= LPM_LATCH:four_bit_latch.Q[2]
+q[3] <= LPM_LATCH:four_bit_latch.Q[3]
+
+
+|tdm|latch4:inst13|LPM_LATCH:four_bit_latch
+data[0] => latches[0].DATAIN
+data[1] => latches[1].DATAIN
+data[2] => latches[2].DATAIN
+data[3] => latches[3].DATAIN
+gate => latches[3].LATCH_ENABLE
+gate => latches[2].LATCH_ENABLE
+gate => latches[1].LATCH_ENABLE
+gate => latches[0].LATCH_ENABLE
+aclr => ~NO_FANOUT~
+aset => ~NO_FANOUT~
+aconst => ~NO_FANOUT~
+q[0] <= latches[0].DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= latches[1].DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= latches[2].DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= latches[3].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tdm|shift4r:inst8
+serial_in => lpm_shiftreg:four_bit_shift.shiftin
+clk => lpm_shiftreg:four_bit_shift.clock
+reset => lpm_shiftreg:four_bit_shift.aclr
+enable => lpm_shiftreg:four_bit_shift.enable
+q_out[0] <= lpm_shiftreg:four_bit_shift.q[0]
+q_out[1] <= lpm_shiftreg:four_bit_shift.q[1]
+q_out[2] <= lpm_shiftreg:four_bit_shift.q[2]
+q_out[3] <= lpm_shiftreg:four_bit_shift.q[3]
+
+
+|tdm|shift4r:inst8|LPM_SHIFTREG:four_bit_shift
+clock => dffs[3].CLK
+clock => dffs[2].CLK
+clock => dffs[1].CLK
+clock => dffs[0].CLK
+enable => dffs[3].ENA
+enable => dffs[2].ENA
+enable => dffs[1].ENA
+enable => dffs[0].ENA
+aset => ~NO_FANOUT~
+q[0] <= dffs[0].DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= dffs[1].DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= dffs[2].DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= dffs[3].DB_MAX_OUTPUT_PORT_TYPE
+shiftout <= shiftout~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tdm|latch4:inst14
+d[0] => LPM_LATCH:four_bit_latch.DATA[0]
+d[1] => LPM_LATCH:four_bit_latch.DATA[1]
+d[2] => LPM_LATCH:four_bit_latch.DATA[2]
+d[3] => LPM_LATCH:four_bit_latch.DATA[3]
+enable => LPM_LATCH:four_bit_latch.GATE
+q[0] <= LPM_LATCH:four_bit_latch.Q[0]
+q[1] <= LPM_LATCH:four_bit_latch.Q[1]
+q[2] <= LPM_LATCH:four_bit_latch.Q[2]
+q[3] <= LPM_LATCH:four_bit_latch.Q[3]
+
+
+|tdm|latch4:inst14|LPM_LATCH:four_bit_latch
+data[0] => latches[0].DATAIN
+data[1] => latches[1].DATAIN
+data[2] => latches[2].DATAIN
+data[3] => latches[3].DATAIN
+gate => latches[3].LATCH_ENABLE
+gate => latches[2].LATCH_ENABLE
+gate => latches[1].LATCH_ENABLE
+gate => latches[0].LATCH_ENABLE
+aclr => ~NO_FANOUT~
+aset => ~NO_FANOUT~
+aconst => ~NO_FANOUT~
+q[0] <= latches[0].DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= latches[1].DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= latches[2].DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= latches[3].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tdm|shift4r:inst9
+serial_in => lpm_shiftreg:four_bit_shift.shiftin
+clk => lpm_shiftreg:four_bit_shift.clock
+reset => lpm_shiftreg:four_bit_shift.aclr
+enable => lpm_shiftreg:four_bit_shift.enable
+q_out[0] <= lpm_shiftreg:four_bit_shift.q[0]
+q_out[1] <= lpm_shiftreg:four_bit_shift.q[1]
+q_out[2] <= lpm_shiftreg:four_bit_shift.q[2]
+q_out[3] <= lpm_shiftreg:four_bit_shift.q[3]
+
+
+|tdm|shift4r:inst9|LPM_SHIFTREG:four_bit_shift
+clock => dffs[3].CLK
+clock => dffs[2].CLK
+clock => dffs[1].CLK
+clock => dffs[0].CLK
+enable => dffs[3].ENA
+enable => dffs[2].ENA
+enable => dffs[1].ENA
+enable => dffs[0].ENA
+aset => ~NO_FANOUT~
+q[0] <= dffs[0].DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= dffs[1].DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= dffs[2].DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= dffs[3].DB_MAX_OUTPUT_PORT_TYPE
+shiftout <= shiftout~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tdm|latch4:inst15
+d[0] => LPM_LATCH:four_bit_latch.DATA[0]
+d[1] => LPM_LATCH:four_bit_latch.DATA[1]
+d[2] => LPM_LATCH:four_bit_latch.DATA[2]
+d[3] => LPM_LATCH:four_bit_latch.DATA[3]
+enable => LPM_LATCH:four_bit_latch.GATE
+q[0] <= LPM_LATCH:four_bit_latch.Q[0]
+q[1] <= LPM_LATCH:four_bit_latch.Q[1]
+q[2] <= LPM_LATCH:four_bit_latch.Q[2]
+q[3] <= LPM_LATCH:four_bit_latch.Q[3]
+
+
+|tdm|latch4:inst15|LPM_LATCH:four_bit_latch
+data[0] => latches[0].DATAIN
+data[1] => latches[1].DATAIN
+data[2] => latches[2].DATAIN
+data[3] => latches[3].DATAIN
+gate => latches[3].LATCH_ENABLE
+gate => latches[2].LATCH_ENABLE
+gate => latches[1].LATCH_ENABLE
+gate => latches[0].LATCH_ENABLE
+aclr => ~NO_FANOUT~
+aset => ~NO_FANOUT~
+aconst => ~NO_FANOUT~
+q[0] <= latches[0].DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= latches[1].DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= latches[2].DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= latches[3].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tdm|shift4r:inst10
+serial_in => lpm_shiftreg:four_bit_shift.shiftin
+clk => lpm_shiftreg:four_bit_shift.clock
+reset => lpm_shiftreg:four_bit_shift.aclr
+enable => lpm_shiftreg:four_bit_shift.enable
+q_out[0] <= lpm_shiftreg:four_bit_shift.q[0]
+q_out[1] <= lpm_shiftreg:four_bit_shift.q[1]
+q_out[2] <= lpm_shiftreg:four_bit_shift.q[2]
+q_out[3] <= lpm_shiftreg:four_bit_shift.q[3]
+
+
+|tdm|shift4r:inst10|LPM_SHIFTREG:four_bit_shift
+clock => dffs[3].CLK
+clock => dffs[2].CLK
+clock => dffs[1].CLK
+clock => dffs[0].CLK
+enable => dffs[3].ENA
+enable => dffs[2].ENA
+enable => dffs[1].ENA
+enable => dffs[0].ENA
+aset => ~NO_FANOUT~
+q[0] <= dffs[0].DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= dffs[1].DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= dffs[2].DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= dffs[3].DB_MAX_OUTPUT_PORT_TYPE
+shiftout <= shiftout~0.DB_MAX_OUTPUT_PORT_TYPE
+
+

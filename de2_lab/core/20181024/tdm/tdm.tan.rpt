@@ -1,0 +1,472 @@
+Classic Timing Analyzer report for tdm
+Wed Oct 24 03:16:22 2018
+Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Timing Analyzer Summary
+  3. Timing Analyzer Settings
+  4. Clock Settings Summary
+  5. Parallel Compilation
+  6. Clock Setup: 'clock'
+  7. Clock Hold: 'clock'
+  8. tsu
+  9. tco
+ 10. th
+ 11. Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2009 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Summary                                                                                                                                                                                                                                                                          ;
++------------------------------+------------------------------------------+---------------+----------------------------------+--------------------------------------------------------------------------+---------------------------------------------------+------------+----------+--------------+
+; Type                         ; Slack                                    ; Required Time ; Actual Time                      ; From                                                                     ; To                                                ; From Clock ; To Clock ; Failed Paths ;
++------------------------------+------------------------------------------+---------------+----------------------------------+--------------------------------------------------------------------------+---------------------------------------------------+------------+----------+--------------+
+; Worst-case tsu               ; N/A                                      ; None          ; 5.302 ns                         ; key_0                                                                    ; shift4:inst5|lpm_shiftreg:four_bit_shift|dffs[0]  ; --         ; clock    ; 0            ;
+; Worst-case tco               ; N/A                                      ; None          ; 12.449 ns                        ; latch4:inst13|lpm_latch:four_bit_latch|latches[0]                        ; out1[0]                                           ; clock      ; --       ; 0            ;
+; Worst-case th                ; N/A                                      ; None          ; 0.916 ns                         ; p1[0]                                                                    ; shift4:inst6|lpm_shiftreg:four_bit_shift|dffs[0]  ; --         ; clock    ; 0            ;
+; Clock Setup: 'clock'         ; N/A                                      ; None          ; 326.26 MHz ( period = 3.065 ns ) ; count4:inst3|lpm_counter:clock_divider|cntr_k9i:auto_generated|safe_q[3] ; shift4r:inst8|lpm_shiftreg:four_bit_shift|dffs[3] ; clock      ; clock    ; 0            ;
+; Clock Hold: 'clock'          ; Not operational: Clock Skew > Data Delay ; None          ; N/A                              ; shift4r:inst8|lpm_shiftreg:four_bit_shift|dffs[0]                        ; latch4:inst13|lpm_latch:four_bit_latch|latches[0] ; clock      ; clock    ; 16           ;
+; Total number of failed paths ;                                          ;               ;                                  ;                                                                          ;                                                   ;            ;          ; 16           ;
++------------------------------+------------------------------------------+---------------+----------------------------------+--------------------------------------------------------------------------+---------------------------------------------------+------------+----------+--------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Settings                                                                                           ;
++---------------------------------------------------------------------+--------------------+------+----+-------------+
+; Option                                                              ; Setting            ; From ; To ; Entity Name ;
++---------------------------------------------------------------------+--------------------+------+----+-------------+
+; Device Name                                                         ; EP2C35F672C6       ;      ;    ;             ;
+; Timing Models                                                       ; Final              ;      ;    ;             ;
+; Default hold multicycle                                             ; Same as Multicycle ;      ;    ;             ;
+; Cut paths between unrelated clock domains                           ; On                 ;      ;    ;             ;
+; Cut off read during write signal paths                              ; On                 ;      ;    ;             ;
+; Cut off feedback from I/O pins                                      ; On                 ;      ;    ;             ;
+; Report Combined Fast/Slow Timing                                    ; Off                ;      ;    ;             ;
+; Ignore Clock Settings                                               ; Off                ;      ;    ;             ;
+; Analyze latches as synchronous elements                             ; On                 ;      ;    ;             ;
+; Enable Recovery/Removal analysis                                    ; Off                ;      ;    ;             ;
+; Enable Clock Latency                                                ; Off                ;      ;    ;             ;
+; Use TimeQuest Timing Analyzer                                       ; Off                ;      ;    ;             ;
+; Minimum Core Junction Temperature                                   ; 0                  ;      ;    ;             ;
+; Maximum Core Junction Temperature                                   ; 85                 ;      ;    ;             ;
+; Number of source nodes to report per destination node               ; 10                 ;      ;    ;             ;
+; Number of destination nodes to report                               ; 10                 ;      ;    ;             ;
+; Number of paths to report                                           ; 200                ;      ;    ;             ;
+; Report Minimum Timing Checks                                        ; Off                ;      ;    ;             ;
+; Use Fast Timing Models                                              ; Off                ;      ;    ;             ;
+; Report IO Paths Separately                                          ; Off                ;      ;    ;             ;
+; Perform Multicorner Analysis                                        ; On                 ;      ;    ;             ;
+; Reports the worst-case path for each clock domain and analysis      ; Off                ;      ;    ;             ;
+; Removes common clock path pessimism (CCPP) during slack computation ; Off                ;      ;    ;             ;
+; Output I/O Timing Endpoint                                          ; Near End           ;      ;    ;             ;
++---------------------------------------------------------------------+--------------------+------+----+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Settings Summary                                                                                                                                                             ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+; Clock Node Name ; Clock Setting Name ; Type     ; Fmax Requirement ; Early Latency ; Late Latency ; Based on ; Multiply Base Fmax by ; Divide Base Fmax by ; Offset ; Phase offset ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+; clock           ;                    ; User Pin ; None             ; 0.000 ns      ; 0.000 ns     ; --       ; N/A                   ; N/A                 ; N/A    ;              ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 4      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Setup: 'clock'                                                                                                                                                                                                                                                                                                     ;
++-------+------------------------------------------------+--------------------------------------------------------------------------+--------------------------------------------------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; Slack ; Actual fmax (period)                           ; From                                                                     ; To                                                                       ; From Clock ; To Clock ; Required Setup Relationship ; Required Longest P2P Time ; Actual Longest P2P Time ;
++-------+------------------------------------------------+--------------------------------------------------------------------------+--------------------------------------------------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; N/A   ; 326.26 MHz ( period = 3.065 ns )               ; count4:inst3|lpm_counter:clock_divider|cntr_k9i:auto_generated|safe_q[3] ; shift4r:inst8|lpm_shiftreg:four_bit_shift|dffs[3]                        ; clock      ; clock    ; None                        ; None                      ; 2.101 ns                ;
+; N/A   ; 326.37 MHz ( period = 3.064 ns )               ; count4:inst3|lpm_counter:clock_divider|cntr_k9i:auto_generated|safe_q[3] ; shift4r:inst9|lpm_shiftreg:four_bit_shift|dffs[3]                        ; clock      ; clock    ; None                        ; None                      ; 2.100 ns                ;
+; N/A   ; 330.14 MHz ( period = 3.029 ns )               ; count4:inst3|lpm_counter:clock_divider|cntr_k9i:auto_generated|safe_q[3] ; shift4r:inst8|lpm_shiftreg:four_bit_shift|dffs[2]                        ; clock      ; clock    ; None                        ; None                      ; 2.065 ns                ;
+; N/A   ; 330.14 MHz ( period = 3.029 ns )               ; count4:inst3|lpm_counter:clock_divider|cntr_k9i:auto_generated|safe_q[3] ; shift4r:inst8|lpm_shiftreg:four_bit_shift|dffs[1]                        ; clock      ; clock    ; None                        ; None                      ; 2.065 ns                ;
+; N/A   ; 330.14 MHz ( period = 3.029 ns )               ; count4:inst3|lpm_counter:clock_divider|cntr_k9i:auto_generated|safe_q[3] ; shift4r:inst8|lpm_shiftreg:four_bit_shift|dffs[0]                        ; clock      ; clock    ; None                        ; None                      ; 2.065 ns                ;
+; N/A   ; 330.14 MHz ( period = 3.029 ns )               ; count4:inst3|lpm_counter:clock_divider|cntr_k9i:auto_generated|safe_q[3] ; shift4r:inst9|lpm_shiftreg:four_bit_shift|dffs[2]                        ; clock      ; clock    ; None                        ; None                      ; 2.065 ns                ;
+; N/A   ; 330.14 MHz ( period = 3.029 ns )               ; count4:inst3|lpm_counter:clock_divider|cntr_k9i:auto_generated|safe_q[3] ; shift4r:inst9|lpm_shiftreg:four_bit_shift|dffs[1]                        ; clock      ; clock    ; None                        ; None                      ; 2.065 ns                ;
+; N/A   ; 330.14 MHz ( period = 3.029 ns )               ; count4:inst3|lpm_counter:clock_divider|cntr_k9i:auto_generated|safe_q[3] ; shift4r:inst9|lpm_shiftreg:four_bit_shift|dffs[0]                        ; clock      ; clock    ; None                        ; None                      ; 2.065 ns                ;
+; N/A   ; 332.78 MHz ( period = 3.005 ns )               ; count4:inst3|lpm_counter:clock_divider|cntr_k9i:auto_generated|safe_q[3] ; shift4r:inst7|lpm_shiftreg:four_bit_shift|dffs[3]                        ; clock      ; clock    ; None                        ; None                      ; 2.044 ns                ;
+; N/A   ; 336.70 MHz ( period = 2.970 ns )               ; count4:inst3|lpm_counter:clock_divider|cntr_k9i:auto_generated|safe_q[2] ; shift4r:inst8|lpm_shiftreg:four_bit_shift|dffs[3]                        ; clock      ; clock    ; None                        ; None                      ; 2.006 ns                ;
+; N/A   ; 336.81 MHz ( period = 2.969 ns )               ; count4:inst3|lpm_counter:clock_divider|cntr_k9i:auto_generated|safe_q[2] ; shift4r:inst9|lpm_shiftreg:four_bit_shift|dffs[3]                        ; clock      ; clock    ; None                        ; None                      ; 2.005 ns                ;
+; N/A   ; 341.30 MHz ( period = 2.930 ns )               ; count4:inst3|lpm_counter:clock_divider|cntr_k9i:auto_generated|safe_q[2] ; shift4r:inst9|lpm_shiftreg:four_bit_shift|dffs[2]                        ; clock      ; clock    ; None                        ; None                      ; 1.966 ns                ;
+; N/A   ; 341.30 MHz ( period = 2.930 ns )               ; count4:inst3|lpm_counter:clock_divider|cntr_k9i:auto_generated|safe_q[2] ; shift4r:inst9|lpm_shiftreg:four_bit_shift|dffs[1]                        ; clock      ; clock    ; None                        ; None                      ; 1.966 ns                ;
+; N/A   ; 341.30 MHz ( period = 2.930 ns )               ; count4:inst3|lpm_counter:clock_divider|cntr_k9i:auto_generated|safe_q[2] ; shift4r:inst9|lpm_shiftreg:four_bit_shift|dffs[0]                        ; clock      ; clock    ; None                        ; None                      ; 1.966 ns                ;
+; N/A   ; 341.76 MHz ( period = 2.926 ns )               ; count4:inst3|lpm_counter:clock_divider|cntr_k9i:auto_generated|safe_q[2] ; shift4r:inst8|lpm_shiftreg:four_bit_shift|dffs[2]                        ; clock      ; clock    ; None                        ; None                      ; 1.962 ns                ;
+; N/A   ; 341.76 MHz ( period = 2.926 ns )               ; count4:inst3|lpm_counter:clock_divider|cntr_k9i:auto_generated|safe_q[2] ; shift4r:inst8|lpm_shiftreg:four_bit_shift|dffs[1]                        ; clock      ; clock    ; None                        ; None                      ; 1.962 ns                ;
+; N/A   ; 341.76 MHz ( period = 2.926 ns )               ; count4:inst3|lpm_counter:clock_divider|cntr_k9i:auto_generated|safe_q[2] ; shift4r:inst8|lpm_shiftreg:four_bit_shift|dffs[0]                        ; clock      ; clock    ; None                        ; None                      ; 1.962 ns                ;
+; N/A   ; 343.64 MHz ( period = 2.910 ns )               ; count4:inst3|lpm_counter:clock_divider|cntr_k9i:auto_generated|safe_q[2] ; shift4r:inst7|lpm_shiftreg:four_bit_shift|dffs[3]                        ; clock      ; clock    ; None                        ; None                      ; 1.949 ns                ;
+; N/A   ; 343.88 MHz ( period = 2.908 ns )               ; count4:inst3|lpm_counter:clock_divider|cntr_k9i:auto_generated|safe_q[3] ; shift4:inst5|lpm_shiftreg:four_bit_shift|dffs[1]                         ; clock      ; clock    ; None                        ; None                      ; 1.949 ns                ;
+; N/A   ; 344.00 MHz ( period = 2.907 ns )               ; count4:inst3|lpm_counter:clock_divider|cntr_k9i:auto_generated|safe_q[3] ; shift4:inst5|lpm_shiftreg:four_bit_shift|dffs[2]                         ; clock      ; clock    ; None                        ; None                      ; 1.948 ns                ;
+; N/A   ; 344.35 MHz ( period = 2.904 ns )               ; count4:inst3|lpm_counter:clock_divider|cntr_k9i:auto_generated|safe_q[3] ; shift4:inst5|lpm_shiftreg:four_bit_shift|dffs[0]                         ; clock      ; clock    ; None                        ; None                      ; 1.945 ns                ;
+; N/A   ; 346.02 MHz ( period = 2.890 ns )               ; count4:inst3|lpm_counter:clock_divider|cntr_k9i:auto_generated|safe_q[3] ; shift4r:inst7|lpm_shiftreg:four_bit_shift|dffs[2]                        ; clock      ; clock    ; None                        ; None                      ; 1.929 ns                ;
+; N/A   ; 346.02 MHz ( period = 2.890 ns )               ; count4:inst3|lpm_counter:clock_divider|cntr_k9i:auto_generated|safe_q[3] ; shift4r:inst7|lpm_shiftreg:four_bit_shift|dffs[1]                        ; clock      ; clock    ; None                        ; None                      ; 1.929 ns                ;
+; N/A   ; 346.02 MHz ( period = 2.890 ns )               ; count4:inst3|lpm_counter:clock_divider|cntr_k9i:auto_generated|safe_q[3] ; shift4r:inst7|lpm_shiftreg:four_bit_shift|dffs[0]                        ; clock      ; clock    ; None                        ; None                      ; 1.929 ns                ;
+; N/A   ; 347.34 MHz ( period = 2.879 ns )               ; count4:inst3|lpm_counter:clock_divider|cntr_k9i:auto_generated|safe_q[3] ; shift4r:inst10|lpm_shiftreg:four_bit_shift|dffs[3]                       ; clock      ; clock    ; None                        ; None                      ; 1.918 ns                ;
+; N/A   ; 347.34 MHz ( period = 2.879 ns )               ; count4:inst3|lpm_counter:clock_divider|cntr_k9i:auto_generated|safe_q[3] ; shift4r:inst10|lpm_shiftreg:four_bit_shift|dffs[2]                       ; clock      ; clock    ; None                        ; None                      ; 1.918 ns                ;
+; N/A   ; 347.34 MHz ( period = 2.879 ns )               ; count4:inst3|lpm_counter:clock_divider|cntr_k9i:auto_generated|safe_q[3] ; shift4r:inst10|lpm_shiftreg:four_bit_shift|dffs[1]                       ; clock      ; clock    ; None                        ; None                      ; 1.918 ns                ;
+; N/A   ; 347.34 MHz ( period = 2.879 ns )               ; count4:inst3|lpm_counter:clock_divider|cntr_k9i:auto_generated|safe_q[3] ; shift4r:inst10|lpm_shiftreg:four_bit_shift|dffs[0]                       ; clock      ; clock    ; None                        ; None                      ; 1.918 ns                ;
+; N/A   ; 356.13 MHz ( period = 2.808 ns )               ; count4:inst3|lpm_counter:clock_divider|cntr_k9i:auto_generated|safe_q[2] ; shift4:inst5|lpm_shiftreg:four_bit_shift|dffs[1]                         ; clock      ; clock    ; None                        ; None                      ; 1.849 ns                ;
+; N/A   ; 356.25 MHz ( period = 2.807 ns )               ; count4:inst3|lpm_counter:clock_divider|cntr_k9i:auto_generated|safe_q[2] ; shift4:inst5|lpm_shiftreg:four_bit_shift|dffs[2]                         ; clock      ; clock    ; None                        ; None                      ; 1.848 ns                ;
+; N/A   ; 356.63 MHz ( period = 2.804 ns )               ; count4:inst3|lpm_counter:clock_divider|cntr_k9i:auto_generated|safe_q[2] ; shift4:inst5|lpm_shiftreg:four_bit_shift|dffs[0]                         ; clock      ; clock    ; None                        ; None                      ; 1.845 ns                ;
+; N/A   ; 358.42 MHz ( period = 2.790 ns )               ; count4:inst3|lpm_counter:clock_divider|cntr_k9i:auto_generated|safe_q[2] ; shift4r:inst7|lpm_shiftreg:four_bit_shift|dffs[2]                        ; clock      ; clock    ; None                        ; None                      ; 1.829 ns                ;
+; N/A   ; 358.42 MHz ( period = 2.790 ns )               ; count4:inst3|lpm_counter:clock_divider|cntr_k9i:auto_generated|safe_q[2] ; shift4r:inst7|lpm_shiftreg:four_bit_shift|dffs[1]                        ; clock      ; clock    ; None                        ; None                      ; 1.829 ns                ;
+; N/A   ; 358.42 MHz ( period = 2.790 ns )               ; count4:inst3|lpm_counter:clock_divider|cntr_k9i:auto_generated|safe_q[2] ; shift4r:inst7|lpm_shiftreg:four_bit_shift|dffs[0]                        ; clock      ; clock    ; None                        ; None                      ; 1.829 ns                ;
+; N/A   ; 359.97 MHz ( period = 2.778 ns )               ; count4:inst3|lpm_counter:clock_divider|cntr_k9i:auto_generated|safe_q[2] ; shift4r:inst10|lpm_shiftreg:four_bit_shift|dffs[3]                       ; clock      ; clock    ; None                        ; None                      ; 1.817 ns                ;
+; N/A   ; 359.97 MHz ( period = 2.778 ns )               ; count4:inst3|lpm_counter:clock_divider|cntr_k9i:auto_generated|safe_q[2] ; shift4r:inst10|lpm_shiftreg:four_bit_shift|dffs[2]                       ; clock      ; clock    ; None                        ; None                      ; 1.817 ns                ;
+; N/A   ; 359.97 MHz ( period = 2.778 ns )               ; count4:inst3|lpm_counter:clock_divider|cntr_k9i:auto_generated|safe_q[2] ; shift4r:inst10|lpm_shiftreg:four_bit_shift|dffs[1]                       ; clock      ; clock    ; None                        ; None                      ; 1.817 ns                ;
+; N/A   ; 359.97 MHz ( period = 2.778 ns )               ; count4:inst3|lpm_counter:clock_divider|cntr_k9i:auto_generated|safe_q[2] ; shift4r:inst10|lpm_shiftreg:four_bit_shift|dffs[0]                       ; clock      ; clock    ; None                        ; None                      ; 1.817 ns                ;
+; N/A   ; 397.61 MHz ( period = 2.515 ns )               ; shift4:inst6|lpm_shiftreg:four_bit_shift|dffs[0]                         ; shift4r:inst8|lpm_shiftreg:four_bit_shift|dffs[3]                        ; clock      ; clock    ; None                        ; None                      ; 2.304 ns                ;
+; N/A   ; 397.77 MHz ( period = 2.514 ns )               ; shift4:inst6|lpm_shiftreg:four_bit_shift|dffs[0]                         ; shift4r:inst9|lpm_shiftreg:four_bit_shift|dffs[3]                        ; clock      ; clock    ; None                        ; None                      ; 2.303 ns                ;
+; N/A   ; 407.33 MHz ( period = 2.455 ns )               ; shift4:inst6|lpm_shiftreg:four_bit_shift|dffs[0]                         ; shift4r:inst7|lpm_shiftreg:four_bit_shift|dffs[3]                        ; clock      ; clock    ; None                        ; None                      ; 2.247 ns                ;
+; N/A   ; 419.46 MHz ( period = 2.384 ns )               ; shift4:inst4|lpm_shiftreg:four_bit_shift|dffs[0]                         ; shift4r:inst8|lpm_shiftreg:four_bit_shift|dffs[3]                        ; clock      ; clock    ; None                        ; None                      ; 2.180 ns                ;
+; N/A   ; 419.64 MHz ( period = 2.383 ns )               ; shift4:inst4|lpm_shiftreg:four_bit_shift|dffs[0]                         ; shift4r:inst9|lpm_shiftreg:four_bit_shift|dffs[3]                        ; clock      ; clock    ; None                        ; None                      ; 2.179 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; count4:inst3|lpm_counter:clock_divider|cntr_k9i:auto_generated|safe_q[3] ; shift4:inst2|lpm_shiftreg:four_bit_shift|dffs[1]                         ; clock      ; clock    ; None                        ; None                      ; 1.356 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; shift4:inst4|lpm_shiftreg:four_bit_shift|dffs[0]                         ; shift4r:inst7|lpm_shiftreg:four_bit_shift|dffs[3]                        ; clock      ; clock    ; None                        ; None                      ; 2.123 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; shift4:inst2|lpm_shiftreg:four_bit_shift|dffs[0]                         ; shift4r:inst8|lpm_shiftreg:four_bit_shift|dffs[3]                        ; clock      ; clock    ; None                        ; None                      ; 2.115 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; shift4:inst2|lpm_shiftreg:four_bit_shift|dffs[0]                         ; shift4r:inst9|lpm_shiftreg:four_bit_shift|dffs[3]                        ; clock      ; clock    ; None                        ; None                      ; 2.114 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; shift4:inst2|lpm_shiftreg:four_bit_shift|dffs[0]                         ; shift4r:inst7|lpm_shiftreg:four_bit_shift|dffs[3]                        ; clock      ; clock    ; None                        ; None                      ; 2.058 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; shift4:inst5|lpm_shiftreg:four_bit_shift|dffs[0]                         ; shift4r:inst8|lpm_shiftreg:four_bit_shift|dffs[3]                        ; clock      ; clock    ; None                        ; None                      ; 1.992 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; shift4:inst5|lpm_shiftreg:four_bit_shift|dffs[0]                         ; shift4r:inst9|lpm_shiftreg:four_bit_shift|dffs[3]                        ; clock      ; clock    ; None                        ; None                      ; 1.991 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; count4:inst3|lpm_counter:clock_divider|cntr_k9i:auto_generated|safe_q[3] ; shift4:inst2|lpm_shiftreg:four_bit_shift|dffs[0]                         ; clock      ; clock    ; None                        ; None                      ; 1.218 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; count4:inst3|lpm_counter:clock_divider|cntr_k9i:auto_generated|safe_q[3] ; shift4:inst2|lpm_shiftreg:four_bit_shift|dffs[2]                         ; clock      ; clock    ; None                        ; None                      ; 1.218 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; count4:inst3|lpm_counter:clock_divider|cntr_k9i:auto_generated|safe_q[3] ; shift4:inst2|lpm_shiftreg:four_bit_shift|dffs[3]                         ; clock      ; clock    ; None                        ; None                      ; 1.215 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; count4:inst3|lpm_counter:clock_divider|cntr_k9i:auto_generated|safe_q[3] ; shift4:inst4|lpm_shiftreg:four_bit_shift|dffs[2]                         ; clock      ; clock    ; None                        ; None                      ; 1.207 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; count4:inst3|lpm_counter:clock_divider|cntr_k9i:auto_generated|safe_q[3] ; shift4:inst4|lpm_shiftreg:four_bit_shift|dffs[0]                         ; clock      ; clock    ; None                        ; None                      ; 1.206 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; count4:inst3|lpm_counter:clock_divider|cntr_k9i:auto_generated|safe_q[3] ; shift4:inst4|lpm_shiftreg:four_bit_shift|dffs[1]                         ; clock      ; clock    ; None                        ; None                      ; 1.206 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; count4:inst3|lpm_counter:clock_divider|cntr_k9i:auto_generated|safe_q[3] ; shift4:inst4|lpm_shiftreg:four_bit_shift|dffs[3]                         ; clock      ; clock    ; None                        ; None                      ; 1.204 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; shift4:inst5|lpm_shiftreg:four_bit_shift|dffs[0]                         ; shift4r:inst7|lpm_shiftreg:four_bit_shift|dffs[3]                        ; clock      ; clock    ; None                        ; None                      ; 1.935 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; count4:inst3|lpm_counter:clock_divider|cntr_k9i:auto_generated|safe_q[3] ; shift4:inst6|lpm_shiftreg:four_bit_shift|dffs[0]                         ; clock      ; clock    ; None                        ; None                      ; 1.117 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; count4:inst3|lpm_counter:clock_divider|cntr_k9i:auto_generated|safe_q[3] ; shift4:inst6|lpm_shiftreg:four_bit_shift|dffs[2]                         ; clock      ; clock    ; None                        ; None                      ; 1.115 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; count4:inst3|lpm_counter:clock_divider|cntr_k9i:auto_generated|safe_q[3] ; shift4:inst6|lpm_shiftreg:four_bit_shift|dffs[1]                         ; clock      ; clock    ; None                        ; None                      ; 1.108 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; count4:inst3|lpm_counter:clock_divider|cntr_k9i:auto_generated|safe_q[3] ; shift4:inst6|lpm_shiftreg:four_bit_shift|dffs[3]                         ; clock      ; clock    ; None                        ; None                      ; 1.107 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; count4:inst3|lpm_counter:clock_divider|cntr_k9i:auto_generated|safe_q[2] ; shift4:inst5|lpm_shiftreg:four_bit_shift|dffs[3]                         ; clock      ; clock    ; None                        ; None                      ; 1.110 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; count4:inst3|lpm_counter:clock_divider|cntr_k9i:auto_generated|safe_q[2] ; shift4:inst2|lpm_shiftreg:four_bit_shift|dffs[0]                         ; clock      ; clock    ; None                        ; None                      ; 1.093 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; count4:inst3|lpm_counter:clock_divider|cntr_k9i:auto_generated|safe_q[2] ; shift4:inst2|lpm_shiftreg:four_bit_shift|dffs[2]                         ; clock      ; clock    ; None                        ; None                      ; 1.093 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; count4:inst3|lpm_counter:clock_divider|cntr_k9i:auto_generated|safe_q[2] ; shift4:inst2|lpm_shiftreg:four_bit_shift|dffs[3]                         ; clock      ; clock    ; None                        ; None                      ; 1.090 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; count4:inst3|lpm_counter:clock_divider|cntr_k9i:auto_generated|safe_q[2] ; shift4:inst2|lpm_shiftreg:four_bit_shift|dffs[1]                         ; clock      ; clock    ; None                        ; None                      ; 1.089 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; count4:inst3|lpm_counter:clock_divider|cntr_k9i:auto_generated|safe_q[2] ; shift4:inst4|lpm_shiftreg:four_bit_shift|dffs[3]                         ; clock      ; clock    ; None                        ; None                      ; 1.086 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; count4:inst3|lpm_counter:clock_divider|cntr_k9i:auto_generated|safe_q[2] ; shift4:inst4|lpm_shiftreg:four_bit_shift|dffs[2]                         ; clock      ; clock    ; None                        ; None                      ; 1.085 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; count4:inst3|lpm_counter:clock_divider|cntr_k9i:auto_generated|safe_q[2] ; shift4:inst4|lpm_shiftreg:four_bit_shift|dffs[0]                         ; clock      ; clock    ; None                        ; None                      ; 1.084 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; count4:inst3|lpm_counter:clock_divider|cntr_k9i:auto_generated|safe_q[2] ; shift4:inst4|lpm_shiftreg:four_bit_shift|dffs[1]                         ; clock      ; clock    ; None                        ; None                      ; 1.083 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; count4:inst3|lpm_counter:clock_divider|cntr_k9i:auto_generated|safe_q[3] ; shift4:inst5|lpm_shiftreg:four_bit_shift|dffs[3]                         ; clock      ; clock    ; None                        ; None                      ; 0.964 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; shift4:inst6|lpm_shiftreg:four_bit_shift|dffs[0]                         ; shift4r:inst10|lpm_shiftreg:four_bit_shift|dffs[3]                       ; clock      ; clock    ; None                        ; None                      ; 1.700 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; shift4:inst4|lpm_shiftreg:four_bit_shift|dffs[0]                         ; shift4r:inst10|lpm_shiftreg:four_bit_shift|dffs[3]                       ; clock      ; clock    ; None                        ; None                      ; 1.576 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; count4:inst3|lpm_counter:clock_divider|cntr_k9i:auto_generated|safe_q[2] ; shift4:inst6|lpm_shiftreg:four_bit_shift|dffs[0]                         ; clock      ; clock    ; None                        ; None                      ; 0.806 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; count4:inst3|lpm_counter:clock_divider|cntr_k9i:auto_generated|safe_q[2] ; shift4:inst6|lpm_shiftreg:four_bit_shift|dffs[2]                         ; clock      ; clock    ; None                        ; None                      ; 0.805 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; count4:inst3|lpm_counter:clock_divider|cntr_k9i:auto_generated|safe_q[2] ; shift4:inst6|lpm_shiftreg:four_bit_shift|dffs[3]                         ; clock      ; clock    ; None                        ; None                      ; 0.797 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; count4:inst3|lpm_counter:clock_divider|cntr_k9i:auto_generated|safe_q[2] ; shift4:inst6|lpm_shiftreg:four_bit_shift|dffs[1]                         ; clock      ; clock    ; None                        ; None                      ; 0.796 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; shift4:inst2|lpm_shiftreg:four_bit_shift|dffs[0]                         ; shift4r:inst10|lpm_shiftreg:four_bit_shift|dffs[3]                       ; clock      ; clock    ; None                        ; None                      ; 1.511 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; shift4:inst5|lpm_shiftreg:four_bit_shift|dffs[0]                         ; shift4r:inst10|lpm_shiftreg:four_bit_shift|dffs[3]                       ; clock      ; clock    ; None                        ; None                      ; 1.388 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; shift4r:inst10|lpm_shiftreg:four_bit_shift|dffs[3]                       ; shift4r:inst10|lpm_shiftreg:four_bit_shift|dffs[2]                       ; clock      ; clock    ; None                        ; None                      ; 1.307 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; count4:inst3|lpm_counter:clock_divider|cntr_k9i:auto_generated|safe_q[2] ; count4:inst3|lpm_counter:clock_divider|cntr_k9i:auto_generated|safe_q[3] ; clock      ; clock    ; None                        ; None                      ; 1.202 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; count4:inst3|lpm_counter:clock_divider|cntr_k9i:auto_generated|safe_q[0] ; count4:inst3|lpm_counter:clock_divider|cntr_k9i:auto_generated|safe_q[1] ; clock      ; clock    ; None                        ; None                      ; 1.187 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; shift4r:inst10|lpm_shiftreg:four_bit_shift|dffs[2]                       ; shift4r:inst10|lpm_shiftreg:four_bit_shift|dffs[1]                       ; clock      ; clock    ; None                        ; None                      ; 1.078 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; shift4r:inst10|lpm_shiftreg:four_bit_shift|dffs[1]                       ; shift4r:inst10|lpm_shiftreg:four_bit_shift|dffs[0]                       ; clock      ; clock    ; None                        ; None                      ; 0.862 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; shift4:inst6|lpm_shiftreg:four_bit_shift|dffs[3]                         ; shift4:inst6|lpm_shiftreg:four_bit_shift|dffs[2]                         ; clock      ; clock    ; None                        ; None                      ; 0.851 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; shift4:inst5|lpm_shiftreg:four_bit_shift|dffs[2]                         ; shift4:inst5|lpm_shiftreg:four_bit_shift|dffs[1]                         ; clock      ; clock    ; None                        ; None                      ; 0.844 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; shift4:inst5|lpm_shiftreg:four_bit_shift|dffs[3]                         ; shift4:inst5|lpm_shiftreg:four_bit_shift|dffs[2]                         ; clock      ; clock    ; None                        ; None                      ; 0.844 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; shift4:inst2|lpm_shiftreg:four_bit_shift|dffs[3]                         ; shift4:inst2|lpm_shiftreg:four_bit_shift|dffs[2]                         ; clock      ; clock    ; None                        ; None                      ; 0.842 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; shift4:inst4|lpm_shiftreg:four_bit_shift|dffs[2]                         ; shift4:inst4|lpm_shiftreg:four_bit_shift|dffs[1]                         ; clock      ; clock    ; None                        ; None                      ; 0.840 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; count4:inst3|lpm_counter:clock_divider|cntr_k9i:auto_generated|safe_q[2] ; count4:inst3|lpm_counter:clock_divider|cntr_k9i:auto_generated|safe_q[2] ; clock      ; clock    ; None                        ; None                      ; 0.819 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; shift4:inst2|lpm_shiftreg:four_bit_shift|dffs[1]                         ; shift4:inst2|lpm_shiftreg:four_bit_shift|dffs[0]                         ; clock      ; clock    ; None                        ; None                      ; 0.810 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; shift4:inst6|lpm_shiftreg:four_bit_shift|dffs[1]                         ; shift4:inst6|lpm_shiftreg:four_bit_shift|dffs[0]                         ; clock      ; clock    ; None                        ; None                      ; 0.809 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; shift4:inst5|lpm_shiftreg:four_bit_shift|dffs[1]                         ; shift4:inst5|lpm_shiftreg:four_bit_shift|dffs[0]                         ; clock      ; clock    ; None                        ; None                      ; 0.809 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; shift4:inst4|lpm_shiftreg:four_bit_shift|dffs[1]                         ; shift4:inst4|lpm_shiftreg:four_bit_shift|dffs[0]                         ; clock      ; clock    ; None                        ; None                      ; 0.807 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; count4:inst3|lpm_counter:clock_divider|cntr_k9i:auto_generated|safe_q[1] ; count4:inst3|lpm_counter:clock_divider|cntr_k9i:auto_generated|safe_q[1] ; clock      ; clock    ; None                        ; None                      ; 0.804 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; count4:inst3|lpm_counter:clock_divider|cntr_k9i:auto_generated|safe_q[0] ; count4:inst3|lpm_counter:clock_divider|cntr_k9i:auto_generated|safe_q[0] ; clock      ; clock    ; None                        ; None                      ; 0.804 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; shift4:inst4|lpm_shiftreg:four_bit_shift|dffs[3]                         ; shift4:inst4|lpm_shiftreg:four_bit_shift|dffs[2]                         ; clock      ; clock    ; None                        ; None                      ; 0.804 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; shift4r:inst7|lpm_shiftreg:four_bit_shift|dffs[3]                        ; shift4r:inst7|lpm_shiftreg:four_bit_shift|dffs[2]                        ; clock      ; clock    ; None                        ; None                      ; 0.738 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; shift4r:inst7|lpm_shiftreg:four_bit_shift|dffs[1]                        ; shift4r:inst7|lpm_shiftreg:four_bit_shift|dffs[0]                        ; clock      ; clock    ; None                        ; None                      ; 0.690 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; shift4r:inst8|lpm_shiftreg:four_bit_shift|dffs[1]                        ; shift4r:inst8|lpm_shiftreg:four_bit_shift|dffs[0]                        ; clock      ; clock    ; None                        ; None                      ; 0.689 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; shift4r:inst9|lpm_shiftreg:four_bit_shift|dffs[3]                        ; shift4r:inst9|lpm_shiftreg:four_bit_shift|dffs[2]                        ; clock      ; clock    ; None                        ; None                      ; 0.688 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; shift4r:inst9|lpm_shiftreg:four_bit_shift|dffs[1]                        ; shift4r:inst9|lpm_shiftreg:four_bit_shift|dffs[0]                        ; clock      ; clock    ; None                        ; None                      ; 0.683 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; shift4:inst6|lpm_shiftreg:four_bit_shift|dffs[2]                         ; shift4:inst6|lpm_shiftreg:four_bit_shift|dffs[1]                         ; clock      ; clock    ; None                        ; None                      ; 0.668 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; shift4:inst2|lpm_shiftreg:four_bit_shift|dffs[2]                         ; shift4:inst2|lpm_shiftreg:four_bit_shift|dffs[1]                         ; clock      ; clock    ; None                        ; None                      ; 0.668 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; count4:inst3|lpm_counter:clock_divider|cntr_k9i:auto_generated|safe_q[0] ; count4:inst3|lpm_counter:clock_divider|cntr_k9i:auto_generated|safe_q[3] ; clock      ; clock    ; None                        ; None                      ; 1.329 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; shift4r:inst9|lpm_shiftreg:four_bit_shift|dffs[2]                        ; shift4r:inst9|lpm_shiftreg:four_bit_shift|dffs[1]                        ; clock      ; clock    ; None                        ; None                      ; 0.551 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; shift4r:inst7|lpm_shiftreg:four_bit_shift|dffs[2]                        ; shift4r:inst7|lpm_shiftreg:four_bit_shift|dffs[1]                        ; clock      ; clock    ; None                        ; None                      ; 0.549 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; count4:inst3|lpm_counter:clock_divider|cntr_k9i:auto_generated|safe_q[3] ; count4:inst3|lpm_counter:clock_divider|cntr_k9i:auto_generated|safe_q[3] ; clock      ; clock    ; None                        ; None                      ; 0.545 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; shift4r:inst8|lpm_shiftreg:four_bit_shift|dffs[2]                        ; shift4r:inst8|lpm_shiftreg:four_bit_shift|dffs[1]                        ; clock      ; clock    ; None                        ; None                      ; 0.544 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; shift4r:inst8|lpm_shiftreg:four_bit_shift|dffs[3]                        ; shift4r:inst8|lpm_shiftreg:four_bit_shift|dffs[2]                        ; clock      ; clock    ; None                        ; None                      ; 0.541 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; count4:inst3|lpm_counter:clock_divider|cntr_k9i:auto_generated|safe_q[0] ; count4:inst3|lpm_counter:clock_divider|cntr_k9i:auto_generated|safe_q[2] ; clock      ; clock    ; None                        ; None                      ; 1.258 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; count4:inst3|lpm_counter:clock_divider|cntr_k9i:auto_generated|safe_q[1] ; count4:inst3|lpm_counter:clock_divider|cntr_k9i:auto_generated|safe_q[3] ; clock      ; clock    ; None                        ; None                      ; 1.258 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; count4:inst3|lpm_counter:clock_divider|cntr_k9i:auto_generated|safe_q[1] ; count4:inst3|lpm_counter:clock_divider|cntr_k9i:auto_generated|safe_q[2] ; clock      ; clock    ; None                        ; None                      ; 1.187 ns                ;
++-------+------------------------------------------------+--------------------------------------------------------------------------+--------------------------------------------------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Hold: 'clock'                                                                                                                                                                                                                                            ;
++------------------------------------------+----------------------------------------------------+---------------------------------------------------+------------+----------+----------------------------+----------------------------+--------------------------+
+; Minimum Slack                            ; From                                               ; To                                                ; From Clock ; To Clock ; Required Hold Relationship ; Required Shortest P2P Time ; Actual Shortest P2P Time ;
++------------------------------------------+----------------------------------------------------+---------------------------------------------------+------------+----------+----------------------------+----------------------------+--------------------------+
+; Not operational: Clock Skew > Data Delay ; shift4r:inst8|lpm_shiftreg:four_bit_shift|dffs[0]  ; latch4:inst13|lpm_latch:four_bit_latch|latches[0] ; clock      ; clock    ; None                       ; None                       ; 0.323 ns                 ;
+; Not operational: Clock Skew > Data Delay ; shift4r:inst9|lpm_shiftreg:four_bit_shift|dffs[0]  ; latch4:inst14|lpm_latch:four_bit_latch|latches[0] ; clock      ; clock    ; None                       ; None                       ; 0.323 ns                 ;
+; Not operational: Clock Skew > Data Delay ; shift4r:inst7|lpm_shiftreg:four_bit_shift|dffs[3]  ; latch4:inst12|lpm_latch:four_bit_latch|latches[3] ; clock      ; clock    ; None                       ; None                       ; 0.323 ns                 ;
+; Not operational: Clock Skew > Data Delay ; shift4r:inst7|lpm_shiftreg:four_bit_shift|dffs[0]  ; latch4:inst12|lpm_latch:four_bit_latch|latches[0] ; clock      ; clock    ; None                       ; None                       ; 0.323 ns                 ;
+; Not operational: Clock Skew > Data Delay ; shift4r:inst10|lpm_shiftreg:four_bit_shift|dffs[1] ; latch4:inst15|lpm_latch:four_bit_latch|latches[1] ; clock      ; clock    ; None                       ; None                       ; 0.323 ns                 ;
+; Not operational: Clock Skew > Data Delay ; shift4r:inst10|lpm_shiftreg:four_bit_shift|dffs[2] ; latch4:inst15|lpm_latch:four_bit_latch|latches[2] ; clock      ; clock    ; None                       ; None                       ; 0.323 ns                 ;
+; Not operational: Clock Skew > Data Delay ; shift4r:inst10|lpm_shiftreg:four_bit_shift|dffs[0] ; latch4:inst15|lpm_latch:four_bit_latch|latches[0] ; clock      ; clock    ; None                       ; None                       ; 0.323 ns                 ;
+; Not operational: Clock Skew > Data Delay ; shift4r:inst8|lpm_shiftreg:four_bit_shift|dffs[3]  ; latch4:inst13|lpm_latch:four_bit_latch|latches[3] ; clock      ; clock    ; None                       ; None                       ; 0.733 ns                 ;
+; Not operational: Clock Skew > Data Delay ; shift4r:inst8|lpm_shiftreg:four_bit_shift|dffs[2]  ; latch4:inst13|lpm_latch:four_bit_latch|latches[2] ; clock      ; clock    ; None                       ; None                       ; 0.734 ns                 ;
+; Not operational: Clock Skew > Data Delay ; shift4r:inst8|lpm_shiftreg:four_bit_shift|dffs[1]  ; latch4:inst13|lpm_latch:four_bit_latch|latches[1] ; clock      ; clock    ; None                       ; None                       ; 0.739 ns                 ;
+; Not operational: Clock Skew > Data Delay ; shift4r:inst9|lpm_shiftreg:four_bit_shift|dffs[1]  ; latch4:inst14|lpm_latch:four_bit_latch|latches[1] ; clock      ; clock    ; None                       ; None                       ; 0.595 ns                 ;
+; Not operational: Clock Skew > Data Delay ; shift4r:inst9|lpm_shiftreg:four_bit_shift|dffs[3]  ; latch4:inst14|lpm_latch:four_bit_latch|latches[3] ; clock      ; clock    ; None                       ; None                       ; 0.596 ns                 ;
+; Not operational: Clock Skew > Data Delay ; shift4r:inst7|lpm_shiftreg:four_bit_shift|dffs[1]  ; latch4:inst12|lpm_latch:four_bit_latch|latches[1] ; clock      ; clock    ; None                       ; None                       ; 0.597 ns                 ;
+; Not operational: Clock Skew > Data Delay ; shift4r:inst9|lpm_shiftreg:four_bit_shift|dffs[2]  ; latch4:inst14|lpm_latch:four_bit_latch|latches[2] ; clock      ; clock    ; None                       ; None                       ; 0.743 ns                 ;
+; Not operational: Clock Skew > Data Delay ; shift4r:inst7|lpm_shiftreg:four_bit_shift|dffs[2]  ; latch4:inst12|lpm_latch:four_bit_latch|latches[2] ; clock      ; clock    ; None                       ; None                       ; 0.770 ns                 ;
+; Not operational: Clock Skew > Data Delay ; shift4r:inst10|lpm_shiftreg:four_bit_shift|dffs[3] ; latch4:inst15|lpm_latch:four_bit_latch|latches[3] ; clock      ; clock    ; None                       ; None                       ; 1.216 ns                 ;
++------------------------------------------+----------------------------------------------------+---------------------------------------------------+------------+----------+----------------------------+----------------------------+--------------------------+
+
+
++---------------------------------------------------------------------------------------------------------+
+; tsu                                                                                                     ;
++-------+--------------+------------+-------+--------------------------------------------------+----------+
+; Slack ; Required tsu ; Actual tsu ; From  ; To                                               ; To Clock ;
++-------+--------------+------------+-------+--------------------------------------------------+----------+
+; N/A   ; None         ; 5.302 ns   ; key_0 ; shift4:inst5|lpm_shiftreg:four_bit_shift|dffs[0] ; clock    ;
+; N/A   ; None         ; 5.298 ns   ; key_0 ; shift4:inst5|lpm_shiftreg:four_bit_shift|dffs[3] ; clock    ;
+; N/A   ; None         ; 5.125 ns   ; key_0 ; shift4:inst5|lpm_shiftreg:four_bit_shift|dffs[2] ; clock    ;
+; N/A   ; None         ; 5.123 ns   ; key_0 ; shift4:inst5|lpm_shiftreg:four_bit_shift|dffs[1] ; clock    ;
+; N/A   ; None         ; 4.646 ns   ; p3[2] ; shift4:inst4|lpm_shiftreg:four_bit_shift|dffs[2] ; clock    ;
+; N/A   ; None         ; 4.625 ns   ; p3[3] ; shift4:inst4|lpm_shiftreg:four_bit_shift|dffs[3] ; clock    ;
+; N/A   ; None         ; 4.580 ns   ; p3[1] ; shift4:inst4|lpm_shiftreg:four_bit_shift|dffs[1] ; clock    ;
+; N/A   ; None         ; 1.111 ns   ; p1[3] ; shift4:inst6|lpm_shiftreg:four_bit_shift|dffs[3] ; clock    ;
+; N/A   ; None         ; 1.101 ns   ; p2[0] ; shift4:inst2|lpm_shiftreg:four_bit_shift|dffs[0] ; clock    ;
+; N/A   ; None         ; 1.094 ns   ; p0[1] ; shift4:inst5|lpm_shiftreg:four_bit_shift|dffs[1] ; clock    ;
+; N/A   ; None         ; 1.062 ns   ; p3[0] ; shift4:inst4|lpm_shiftreg:four_bit_shift|dffs[0] ; clock    ;
+; N/A   ; None         ; 1.054 ns   ; p0[2] ; shift4:inst5|lpm_shiftreg:four_bit_shift|dffs[2] ; clock    ;
+; N/A   ; None         ; 0.927 ns   ; p0[0] ; shift4:inst5|lpm_shiftreg:four_bit_shift|dffs[0] ; clock    ;
+; N/A   ; None         ; 0.820 ns   ; p2[3] ; shift4:inst2|lpm_shiftreg:four_bit_shift|dffs[3] ; clock    ;
+; N/A   ; None         ; 0.726 ns   ; p2[1] ; shift4:inst2|lpm_shiftreg:four_bit_shift|dffs[1] ; clock    ;
+; N/A   ; None         ; 0.719 ns   ; p2[2] ; shift4:inst2|lpm_shiftreg:four_bit_shift|dffs[2] ; clock    ;
+; N/A   ; None         ; -0.326 ns  ; p0[3] ; shift4:inst5|lpm_shiftreg:four_bit_shift|dffs[3] ; clock    ;
+; N/A   ; None         ; -0.551 ns  ; p1[1] ; shift4:inst6|lpm_shiftreg:four_bit_shift|dffs[1] ; clock    ;
+; N/A   ; None         ; -0.562 ns  ; p1[2] ; shift4:inst6|lpm_shiftreg:four_bit_shift|dffs[2] ; clock    ;
+; N/A   ; None         ; -0.686 ns  ; p1[0] ; shift4:inst6|lpm_shiftreg:four_bit_shift|dffs[0] ; clock    ;
++-------+--------------+------------+-------+--------------------------------------------------+----------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------+
+; tco                                                                                                                                 ;
++-------+--------------+------------+--------------------------------------------------------------------------+---------+------------+
+; Slack ; Required tco ; Actual tco ; From                                                                     ; To      ; From Clock ;
++-------+--------------+------------+--------------------------------------------------------------------------+---------+------------+
+; N/A   ; None         ; 12.449 ns  ; latch4:inst13|lpm_latch:four_bit_latch|latches[0]                        ; out1[0] ; clock      ;
+; N/A   ; None         ; 12.427 ns  ; latch4:inst13|lpm_latch:four_bit_latch|latches[3]                        ; out1[3] ; clock      ;
+; N/A   ; None         ; 12.243 ns  ; latch4:inst13|lpm_latch:four_bit_latch|latches[2]                        ; out1[2] ; clock      ;
+; N/A   ; None         ; 12.229 ns  ; latch4:inst12|lpm_latch:four_bit_latch|latches[2]                        ; out0[2] ; clock      ;
+; N/A   ; None         ; 12.079 ns  ; latch4:inst12|lpm_latch:four_bit_latch|latches[3]                        ; out0[3] ; clock      ;
+; N/A   ; None         ; 11.839 ns  ; latch4:inst12|lpm_latch:four_bit_latch|latches[0]                        ; out0[0] ; clock      ;
+; N/A   ; None         ; 11.779 ns  ; latch4:inst13|lpm_latch:four_bit_latch|latches[1]                        ; out1[1] ; clock      ;
+; N/A   ; None         ; 11.213 ns  ; latch4:inst12|lpm_latch:four_bit_latch|latches[1]                        ; out0[1] ; clock      ;
+; N/A   ; None         ; 10.831 ns  ; latch4:inst15|lpm_latch:four_bit_latch|latches[2]                        ; out3[2] ; clock      ;
+; N/A   ; None         ; 10.816 ns  ; latch4:inst15|lpm_latch:four_bit_latch|latches[3]                        ; out3[3] ; clock      ;
+; N/A   ; None         ; 10.680 ns  ; latch4:inst15|lpm_latch:four_bit_latch|latches[0]                        ; out3[0] ; clock      ;
+; N/A   ; None         ; 10.678 ns  ; latch4:inst15|lpm_latch:four_bit_latch|latches[1]                        ; out3[1] ; clock      ;
+; N/A   ; None         ; 10.464 ns  ; latch4:inst14|lpm_latch:four_bit_latch|latches[3]                        ; out2[3] ; clock      ;
+; N/A   ; None         ; 10.461 ns  ; latch4:inst14|lpm_latch:four_bit_latch|latches[1]                        ; out2[1] ; clock      ;
+; N/A   ; None         ; 10.461 ns  ; latch4:inst14|lpm_latch:four_bit_latch|latches[2]                        ; out2[2] ; clock      ;
+; N/A   ; None         ; 10.457 ns  ; latch4:inst14|lpm_latch:four_bit_latch|latches[0]                        ; out2[0] ; clock      ;
+; N/A   ; None         ; 8.863 ns   ; count4:inst3|lpm_counter:clock_divider|cntr_k9i:auto_generated|safe_q[3] ; tx_out  ; clock      ;
+; N/A   ; None         ; 8.768 ns   ; count4:inst3|lpm_counter:clock_divider|cntr_k9i:auto_generated|safe_q[2] ; tx_out  ; clock      ;
+; N/A   ; None         ; 8.701 ns   ; count4:inst3|lpm_counter:clock_divider|cntr_k9i:auto_generated|safe_q[2] ; led     ; clock      ;
+; N/A   ; None         ; 8.313 ns   ; shift4:inst6|lpm_shiftreg:four_bit_shift|dffs[0]                         ; tx_out  ; clock      ;
+; N/A   ; None         ; 8.182 ns   ; shift4:inst4|lpm_shiftreg:four_bit_shift|dffs[0]                         ; tx_out  ; clock      ;
+; N/A   ; None         ; 8.116 ns   ; shift4:inst2|lpm_shiftreg:four_bit_shift|dffs[0]                         ; tx_out  ; clock      ;
+; N/A   ; None         ; 8.009 ns   ; shift4:inst5|lpm_shiftreg:four_bit_shift|dffs[0]                         ; tx_out  ; clock      ;
+; N/A   ; None         ; 7.729 ns   ; shift4:inst5|lpm_shiftreg:four_bit_shift|dffs[0]                         ; a1      ; clock      ;
+; N/A   ; None         ; 7.276 ns   ; shift4:inst6|lpm_shiftreg:four_bit_shift|dffs[0]                         ; b1      ; clock      ;
++-------+--------------+------------+--------------------------------------------------------------------------+---------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------+
+; th                                                                                                            ;
++---------------+-------------+-----------+-------+--------------------------------------------------+----------+
+; Minimum Slack ; Required th ; Actual th ; From  ; To                                               ; To Clock ;
++---------------+-------------+-----------+-------+--------------------------------------------------+----------+
+; N/A           ; None        ; 0.916 ns  ; p1[0] ; shift4:inst6|lpm_shiftreg:four_bit_shift|dffs[0] ; clock    ;
+; N/A           ; None        ; 0.792 ns  ; p1[2] ; shift4:inst6|lpm_shiftreg:four_bit_shift|dffs[2] ; clock    ;
+; N/A           ; None        ; 0.781 ns  ; p1[1] ; shift4:inst6|lpm_shiftreg:four_bit_shift|dffs[1] ; clock    ;
+; N/A           ; None        ; 0.556 ns  ; p0[3] ; shift4:inst5|lpm_shiftreg:four_bit_shift|dffs[3] ; clock    ;
+; N/A           ; None        ; -0.489 ns ; p2[2] ; shift4:inst2|lpm_shiftreg:four_bit_shift|dffs[2] ; clock    ;
+; N/A           ; None        ; -0.496 ns ; p2[1] ; shift4:inst2|lpm_shiftreg:four_bit_shift|dffs[1] ; clock    ;
+; N/A           ; None        ; -0.590 ns ; p2[3] ; shift4:inst2|lpm_shiftreg:four_bit_shift|dffs[3] ; clock    ;
+; N/A           ; None        ; -0.697 ns ; p0[0] ; shift4:inst5|lpm_shiftreg:four_bit_shift|dffs[0] ; clock    ;
+; N/A           ; None        ; -0.824 ns ; p0[2] ; shift4:inst5|lpm_shiftreg:four_bit_shift|dffs[2] ; clock    ;
+; N/A           ; None        ; -0.832 ns ; p3[0] ; shift4:inst4|lpm_shiftreg:four_bit_shift|dffs[0] ; clock    ;
+; N/A           ; None        ; -0.864 ns ; p0[1] ; shift4:inst5|lpm_shiftreg:four_bit_shift|dffs[1] ; clock    ;
+; N/A           ; None        ; -0.871 ns ; p2[0] ; shift4:inst2|lpm_shiftreg:four_bit_shift|dffs[0] ; clock    ;
+; N/A           ; None        ; -0.881 ns ; p1[3] ; shift4:inst6|lpm_shiftreg:four_bit_shift|dffs[3] ; clock    ;
+; N/A           ; None        ; -4.350 ns ; p3[1] ; shift4:inst4|lpm_shiftreg:four_bit_shift|dffs[1] ; clock    ;
+; N/A           ; None        ; -4.395 ns ; p3[3] ; shift4:inst4|lpm_shiftreg:four_bit_shift|dffs[3] ; clock    ;
+; N/A           ; None        ; -4.416 ns ; p3[2] ; shift4:inst4|lpm_shiftreg:four_bit_shift|dffs[2] ; clock    ;
+; N/A           ; None        ; -4.893 ns ; key_0 ; shift4:inst5|lpm_shiftreg:four_bit_shift|dffs[1] ; clock    ;
+; N/A           ; None        ; -4.895 ns ; key_0 ; shift4:inst5|lpm_shiftreg:four_bit_shift|dffs[2] ; clock    ;
+; N/A           ; None        ; -5.068 ns ; key_0 ; shift4:inst5|lpm_shiftreg:four_bit_shift|dffs[3] ; clock    ;
+; N/A           ; None        ; -5.072 ns ; key_0 ; shift4:inst5|lpm_shiftreg:four_bit_shift|dffs[0] ; clock    ;
++---------------+-------------+-----------+-------+--------------------------------------------------+----------+
+
+
++--------------------------+
+; Timing Analyzer Messages ;
++--------------------------+
+Info: *******************************************************************
+Info: Running Quartus II Classic Timing Analyzer
+    Info: Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
+    Info: Processing started: Wed Oct 24 03:16:21 2018
+Info: Command: quartus_tan --read_settings_files=off --write_settings_files=off tdm -c tdm --timing_analysis_only
+Warning: Timing Analysis is analyzing one or more combinational loops as latches
+    Warning: Node "latch4:inst12|lpm_latch:four_bit_latch|latches[3]" is a latch
+    Warning: Node "latch4:inst12|lpm_latch:four_bit_latch|latches[2]" is a latch
+    Warning: Node "latch4:inst12|lpm_latch:four_bit_latch|latches[1]" is a latch
+    Warning: Node "latch4:inst12|lpm_latch:four_bit_latch|latches[0]" is a latch
+    Warning: Node "latch4:inst13|lpm_latch:four_bit_latch|latches[3]" is a latch
+    Warning: Node "latch4:inst13|lpm_latch:four_bit_latch|latches[2]" is a latch
+    Warning: Node "latch4:inst13|lpm_latch:four_bit_latch|latches[1]" is a latch
+    Warning: Node "latch4:inst13|lpm_latch:four_bit_latch|latches[0]" is a latch
+    Warning: Node "latch4:inst14|lpm_latch:four_bit_latch|latches[3]" is a latch
+    Warning: Node "latch4:inst14|lpm_latch:four_bit_latch|latches[2]" is a latch
+    Warning: Node "latch4:inst14|lpm_latch:four_bit_latch|latches[1]" is a latch
+    Warning: Node "latch4:inst14|lpm_latch:four_bit_latch|latches[0]" is a latch
+    Warning: Node "latch4:inst15|lpm_latch:four_bit_latch|latches[3]" is a latch
+    Warning: Node "latch4:inst15|lpm_latch:four_bit_latch|latches[2]" is a latch
+    Warning: Node "latch4:inst15|lpm_latch:four_bit_latch|latches[1]" is a latch
+    Warning: Node "latch4:inst15|lpm_latch:four_bit_latch|latches[0]" is a latch
+Warning: Found pins functioning as undefined clocks and/or memory enables
+    Info: Assuming node "clock" is an undefined clock
+Warning: Found 6 node(s) in clock paths which may be acting as ripple and/or gated clocks -- node(s) analyzed as buffer(s) resulting in clock skew
+    Info: Detected gated clock "decode4c:inst11|x2~3" as buffer
+    Info: Detected gated clock "decode4c:inst11|x2~2" as buffer
+    Info: Detected gated clock "decode4c:inst11|x2~1" as buffer
+    Info: Detected gated clock "decode4c:inst11|x0" as buffer
+    Info: Detected ripple clock "count4:inst3|lpm_counter:clock_divider|cntr_k9i:auto_generated|safe_q[3]" as buffer
+    Info: Detected ripple clock "count4:inst3|lpm_counter:clock_divider|cntr_k9i:auto_generated|safe_q[2]" as buffer
+Info: Clock "clock" has Internal fmax of 326.26 MHz between source register "count4:inst3|lpm_counter:clock_divider|cntr_k9i:auto_generated|safe_q[3]" and destination register "shift4r:inst8|lpm_shiftreg:four_bit_shift|dffs[3]" (period= 3.065 ns)
+    Info: + Longest register to register delay is 2.101 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LCFF_X35_Y1_N7; Fanout = 20; REG Node = 'count4:inst3|lpm_counter:clock_divider|cntr_k9i:auto_generated|safe_q[3]'
+        Info: 2: + IC(0.749 ns) + CELL(0.271 ns) = 1.020 ns; Loc. = LCCOMB_X37_Y1_N28; Fanout = 1; COMB Node = 'mux_4ch:inst1|Mux0~0'
+        Info: 3: + IC(0.243 ns) + CELL(0.150 ns) = 1.413 ns; Loc. = LCCOMB_X37_Y1_N24; Fanout = 5; COMB Node = 'mux_4ch:inst1|Mux0~1'
+        Info: 4: + IC(0.455 ns) + CELL(0.149 ns) = 2.017 ns; Loc. = LCCOMB_X36_Y1_N0; Fanout = 1; COMB Node = 'shift4r:inst8|lpm_shiftreg:four_bit_shift|dffs[3]~feeder'
+        Info: 5: + IC(0.000 ns) + CELL(0.084 ns) = 2.101 ns; Loc. = LCFF_X36_Y1_N1; Fanout = 2; REG Node = 'shift4r:inst8|lpm_shiftreg:four_bit_shift|dffs[3]'
+        Info: Total cell delay = 0.654 ns ( 31.13 % )
+        Info: Total interconnect delay = 1.447 ns ( 68.87 % )
+    Info: - Smallest clock skew is -0.750 ns
+        Info: + Shortest clock path from clock "clock" to destination register is 2.651 ns
+            Info: 1: + IC(0.000 ns) + CELL(0.979 ns) = 0.979 ns; Loc. = PIN_D13; Fanout = 3; CLK Node = 'clock'
+            Info: 2: + IC(0.113 ns) + CELL(0.000 ns) = 1.092 ns; Loc. = CLKCTRL_G11; Fanout = 34; COMB Node = 'clock~clkctrl'
+            Info: 3: + IC(1.022 ns) + CELL(0.537 ns) = 2.651 ns; Loc. = LCFF_X36_Y1_N1; Fanout = 2; REG Node = 'shift4r:inst8|lpm_shiftreg:four_bit_shift|dffs[3]'
+            Info: Total cell delay = 1.516 ns ( 57.19 % )
+            Info: Total interconnect delay = 1.135 ns ( 42.81 % )
+        Info: - Longest clock path from clock "clock" to source register is 3.401 ns
+            Info: 1: + IC(0.000 ns) + CELL(0.979 ns) = 0.979 ns; Loc. = PIN_D13; Fanout = 3; CLK Node = 'clock'
+            Info: 2: + IC(1.885 ns) + CELL(0.537 ns) = 3.401 ns; Loc. = LCFF_X35_Y1_N7; Fanout = 20; REG Node = 'count4:inst3|lpm_counter:clock_divider|cntr_k9i:auto_generated|safe_q[3]'
+            Info: Total cell delay = 1.516 ns ( 44.58 % )
+            Info: Total interconnect delay = 1.885 ns ( 55.42 % )
+    Info: + Micro clock to output delay of source is 0.250 ns
+    Info: + Micro setup delay of destination is -0.036 ns
+Warning: Circuit may not operate. Detected 16 non-operational path(s) clocked by clock "clock" with clock skew larger than data delay. See Compilation Report for details.
+Info: Found hold time violation between source  pin or register "shift4r:inst8|lpm_shiftreg:four_bit_shift|dffs[0]" and destination pin or register "latch4:inst13|lpm_latch:four_bit_latch|latches[0]" for clock "clock" (Hold time is 4.222 ns)
+    Info: + Largest clock skew is 4.795 ns
+        Info: + Longest clock path from clock "clock" to destination register is 7.446 ns
+            Info: 1: + IC(0.000 ns) + CELL(0.979 ns) = 0.979 ns; Loc. = PIN_D13; Fanout = 3; CLK Node = 'clock'
+            Info: 2: + IC(1.885 ns) + CELL(0.787 ns) = 3.651 ns; Loc. = LCFF_X35_Y1_N7; Fanout = 20; REG Node = 'count4:inst3|lpm_counter:clock_divider|cntr_k9i:auto_generated|safe_q[3]'
+            Info: 3: + IC(0.750 ns) + CELL(0.275 ns) = 4.676 ns; Loc. = LCCOMB_X37_Y1_N14; Fanout = 5; COMB Node = 'decode4c:inst11|x2~1'
+            Info: 4: + IC(0.951 ns) + CELL(0.000 ns) = 5.627 ns; Loc. = CLKCTRL_G13; Fanout = 4; COMB Node = 'decode4c:inst11|x2~1clkctrl'
+            Info: 5: + IC(1.382 ns) + CELL(0.437 ns) = 7.446 ns; Loc. = LCCOMB_X36_Y1_N30; Fanout = 1; REG Node = 'latch4:inst13|lpm_latch:four_bit_latch|latches[0]'
+            Info: Total cell delay = 2.478 ns ( 33.28 % )
+            Info: Total interconnect delay = 4.968 ns ( 66.72 % )
+        Info: - Shortest clock path from clock "clock" to source register is 2.651 ns
+            Info: 1: + IC(0.000 ns) + CELL(0.979 ns) = 0.979 ns; Loc. = PIN_D13; Fanout = 3; CLK Node = 'clock'
+            Info: 2: + IC(0.113 ns) + CELL(0.000 ns) = 1.092 ns; Loc. = CLKCTRL_G11; Fanout = 34; COMB Node = 'clock~clkctrl'
+            Info: 3: + IC(1.022 ns) + CELL(0.537 ns) = 2.651 ns; Loc. = LCFF_X36_Y1_N31; Fanout = 1; REG Node = 'shift4r:inst8|lpm_shiftreg:four_bit_shift|dffs[0]'
+            Info: Total cell delay = 1.516 ns ( 57.19 % )
+            Info: Total interconnect delay = 1.135 ns ( 42.81 % )
+    Info: - Micro clock to output delay of source is 0.250 ns
+    Info: - Shortest register to register delay is 0.323 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LCFF_X36_Y1_N31; Fanout = 1; REG Node = 'shift4r:inst8|lpm_shiftreg:four_bit_shift|dffs[0]'
+        Info: 2: + IC(0.000 ns) + CELL(0.323 ns) = 0.323 ns; Loc. = LCCOMB_X36_Y1_N30; Fanout = 1; REG Node = 'latch4:inst13|lpm_latch:four_bit_latch|latches[0]'
+        Info: Total cell delay = 0.323 ns ( 100.00 % )
+    Info: + Micro hold delay of destination is 0.000 ns
+Info: tsu for register "shift4:inst5|lpm_shiftreg:four_bit_shift|dffs[0]" (data pin = "key_0", clock pin = "clock") is 5.302 ns
+    Info: + Longest pin to register delay is 7.994 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.862 ns) = 0.862 ns; Loc. = PIN_G26; Fanout = 36; PIN Node = 'key_0'
+        Info: 2: + IC(6.610 ns) + CELL(0.438 ns) = 7.910 ns; Loc. = LCCOMB_X38_Y1_N24; Fanout = 1; COMB Node = 'shift4:inst5|lpm_shiftreg:four_bit_shift|_~18'
+        Info: 3: + IC(0.000 ns) + CELL(0.084 ns) = 7.994 ns; Loc. = LCFF_X38_Y1_N25; Fanout = 2; REG Node = 'shift4:inst5|lpm_shiftreg:four_bit_shift|dffs[0]'
+        Info: Total cell delay = 1.384 ns ( 17.31 % )
+        Info: Total interconnect delay = 6.610 ns ( 82.69 % )
+    Info: + Micro setup delay of destination is -0.036 ns
+    Info: - Shortest clock path from clock "clock" to destination register is 2.656 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.979 ns) = 0.979 ns; Loc. = PIN_D13; Fanout = 3; CLK Node = 'clock'
+        Info: 2: + IC(0.113 ns) + CELL(0.000 ns) = 1.092 ns; Loc. = CLKCTRL_G11; Fanout = 34; COMB Node = 'clock~clkctrl'
+        Info: 3: + IC(1.027 ns) + CELL(0.537 ns) = 2.656 ns; Loc. = LCFF_X38_Y1_N25; Fanout = 2; REG Node = 'shift4:inst5|lpm_shiftreg:four_bit_shift|dffs[0]'
+        Info: Total cell delay = 1.516 ns ( 57.08 % )
+        Info: Total interconnect delay = 1.140 ns ( 42.92 % )
+Info: tco from clock "clock" to destination pin "out1[0]" through register "latch4:inst13|lpm_latch:four_bit_latch|latches[0]" is 12.449 ns
+    Info: + Longest clock path from clock "clock" to source register is 7.446 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.979 ns) = 0.979 ns; Loc. = PIN_D13; Fanout = 3; CLK Node = 'clock'
+        Info: 2: + IC(1.885 ns) + CELL(0.787 ns) = 3.651 ns; Loc. = LCFF_X35_Y1_N7; Fanout = 20; REG Node = 'count4:inst3|lpm_counter:clock_divider|cntr_k9i:auto_generated|safe_q[3]'
+        Info: 3: + IC(0.750 ns) + CELL(0.275 ns) = 4.676 ns; Loc. = LCCOMB_X37_Y1_N14; Fanout = 5; COMB Node = 'decode4c:inst11|x2~1'
+        Info: 4: + IC(0.951 ns) + CELL(0.000 ns) = 5.627 ns; Loc. = CLKCTRL_G13; Fanout = 4; COMB Node = 'decode4c:inst11|x2~1clkctrl'
+        Info: 5: + IC(1.382 ns) + CELL(0.437 ns) = 7.446 ns; Loc. = LCCOMB_X36_Y1_N30; Fanout = 1; REG Node = 'latch4:inst13|lpm_latch:four_bit_latch|latches[0]'
+        Info: Total cell delay = 2.478 ns ( 33.28 % )
+        Info: Total interconnect delay = 4.968 ns ( 66.72 % )
+    Info: + Micro clock to output delay of source is 0.000 ns
+    Info: + Longest register to pin delay is 5.003 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LCCOMB_X36_Y1_N30; Fanout = 1; REG Node = 'latch4:inst13|lpm_latch:four_bit_latch|latches[0]'
+        Info: 2: + IC(2.195 ns) + CELL(2.808 ns) = 5.003 ns; Loc. = PIN_AD22; Fanout = 0; PIN Node = 'out1[0]'
+        Info: Total cell delay = 2.808 ns ( 56.13 % )
+        Info: Total interconnect delay = 2.195 ns ( 43.87 % )
+Info: th for register "shift4:inst6|lpm_shiftreg:four_bit_shift|dffs[0]" (data pin = "p1[0]", clock pin = "clock") is 0.916 ns
+    Info: + Longest clock path from clock "clock" to destination register is 2.648 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.979 ns) = 0.979 ns; Loc. = PIN_D13; Fanout = 3; CLK Node = 'clock'
+        Info: 2: + IC(0.113 ns) + CELL(0.000 ns) = 1.092 ns; Loc. = CLKCTRL_G11; Fanout = 34; COMB Node = 'clock~clkctrl'
+        Info: 3: + IC(1.019 ns) + CELL(0.537 ns) = 2.648 ns; Loc. = LCFF_X34_Y1_N17; Fanout = 2; REG Node = 'shift4:inst6|lpm_shiftreg:four_bit_shift|dffs[0]'
+        Info: Total cell delay = 1.516 ns ( 57.25 % )
+        Info: Total interconnect delay = 1.132 ns ( 42.75 % )
+    Info: + Micro hold delay of destination is 0.266 ns
+    Info: - Shortest pin to register delay is 1.998 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.999 ns) = 0.999 ns; Loc. = PIN_AF14; Fanout = 1; PIN Node = 'p1[0]'
+        Info: 2: + IC(0.640 ns) + CELL(0.275 ns) = 1.914 ns; Loc. = LCCOMB_X34_Y1_N16; Fanout = 1; COMB Node = 'shift4:inst6|lpm_shiftreg:four_bit_shift|_~18'
+        Info: 3: + IC(0.000 ns) + CELL(0.084 ns) = 1.998 ns; Loc. = LCFF_X34_Y1_N17; Fanout = 2; REG Node = 'shift4:inst6|lpm_shiftreg:four_bit_shift|dffs[0]'
+        Info: Total cell delay = 1.358 ns ( 67.97 % )
+        Info: Total interconnect delay = 0.640 ns ( 32.03 % )
+Info: Quartus II Classic Timing Analyzer was successful. 0 errors, 20 warnings
+    Info: Peak virtual memory: 165 megabytes
+    Info: Processing ended: Wed Oct 24 03:16:23 2018
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:00
+
+

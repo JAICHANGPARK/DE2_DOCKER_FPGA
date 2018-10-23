@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Wed Oct 24 03:16:00 2018
+Quartus II Version : 9.0 Build 235 06/17/2009 SP 2 SJ Web Edition
+Revision Name : tdm
+Top-level Entity Name : tdm
+Family : Cyclone II
+Total logic elements : 57
+    Total combinational functions : 42
+    Dedicated logic registers : 36
+Total registers : 36
+Total pins : 38
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

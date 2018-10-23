@@ -1,0 +1,6 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="tdm">
+		<CBX_INST_ENTRY INSTANCE_NAME="|tdm|count4:inst3|LPM_COUNTER:clock_divider" CBX_FILE_NAME="cntr_k9i.tdf"/>
+	</PROJECT>
+</LOG_ROOT>

@@ -1,0 +1,66 @@
+--------------------------------------------------------------------------------------
+Timing Analyzer Summary
+--------------------------------------------------------------------------------------
+
+Type           : Worst-case tsu
+Slack          : N/A
+Required Time  : None
+Actual Time    : 5.302 ns
+From           : key_0
+To             : shift4:inst5|lpm_shiftreg:four_bit_shift|dffs[0]
+From Clock     : --
+To Clock       : clock
+Failed Paths   : 0
+
+Type           : Worst-case tco
+Slack          : N/A
+Required Time  : None
+Actual Time    : 12.449 ns
+From           : latch4:inst13|lpm_latch:four_bit_latch|latches[0]
+To             : out1[0]
+From Clock     : clock
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Worst-case th
+Slack          : N/A
+Required Time  : None
+Actual Time    : 0.916 ns
+From           : p1[0]
+To             : shift4:inst6|lpm_shiftreg:four_bit_shift|dffs[0]
+From Clock     : --
+To Clock       : clock
+Failed Paths   : 0
+
+Type           : Clock Setup: 'clock'
+Slack          : N/A
+Required Time  : None
+Actual Time    : 326.26 MHz ( period = 3.065 ns )
+From           : count4:inst3|lpm_counter:clock_divider|cntr_k9i:auto_generated|safe_q[3]
+To             : shift4r:inst8|lpm_shiftreg:four_bit_shift|dffs[3]
+From Clock     : clock
+To Clock       : clock
+Failed Paths   : 0
+
+Type           : Clock Hold: 'clock'
+Slack          : Not operational: Clock Skew > Data Delay
+Required Time  : None
+Actual Time    : N/A
+From           : shift4r:inst8|lpm_shiftreg:four_bit_shift|dffs[0]
+To             : latch4:inst13|lpm_latch:four_bit_latch|latches[0]
+From Clock     : clock
+To Clock       : clock
+Failed Paths   : 16
+
+Type           : Total number of failed paths
+Slack          : 
+Required Time  : 
+Actual Time    : 
+From           : 
+To             : 
+From Clock     : 
+To Clock       : 
+Failed Paths   : 16
+
+--------------------------------------------------------------------------------------
+

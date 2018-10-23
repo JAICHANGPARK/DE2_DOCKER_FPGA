@@ -1,0 +1,92 @@
+# -------------------------------------------------------------------------- #
+#
+# Copyright (C) 1991-2009 Altera Corporation
+# Your use of Altera Corporation's design tools, logic functions 
+# and other software and tools, and its AMPP partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Altera Program License 
+# Subscription Agreement, Altera MegaCore Function License 
+# Agreement, or other applicable license agreement, including, 
+# without limitation, that your use is for the sole purpose of 
+# programming logic devices manufactured by Altera and sold by 
+# Altera or its authorized distributors.  Please refer to the 
+# applicable agreement for further details.
+#
+# -------------------------------------------------------------------------- #
+#
+# Quartus II
+# Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
+# Date created = 03:08:14  October 24, 2018
+#
+# -------------------------------------------------------------------------- #
+#
+# Notes:
+#
+# 1) The default values for assignments are stored in the file:
+#		tdm_assignment_defaults.qdf
+#    If this file doesn't exist, see file:
+#		assignment_defaults.qdf
+#
+# 2) Altera recommends that you do not modify this file. This
+#    file is updated automatically by the Quartus II software
+#    and any changes you make may be lost or overwritten.
+#
+# -------------------------------------------------------------------------- #
+
+
+set_global_assignment -name FAMILY "Cyclone II"
+set_global_assignment -name DEVICE EP2C35F672C6
+set_global_assignment -name TOP_LEVEL_ENTITY tdm
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION "9.0 SP2"
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "03:08:14  OCTOBER 24, 2018"
+set_global_assignment -name LAST_QUARTUS_VERSION "9.0 SP2"
+set_global_assignment -name USE_GENERATED_PHYSICAL_CONSTRAINTS OFF -section_id eda_blast_fpga
+set_global_assignment -name CYCLONEII_OPTIMIZATION_TECHNIQUE SPEED
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
+set_global_assignment -name BDF_FILE tdm.bdf
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name LL_ROOT_REGION ON -section_id "Root Region"
+set_global_assignment -name LL_MEMBER_STATE LOCKED -section_id "Root Region"
+set_location_assignment PIN_AE22 -to a1
+set_location_assignment PIN_AF22 -to b1
+set_location_assignment PIN_D13 -to clock
+set_location_assignment PIN_G26 -to key_0
+set_location_assignment PIN_W19 -to led
+set_location_assignment PIN_AE23 -to out0[0]
+set_location_assignment PIN_AF23 -to out0[1]
+set_location_assignment PIN_AB21 -to out0[2]
+set_location_assignment PIN_AC22 -to out0[3]
+set_location_assignment PIN_AD22 -to out1[0]
+set_location_assignment PIN_AD23 -to out1[1]
+set_location_assignment PIN_AD21 -to out1[2]
+set_location_assignment PIN_AC21 -to out1[3]
+set_location_assignment PIN_AA14 -to out2[0]
+set_location_assignment PIN_Y13 -to out2[1]
+set_location_assignment PIN_AA13 -to out2[2]
+set_location_assignment PIN_AC14 -to out2[3]
+set_location_assignment PIN_AD15 -to out3[0]
+set_location_assignment PIN_AE15 -to out3[1]
+set_location_assignment PIN_AF13 -to out3[2]
+set_location_assignment PIN_AE13 -to out3[3]
+set_location_assignment PIN_N25 -to p0[0]
+set_location_assignment PIN_N26 -to p0[1]
+set_location_assignment PIN_P25 -to p0[2]
+set_location_assignment PIN_AE14 -to p0[3]
+set_location_assignment PIN_AF14 -to p1[0]
+set_location_assignment PIN_AD13 -to p1[1]
+set_location_assignment PIN_AC13 -to p1[2]
+set_location_assignment PIN_C13 -to p1[3]
+set_location_assignment PIN_B13 -to p2[0]
+set_location_assignment PIN_A13 -to p2[1]
+set_location_assignment PIN_N1 -to p2[2]
+set_location_assignment PIN_P1 -to p2[3]
+set_location_assignment PIN_P2 -to p3[0]
+set_location_assignment PIN_T7 -to p3[1]
+set_location_assignment PIN_U3 -to p3[2]
+set_location_assignment PIN_U4 -to p3[3]
+set_location_assignment PIN_Y12 -to tx_out

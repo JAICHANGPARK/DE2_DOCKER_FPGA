@@ -1,0 +1,251 @@
+Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
+11
+1000
+OFF
+OFF
+OFF
+ON
+ON
+ON
+FV_OFF
+Level2
+0
+0
+VRSM_ON
+VHSM_ON
+0
+-- Start Library Paths --
+-- End Library Paths --
+-- Start VHDL Libraries --
+-- End VHDL Libraries --
+# entity
+clock_divider
+# storage
+db|traffic_light_01.(1).cnf
+db|traffic_light_01.(1).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+clock_divider.vhd
+4cb65555d92773f4936be16e9d5d8bf5
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+width
+25
+PARAMETER_SIGNED_DEC
+USR
+}
+# hierarchies {
+clock_divider:inst
+}
+# lmf
+..|..|..|..|altera|90sp2|quartus|lmf|maxplus2.lmf
+9a59d39b0706640b4b2718e8a1ff1f
+# macro_sequence
+
+# end
+# entity
+ct_mod5
+# storage
+db|traffic_light_01.(2).cnf
+db|traffic_light_01.(2).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+ct_mod5.vhd
+4781741e6fa76976e42ac66cf177a4
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# hierarchies {
+ct_mod5:inst1
+traffic:inst5|ct_mod5:light_timer
+}
+# lmf
+..|..|..|..|altera|90sp2|quartus|lmf|maxplus2.lmf
+9a59d39b0706640b4b2718e8a1ff1f
+# macro_sequence
+
+# end
+# entity
+traffic
+# storage
+db|traffic_light_01.(4).cnf
+db|traffic_light_01.(4).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+traffic.vhd
+f75171ce7cc18abe24def76b90ba82
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# hierarchies {
+traffic:inst5
+}
+# lmf
+..|..|..|..|altera|90sp2|quartus|lmf|maxplus2.lmf
+9a59d39b0706640b4b2718e8a1ff1f
+# macro_sequence
+
+# end
+# entity
+traf_vis
+# storage
+db|traffic_light_01.(3).cnf
+db|traffic_light_01.(3).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+traf_vis.vhd
+21b19d770379abca0de91fd5da4b6dc
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# lmf
+..|..|..|..|altera|90sp2|quartus|lmf|maxplus2.lmf
+9a59d39b0706640b4b2718e8a1ff1f
+# macro_sequence
+
+# end
+# entity
+traffic_light_01
+# storage
+db|traffic_light_01.(0).cnf
+db|traffic_light_01.(0).cnf
+# case_insensitive
+# source_file
+traffic_light_01.bdf
+95bfe92e31b5b836ff2863ab3fac21
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+|
+}
+# macro_sequence
+
+# end
+# entity
+lpm_inv0
+# storage
+db|traffic_light_01.(5).cnf
+db|traffic_light_01.(5).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+lpm_inv0.vhd
+dd899d13157773167778efc3a67c3a99
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# hierarchies {
+lpm_inv0:inst8
+lpm_inv0:inst7
+lpm_inv0:inst9
+lpm_inv0:inst10
+lpm_inv0:inst11
+lpm_inv0:inst12
+}
+# lmf
+..|..|..|..|altera|90sp2|quartus|lmf|maxplus2.lmf
+9a59d39b0706640b4b2718e8a1ff1f
+# macro_sequence
+
+# end
+# entity
+lpm_inv
+# storage
+db|traffic_light_01.(6).cnf
+db|traffic_light_01.(6).cnf
+# case_insensitive
+# source_file
+..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|lpm_inv.tdf
+7e832aed3776af8ad080be4da59dd25d
+7
+# user_parameter {
+LPM_WIDTH
+1
+PARAMETER_SIGNED_DEC
+USR
+}
+# used_port {
+result0
+-1
+3
+data0
+-1
+3
+}
+# hierarchies {
+lpm_inv0:inst8|lpm_inv:lpm_inv_component
+lpm_inv0:inst7|lpm_inv:lpm_inv_component
+lpm_inv0:inst9|lpm_inv:lpm_inv_component
+lpm_inv0:inst10|lpm_inv:lpm_inv_component
+lpm_inv0:inst11|lpm_inv:lpm_inv_component
+lpm_inv0:inst12|lpm_inv:lpm_inv_component
+}
+# macro_sequence
+
+# end
+# complete
+

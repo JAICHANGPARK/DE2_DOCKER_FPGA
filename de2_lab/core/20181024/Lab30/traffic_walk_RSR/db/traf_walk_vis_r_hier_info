@@ -1,0 +1,90 @@
+|traf_walk_vis_r
+clk => clkdiv:clock_divider.clk_in
+reset => traffic_walk_r:traffic_controller.reset
+ns_walk_sw => ns_latch.PRESET
+ew_walk_sw => ew_latch.PRESET
+nsr <= traffic_walk_r:traffic_controller.nsr
+nsy <= traffic_walk_r:traffic_controller.nsy
+nsg <= traffic_walk_r:traffic_controller.nsg
+ewr <= traffic_walk_r:traffic_controller.ewr
+ewy <= traffic_walk_r:traffic_controller.ewy
+ewg <= traffic_walk_r:traffic_controller.ewg
+ns_walk_lt <= traffic_walk_r:traffic_controller.ns_walk_lt
+ew_walk_lt <= traffic_walk_r:traffic_controller.ew_walk_lt
+tick <= clkdiv:clock_divider.clk_out
+unused[7] <= <GND>
+unused[6] <= <GND>
+unused[5] <= <GND>
+unused[4] <= <GND>
+unused[3] <= <GND>
+unused[2] <= <GND>
+unused[1] <= <GND>
+
+
+|traf_walk_vis_r|clkdiv:clock_divider
+clk_in => count[20].CLK
+clk_in => count[19].CLK
+clk_in => count[18].CLK
+clk_in => count[17].CLK
+clk_in => count[16].CLK
+clk_in => count[15].CLK
+clk_in => count[14].CLK
+clk_in => count[13].CLK
+clk_in => count[12].CLK
+clk_in => count[11].CLK
+clk_in => count[10].CLK
+clk_in => count[9].CLK
+clk_in => count[8].CLK
+clk_in => count[7].CLK
+clk_in => count[6].CLK
+clk_in => count[5].CLK
+clk_in => count[4].CLK
+clk_in => count[3].CLK
+clk_in => count[2].CLK
+clk_in => count[1].CLK
+clk_in => count[0].CLK
+clk_in => count[21].CLK
+clk_out <= count[21].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|traf_walk_vis_r|traffic_walk_r:traffic_controller
+clk => outputs[1].CLK
+clk => outputs[2].CLK
+clk => outputs[3].CLK
+clk => outputs[4].CLK
+clk => outputs[5].CLK
+clk => outputs[6].CLK
+clk => outputs[7].CLK
+clk => outputs[8].CLK
+clk => outputs[9].CLK
+clk => outputs[10].CLK
+clk => ct_mod5:output_timer.clk
+clk => sequence~0.IN1
+reset => i4.IN0
+reset => ct_mod5:output_timer.reset
+ns_walk_sw => i10.IN0
+ns_walk_sw => i~12.IN1
+ew_walk_sw => i19.IN0
+ew_walk_sw => i~10.IN1
+nsr <= i93.DB_MAX_OUTPUT_PORT_TYPE
+nsy <= i94.DB_MAX_OUTPUT_PORT_TYPE
+nsg <= i95.DB_MAX_OUTPUT_PORT_TYPE
+ewr <= i96.DB_MAX_OUTPUT_PORT_TYPE
+ewy <= i97.DB_MAX_OUTPUT_PORT_TYPE
+ewg <= i98.DB_MAX_OUTPUT_PORT_TYPE
+ns_walk_lt <= i99.DB_MAX_OUTPUT_PORT_TYPE
+ns_reset <= outputs[8].DB_MAX_OUTPUT_PORT_TYPE
+ew_walk_lt <= i100.DB_MAX_OUTPUT_PORT_TYPE
+ew_reset <= outputs[10].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|traf_walk_vis_r|traffic_walk_r:traffic_controller|ct_mod5:output_timer
+clk => count[1].CLK
+clk => count[0].CLK
+clk => count[2].CLK
+reset => i4.IN0
+q[0] <= count[0].DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= count[1].DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= count[2].DB_MAX_OUTPUT_PORT_TYPE
+
+

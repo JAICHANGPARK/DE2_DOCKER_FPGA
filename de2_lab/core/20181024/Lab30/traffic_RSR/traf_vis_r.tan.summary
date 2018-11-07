@@ -1,0 +1,27 @@
+--------------------------------------------------------------------------------------
+Timing Analyzer Summary
+--------------------------------------------------------------------------------------
+
+Type           : Worst-case tco
+Slack          : N/A
+Required Time  : None
+Actual Time    : 14.500 ns
+From           : traffic_r:traffic_controller|lights[5]
+To             : ewr
+
+Type           : Worst-case minimum tco
+Slack          : N/A
+Required Time  : None
+Actual Time    : 4.500 ns
+From           : clkdiv:clock_divider|lpm_counter:count_rtl_0|dffs[21]
+To             : tick
+
+Type           : Clock Setup: 'clk'
+Slack          : N/A
+Required Time  : None
+Actual Time    : 125.00 MHz ( period = 8.000 ns )
+From           : clkdiv:clock_divider|lpm_counter:count_rtl_0|dffs[0]
+To             : clkdiv:clock_divider|lpm_counter:count_rtl_0|dffs[0]
+
+--------------------------------------------------------------------------------------
+

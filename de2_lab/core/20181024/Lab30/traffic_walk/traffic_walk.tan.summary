@@ -1,0 +1,41 @@
+--------------------------------------------------------------------------------------
+Timing Analyzer Summary
+--------------------------------------------------------------------------------------
+
+Type           : Worst-case tsu
+Slack          : N/A
+Required Time  : None
+Actual Time    : 6.000 ns
+From           : ns_walk_sw
+To             : outputs[7]
+
+Type           : Worst-case tco
+Slack          : N/A
+Required Time  : None
+Actual Time    : 9.500 ns
+From           : outputs[1]
+To             : ewr
+
+Type           : Worst-case th
+Slack          : N/A
+Required Time  : None
+Actual Time    : -1.000 ns
+From           : ns_walk_sw
+To             : outputs[7]
+
+Type           : Worst-case minimum tco
+Slack          : N/A
+Required Time  : None
+Actual Time    : 4.500 ns
+From           : outputs[2]
+To             : nsy
+
+Type           : Clock Setup: 'clk'
+Slack          : N/A
+Required Time  : None
+Actual Time    : 125.00 MHz ( period = 8.000 ns )
+From           : ct_mod5:output_timer|count[1]
+To             : ct_mod5:output_timer|count[0]
+
+--------------------------------------------------------------------------------------
+

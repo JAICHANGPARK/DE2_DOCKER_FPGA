@@ -1,0 +1,306 @@
+Simulator report for traffic_light_01
+Wed Oct 24 10:36:28 2018
+Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. Coverage Summary
+  6. Complete 1/0-Value Coverage
+  7. Missing 1-Value Coverage
+  8. Missing 0-Value Coverage
+  9. Simulator INI Usage
+ 10. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2009 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------+
+; Simulator Summary                          ;
++-----------------------------+--------------+
+; Type                        ; Value        ;
++-----------------------------+--------------+
+; Simulation Start Time       ; 0 ps         ;
+; Simulation End Time         ; 10.0 s       ;
+; Simulation Netlist Size     ; 53 nodes     ;
+; Simulation Coverage         ;      10.53 % ;
+; Total Number of Transitions ; 49           ;
+; Simulation Breakpoints      ; 0            ;
+; Family                      ; Cyclone II   ;
+; Device                      ; EP2C35F672C6 ;
++-----------------------------+--------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                                ;
++--------------------------------------------------------------------------------------------+----------------------+---------------+
+; Option                                                                                     ; Setting              ; Default Value ;
++--------------------------------------------------------------------------------------------+----------------------+---------------+
+; Simulation mode                                                                            ; Timing               ; Timing        ;
+; Start time                                                                                 ; 0 ns                 ; 0 ns          ;
+; End time                                                                                   ; 10 s                 ;               ;
+; Simulation results format                                                                  ; CVWF                 ;               ;
+; Vector input source                                                                        ; traffic_light_01.vwf ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On                   ; On            ;
+; Check outputs                                                                              ; Off                  ; Off           ;
+; Report simulation coverage                                                                 ; On                   ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On                   ; On            ;
+; Display missing 1-value coverage report                                                    ; On                   ; On            ;
+; Display missing 0-value coverage report                                                    ; On                   ; On            ;
+; Detect setup and hold time violations                                                      ; Off                  ; Off           ;
+; Detect glitches                                                                            ; Off                  ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off                  ; Off           ;
+; Generate Signal Activity File                                                              ; Off                  ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off                  ; Off           ;
+; Group bus channels in simulation results                                                   ; Off                  ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On                   ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE           ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off                  ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; Off                  ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto                 ; Auto          ;
++--------------------------------------------------------------------------------------------+----------------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II to view the waveform report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;      10.53 % ;
+; Total nodes checked                                 ; 53           ;
+; Total output ports checked                          ; 76           ;
+; Total output ports with complete 1/0-value coverage ; 8            ;
+; Total output ports with no 1/0-value coverage       ; 67           ;
+; Total output ports with no 1-value coverage         ; 67           ;
+; Total output ports with no 0-value coverage         ; 68           ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++------------------------------------------------------------------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                                                                            ;
++--------------------------------------------------+--------------------------------------------------+------------------+
+; Node Name                                        ; Output Port Name                                 ; Output Port Type ;
++--------------------------------------------------+--------------------------------------------------+------------------+
+; |traffic_light_01|clock_divider:inst|count[1]    ; |traffic_light_01|clock_divider:inst|count[1]    ; regout           ;
+; |traffic_light_01|clock_divider:inst|count[1]~24 ; |traffic_light_01|clock_divider:inst|count[1]~24 ; combout          ;
+; |traffic_light_01|clock_divider:inst|count[1]~24 ; |traffic_light_01|clock_divider:inst|count[1]~25 ; cout             ;
+; |traffic_light_01|clock_divider:inst|count[2]~26 ; |traffic_light_01|clock_divider:inst|count[2]~26 ; combout          ;
+; |traffic_light_01|clock_divider:inst|count[0]    ; |traffic_light_01|clock_divider:inst|count[0]    ; regout           ;
+; |traffic_light_01|clock_divider:inst|count[0]~72 ; |traffic_light_01|clock_divider:inst|count[0]~72 ; combout          ;
+; |traffic_light_01|clock                          ; |traffic_light_01|clock~corein                   ; combout          ;
+; |traffic_light_01|clock~clkctrl                  ; |traffic_light_01|clock~clkctrl                  ; outclk           ;
++--------------------------------------------------+--------------------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++--------------------------------------------------------------------------------------------------------------------------+
+; Missing 1-Value Coverage                                                                                                 ;
++---------------------------------------------------+---------------------------------------------------+------------------+
+; Node Name                                         ; Output Port Name                                  ; Output Port Type ;
++---------------------------------------------------+---------------------------------------------------+------------------+
+; |traffic_light_01|clock_divider:inst|count[24]    ; |traffic_light_01|clock_divider:inst|count[24]    ; regout           ;
+; |traffic_light_01|clock_divider:inst|count[23]    ; |traffic_light_01|clock_divider:inst|count[23]    ; regout           ;
+; |traffic_light_01|clock_divider:inst|count[22]    ; |traffic_light_01|clock_divider:inst|count[22]    ; regout           ;
+; |traffic_light_01|clock_divider:inst|count[21]    ; |traffic_light_01|clock_divider:inst|count[21]    ; regout           ;
+; |traffic_light_01|clock_divider:inst|count[20]    ; |traffic_light_01|clock_divider:inst|count[20]    ; regout           ;
+; |traffic_light_01|clock_divider:inst|count[19]    ; |traffic_light_01|clock_divider:inst|count[19]    ; regout           ;
+; |traffic_light_01|clock_divider:inst|count[18]    ; |traffic_light_01|clock_divider:inst|count[18]    ; regout           ;
+; |traffic_light_01|clock_divider:inst|count[17]    ; |traffic_light_01|clock_divider:inst|count[17]    ; regout           ;
+; |traffic_light_01|clock_divider:inst|count[16]    ; |traffic_light_01|clock_divider:inst|count[16]    ; regout           ;
+; |traffic_light_01|clock_divider:inst|count[15]    ; |traffic_light_01|clock_divider:inst|count[15]    ; regout           ;
+; |traffic_light_01|clock_divider:inst|count[14]    ; |traffic_light_01|clock_divider:inst|count[14]    ; regout           ;
+; |traffic_light_01|clock_divider:inst|count[13]    ; |traffic_light_01|clock_divider:inst|count[13]    ; regout           ;
+; |traffic_light_01|clock_divider:inst|count[12]    ; |traffic_light_01|clock_divider:inst|count[12]    ; regout           ;
+; |traffic_light_01|clock_divider:inst|count[11]    ; |traffic_light_01|clock_divider:inst|count[11]    ; regout           ;
+; |traffic_light_01|clock_divider:inst|count[10]    ; |traffic_light_01|clock_divider:inst|count[10]    ; regout           ;
+; |traffic_light_01|clock_divider:inst|count[9]     ; |traffic_light_01|clock_divider:inst|count[9]     ; regout           ;
+; |traffic_light_01|clock_divider:inst|count[8]     ; |traffic_light_01|clock_divider:inst|count[8]     ; regout           ;
+; |traffic_light_01|clock_divider:inst|count[7]     ; |traffic_light_01|clock_divider:inst|count[7]     ; regout           ;
+; |traffic_light_01|clock_divider:inst|count[6]     ; |traffic_light_01|clock_divider:inst|count[6]     ; regout           ;
+; |traffic_light_01|clock_divider:inst|count[5]     ; |traffic_light_01|clock_divider:inst|count[5]     ; regout           ;
+; |traffic_light_01|clock_divider:inst|count[4]     ; |traffic_light_01|clock_divider:inst|count[4]     ; regout           ;
+; |traffic_light_01|clock_divider:inst|count[3]     ; |traffic_light_01|clock_divider:inst|count[3]     ; regout           ;
+; |traffic_light_01|clock_divider:inst|count[2]~26  ; |traffic_light_01|clock_divider:inst|count[2]~27  ; cout             ;
+; |traffic_light_01|clock_divider:inst|count[3]~28  ; |traffic_light_01|clock_divider:inst|count[3]~28  ; combout          ;
+; |traffic_light_01|clock_divider:inst|count[3]~28  ; |traffic_light_01|clock_divider:inst|count[3]~29  ; cout             ;
+; |traffic_light_01|clock_divider:inst|count[4]~30  ; |traffic_light_01|clock_divider:inst|count[4]~30  ; combout          ;
+; |traffic_light_01|clock_divider:inst|count[4]~30  ; |traffic_light_01|clock_divider:inst|count[4]~31  ; cout             ;
+; |traffic_light_01|clock_divider:inst|count[5]~32  ; |traffic_light_01|clock_divider:inst|count[5]~32  ; combout          ;
+; |traffic_light_01|clock_divider:inst|count[5]~32  ; |traffic_light_01|clock_divider:inst|count[5]~33  ; cout             ;
+; |traffic_light_01|clock_divider:inst|count[6]~34  ; |traffic_light_01|clock_divider:inst|count[6]~34  ; combout          ;
+; |traffic_light_01|clock_divider:inst|count[6]~34  ; |traffic_light_01|clock_divider:inst|count[6]~35  ; cout             ;
+; |traffic_light_01|clock_divider:inst|count[7]~36  ; |traffic_light_01|clock_divider:inst|count[7]~36  ; combout          ;
+; |traffic_light_01|clock_divider:inst|count[7]~36  ; |traffic_light_01|clock_divider:inst|count[7]~37  ; cout             ;
+; |traffic_light_01|clock_divider:inst|count[8]~38  ; |traffic_light_01|clock_divider:inst|count[8]~38  ; combout          ;
+; |traffic_light_01|clock_divider:inst|count[8]~38  ; |traffic_light_01|clock_divider:inst|count[8]~39  ; cout             ;
+; |traffic_light_01|clock_divider:inst|count[9]~40  ; |traffic_light_01|clock_divider:inst|count[9]~40  ; combout          ;
+; |traffic_light_01|clock_divider:inst|count[9]~40  ; |traffic_light_01|clock_divider:inst|count[9]~41  ; cout             ;
+; |traffic_light_01|clock_divider:inst|count[10]~42 ; |traffic_light_01|clock_divider:inst|count[10]~42 ; combout          ;
+; |traffic_light_01|clock_divider:inst|count[10]~42 ; |traffic_light_01|clock_divider:inst|count[10]~43 ; cout             ;
+; |traffic_light_01|clock_divider:inst|count[11]~44 ; |traffic_light_01|clock_divider:inst|count[11]~44 ; combout          ;
+; |traffic_light_01|clock_divider:inst|count[11]~44 ; |traffic_light_01|clock_divider:inst|count[11]~45 ; cout             ;
+; |traffic_light_01|clock_divider:inst|count[12]~46 ; |traffic_light_01|clock_divider:inst|count[12]~46 ; combout          ;
+; |traffic_light_01|clock_divider:inst|count[12]~46 ; |traffic_light_01|clock_divider:inst|count[12]~47 ; cout             ;
+; |traffic_light_01|clock_divider:inst|count[13]~48 ; |traffic_light_01|clock_divider:inst|count[13]~48 ; combout          ;
+; |traffic_light_01|clock_divider:inst|count[13]~48 ; |traffic_light_01|clock_divider:inst|count[13]~49 ; cout             ;
+; |traffic_light_01|clock_divider:inst|count[14]~50 ; |traffic_light_01|clock_divider:inst|count[14]~50 ; combout          ;
+; |traffic_light_01|clock_divider:inst|count[14]~50 ; |traffic_light_01|clock_divider:inst|count[14]~51 ; cout             ;
+; |traffic_light_01|clock_divider:inst|count[15]~52 ; |traffic_light_01|clock_divider:inst|count[15]~52 ; combout          ;
+; |traffic_light_01|clock_divider:inst|count[15]~52 ; |traffic_light_01|clock_divider:inst|count[15]~53 ; cout             ;
+; |traffic_light_01|clock_divider:inst|count[16]~54 ; |traffic_light_01|clock_divider:inst|count[16]~54 ; combout          ;
+; |traffic_light_01|clock_divider:inst|count[16]~54 ; |traffic_light_01|clock_divider:inst|count[16]~55 ; cout             ;
+; |traffic_light_01|clock_divider:inst|count[17]~56 ; |traffic_light_01|clock_divider:inst|count[17]~56 ; combout          ;
+; |traffic_light_01|clock_divider:inst|count[17]~56 ; |traffic_light_01|clock_divider:inst|count[17]~57 ; cout             ;
+; |traffic_light_01|clock_divider:inst|count[18]~58 ; |traffic_light_01|clock_divider:inst|count[18]~58 ; combout          ;
+; |traffic_light_01|clock_divider:inst|count[18]~58 ; |traffic_light_01|clock_divider:inst|count[18]~59 ; cout             ;
+; |traffic_light_01|clock_divider:inst|count[19]~60 ; |traffic_light_01|clock_divider:inst|count[19]~60 ; combout          ;
+; |traffic_light_01|clock_divider:inst|count[19]~60 ; |traffic_light_01|clock_divider:inst|count[19]~61 ; cout             ;
+; |traffic_light_01|clock_divider:inst|count[20]~62 ; |traffic_light_01|clock_divider:inst|count[20]~62 ; combout          ;
+; |traffic_light_01|clock_divider:inst|count[20]~62 ; |traffic_light_01|clock_divider:inst|count[20]~63 ; cout             ;
+; |traffic_light_01|clock_divider:inst|count[21]~64 ; |traffic_light_01|clock_divider:inst|count[21]~64 ; combout          ;
+; |traffic_light_01|clock_divider:inst|count[21]~64 ; |traffic_light_01|clock_divider:inst|count[21]~65 ; cout             ;
+; |traffic_light_01|clock_divider:inst|count[22]~66 ; |traffic_light_01|clock_divider:inst|count[22]~66 ; combout          ;
+; |traffic_light_01|clock_divider:inst|count[22]~66 ; |traffic_light_01|clock_divider:inst|count[22]~67 ; cout             ;
+; |traffic_light_01|clock_divider:inst|count[23]~68 ; |traffic_light_01|clock_divider:inst|count[23]~68 ; combout          ;
+; |traffic_light_01|clock_divider:inst|count[23]~68 ; |traffic_light_01|clock_divider:inst|count[23]~69 ; cout             ;
+; |traffic_light_01|clock_divider:inst|count[24]~70 ; |traffic_light_01|clock_divider:inst|count[24]~70 ; combout          ;
+; |traffic_light_01|INDICATOR                       ; |traffic_light_01|INDICATOR                       ; padio            ;
++---------------------------------------------------+---------------------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++--------------------------------------------------------------------------------------------------------------------------+
+; Missing 0-Value Coverage                                                                                                 ;
++---------------------------------------------------+---------------------------------------------------+------------------+
+; Node Name                                         ; Output Port Name                                  ; Output Port Type ;
++---------------------------------------------------+---------------------------------------------------+------------------+
+; |traffic_light_01|clock_divider:inst|count[24]    ; |traffic_light_01|clock_divider:inst|count[24]    ; regout           ;
+; |traffic_light_01|clock_divider:inst|count[23]    ; |traffic_light_01|clock_divider:inst|count[23]    ; regout           ;
+; |traffic_light_01|clock_divider:inst|count[22]    ; |traffic_light_01|clock_divider:inst|count[22]    ; regout           ;
+; |traffic_light_01|clock_divider:inst|count[21]    ; |traffic_light_01|clock_divider:inst|count[21]    ; regout           ;
+; |traffic_light_01|clock_divider:inst|count[20]    ; |traffic_light_01|clock_divider:inst|count[20]    ; regout           ;
+; |traffic_light_01|clock_divider:inst|count[19]    ; |traffic_light_01|clock_divider:inst|count[19]    ; regout           ;
+; |traffic_light_01|clock_divider:inst|count[18]    ; |traffic_light_01|clock_divider:inst|count[18]    ; regout           ;
+; |traffic_light_01|clock_divider:inst|count[17]    ; |traffic_light_01|clock_divider:inst|count[17]    ; regout           ;
+; |traffic_light_01|clock_divider:inst|count[16]    ; |traffic_light_01|clock_divider:inst|count[16]    ; regout           ;
+; |traffic_light_01|clock_divider:inst|count[15]    ; |traffic_light_01|clock_divider:inst|count[15]    ; regout           ;
+; |traffic_light_01|clock_divider:inst|count[14]    ; |traffic_light_01|clock_divider:inst|count[14]    ; regout           ;
+; |traffic_light_01|clock_divider:inst|count[13]    ; |traffic_light_01|clock_divider:inst|count[13]    ; regout           ;
+; |traffic_light_01|clock_divider:inst|count[12]    ; |traffic_light_01|clock_divider:inst|count[12]    ; regout           ;
+; |traffic_light_01|clock_divider:inst|count[11]    ; |traffic_light_01|clock_divider:inst|count[11]    ; regout           ;
+; |traffic_light_01|clock_divider:inst|count[10]    ; |traffic_light_01|clock_divider:inst|count[10]    ; regout           ;
+; |traffic_light_01|clock_divider:inst|count[9]     ; |traffic_light_01|clock_divider:inst|count[9]     ; regout           ;
+; |traffic_light_01|clock_divider:inst|count[8]     ; |traffic_light_01|clock_divider:inst|count[8]     ; regout           ;
+; |traffic_light_01|clock_divider:inst|count[7]     ; |traffic_light_01|clock_divider:inst|count[7]     ; regout           ;
+; |traffic_light_01|clock_divider:inst|count[6]     ; |traffic_light_01|clock_divider:inst|count[6]     ; regout           ;
+; |traffic_light_01|clock_divider:inst|count[5]     ; |traffic_light_01|clock_divider:inst|count[5]     ; regout           ;
+; |traffic_light_01|clock_divider:inst|count[4]     ; |traffic_light_01|clock_divider:inst|count[4]     ; regout           ;
+; |traffic_light_01|clock_divider:inst|count[3]     ; |traffic_light_01|clock_divider:inst|count[3]     ; regout           ;
+; |traffic_light_01|clock_divider:inst|count[2]     ; |traffic_light_01|clock_divider:inst|count[2]     ; regout           ;
+; |traffic_light_01|clock_divider:inst|count[2]~26  ; |traffic_light_01|clock_divider:inst|count[2]~27  ; cout             ;
+; |traffic_light_01|clock_divider:inst|count[3]~28  ; |traffic_light_01|clock_divider:inst|count[3]~28  ; combout          ;
+; |traffic_light_01|clock_divider:inst|count[3]~28  ; |traffic_light_01|clock_divider:inst|count[3]~29  ; cout             ;
+; |traffic_light_01|clock_divider:inst|count[4]~30  ; |traffic_light_01|clock_divider:inst|count[4]~30  ; combout          ;
+; |traffic_light_01|clock_divider:inst|count[4]~30  ; |traffic_light_01|clock_divider:inst|count[4]~31  ; cout             ;
+; |traffic_light_01|clock_divider:inst|count[5]~32  ; |traffic_light_01|clock_divider:inst|count[5]~32  ; combout          ;
+; |traffic_light_01|clock_divider:inst|count[5]~32  ; |traffic_light_01|clock_divider:inst|count[5]~33  ; cout             ;
+; |traffic_light_01|clock_divider:inst|count[6]~34  ; |traffic_light_01|clock_divider:inst|count[6]~34  ; combout          ;
+; |traffic_light_01|clock_divider:inst|count[6]~34  ; |traffic_light_01|clock_divider:inst|count[6]~35  ; cout             ;
+; |traffic_light_01|clock_divider:inst|count[7]~36  ; |traffic_light_01|clock_divider:inst|count[7]~36  ; combout          ;
+; |traffic_light_01|clock_divider:inst|count[7]~36  ; |traffic_light_01|clock_divider:inst|count[7]~37  ; cout             ;
+; |traffic_light_01|clock_divider:inst|count[8]~38  ; |traffic_light_01|clock_divider:inst|count[8]~38  ; combout          ;
+; |traffic_light_01|clock_divider:inst|count[8]~38  ; |traffic_light_01|clock_divider:inst|count[8]~39  ; cout             ;
+; |traffic_light_01|clock_divider:inst|count[9]~40  ; |traffic_light_01|clock_divider:inst|count[9]~40  ; combout          ;
+; |traffic_light_01|clock_divider:inst|count[9]~40  ; |traffic_light_01|clock_divider:inst|count[9]~41  ; cout             ;
+; |traffic_light_01|clock_divider:inst|count[10]~42 ; |traffic_light_01|clock_divider:inst|count[10]~42 ; combout          ;
+; |traffic_light_01|clock_divider:inst|count[10]~42 ; |traffic_light_01|clock_divider:inst|count[10]~43 ; cout             ;
+; |traffic_light_01|clock_divider:inst|count[11]~44 ; |traffic_light_01|clock_divider:inst|count[11]~44 ; combout          ;
+; |traffic_light_01|clock_divider:inst|count[11]~44 ; |traffic_light_01|clock_divider:inst|count[11]~45 ; cout             ;
+; |traffic_light_01|clock_divider:inst|count[12]~46 ; |traffic_light_01|clock_divider:inst|count[12]~46 ; combout          ;
+; |traffic_light_01|clock_divider:inst|count[12]~46 ; |traffic_light_01|clock_divider:inst|count[12]~47 ; cout             ;
+; |traffic_light_01|clock_divider:inst|count[13]~48 ; |traffic_light_01|clock_divider:inst|count[13]~48 ; combout          ;
+; |traffic_light_01|clock_divider:inst|count[13]~48 ; |traffic_light_01|clock_divider:inst|count[13]~49 ; cout             ;
+; |traffic_light_01|clock_divider:inst|count[14]~50 ; |traffic_light_01|clock_divider:inst|count[14]~50 ; combout          ;
+; |traffic_light_01|clock_divider:inst|count[14]~50 ; |traffic_light_01|clock_divider:inst|count[14]~51 ; cout             ;
+; |traffic_light_01|clock_divider:inst|count[15]~52 ; |traffic_light_01|clock_divider:inst|count[15]~52 ; combout          ;
+; |traffic_light_01|clock_divider:inst|count[15]~52 ; |traffic_light_01|clock_divider:inst|count[15]~53 ; cout             ;
+; |traffic_light_01|clock_divider:inst|count[16]~54 ; |traffic_light_01|clock_divider:inst|count[16]~54 ; combout          ;
+; |traffic_light_01|clock_divider:inst|count[16]~54 ; |traffic_light_01|clock_divider:inst|count[16]~55 ; cout             ;
+; |traffic_light_01|clock_divider:inst|count[17]~56 ; |traffic_light_01|clock_divider:inst|count[17]~56 ; combout          ;
+; |traffic_light_01|clock_divider:inst|count[17]~56 ; |traffic_light_01|clock_divider:inst|count[17]~57 ; cout             ;
+; |traffic_light_01|clock_divider:inst|count[18]~58 ; |traffic_light_01|clock_divider:inst|count[18]~58 ; combout          ;
+; |traffic_light_01|clock_divider:inst|count[18]~58 ; |traffic_light_01|clock_divider:inst|count[18]~59 ; cout             ;
+; |traffic_light_01|clock_divider:inst|count[19]~60 ; |traffic_light_01|clock_divider:inst|count[19]~60 ; combout          ;
+; |traffic_light_01|clock_divider:inst|count[19]~60 ; |traffic_light_01|clock_divider:inst|count[19]~61 ; cout             ;
+; |traffic_light_01|clock_divider:inst|count[20]~62 ; |traffic_light_01|clock_divider:inst|count[20]~62 ; combout          ;
+; |traffic_light_01|clock_divider:inst|count[20]~62 ; |traffic_light_01|clock_divider:inst|count[20]~63 ; cout             ;
+; |traffic_light_01|clock_divider:inst|count[21]~64 ; |traffic_light_01|clock_divider:inst|count[21]~64 ; combout          ;
+; |traffic_light_01|clock_divider:inst|count[21]~64 ; |traffic_light_01|clock_divider:inst|count[21]~65 ; cout             ;
+; |traffic_light_01|clock_divider:inst|count[22]~66 ; |traffic_light_01|clock_divider:inst|count[22]~66 ; combout          ;
+; |traffic_light_01|clock_divider:inst|count[22]~66 ; |traffic_light_01|clock_divider:inst|count[22]~67 ; cout             ;
+; |traffic_light_01|clock_divider:inst|count[23]~68 ; |traffic_light_01|clock_divider:inst|count[23]~68 ; combout          ;
+; |traffic_light_01|clock_divider:inst|count[23]~68 ; |traffic_light_01|clock_divider:inst|count[23]~69 ; cout             ;
+; |traffic_light_01|clock_divider:inst|count[24]~70 ; |traffic_light_01|clock_divider:inst|count[24]~70 ; combout          ;
+; |traffic_light_01|INDICATOR                       ; |traffic_light_01|INDICATOR                       ; padio            ;
++---------------------------------------------------+---------------------------------------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II Simulator
+    Info: Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
+    Info: Processing started: Wed Oct 24 10:36:28 2018
+Info: Command: quartus_sim --read_settings_files=on --write_settings_files=off traffic_light_01 -c traffic_light_01
+Info: Using vector source file "C:/Users/5E406/Desktop/traffic_light_01/traffic_light_01.vwf"
+Info: Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info: Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Info: Simulation partitioned into 1 sub-simulations
+Info: Simulation coverage is      10.53 %
+Info: Number of transitions in simulation is 49
+Info: Quartus II Simulator was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 137 megabytes
+    Info: Processing ended: Wed Oct 24 10:36:28 2018
+    Info: Elapsed time: 00:00:00
+    Info: Total CPU time (on all processors): 00:00:01
+
+

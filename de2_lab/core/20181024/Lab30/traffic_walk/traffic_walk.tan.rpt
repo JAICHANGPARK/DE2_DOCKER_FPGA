@@ -1,0 +1,284 @@
+Timing Analyzer report for traffic_walk
+Fri Jul 16 15:56:29 2004
+Version 4.0 Build 190 1/28/2004 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Timing Analyzer Settings
+  3. Timing Analyzer Summary
+  4. Clock Settings Summary
+  5. Clock Setup: 'clk'
+  6. tsu
+  7. tco
+  8. th
+  9. Minimum tco
+ 10. Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2004 Altera Corporation
+Any  megafunction  design,  and related netlist (encrypted  or  decrypted),
+support information,  device programming or simulation file,  and any other
+associated  documentation or information  provided by  Altera  or a partner
+under  Altera's   Megafunction   Partnership   Program  may  be  used  only
+to program  PLD  devices (but not masked  PLD  devices) from  Altera.   Any
+other  use  of such  megafunction  design,  netlist,  support  information,
+device programming or simulation file,  or any other  related documentation
+or information  is prohibited  for  any  other purpose,  including, but not
+limited to  modification,  reverse engineering,  de-compiling, or use  with
+any other  silicon devices,  unless such use is  explicitly  licensed under
+a separate agreement with  Altera  or a megafunction partner.  Title to the
+intellectual property,  including patents,  copyrights,  trademarks,  trade
+secrets,  or maskworks,  embodied in any such megafunction design, netlist,
+support  information,  device programming or simulation file,  or any other
+related documentation or information provided by  Altera  or a megafunction
+partner, remains with Altera, the megafunction partner, or their respective
+licensors. No other licenses, including any licenses needed under any third
+party's intellectual property, are provided herein.
+
+
+
++----------------------------------------------------------------------------------------+
+; Timing Analyzer Settings                                                               ;
++-----------------------------------------------------------------------------------------
+; Option                                                ; Setting            ; From ; To ;
++-------------------------------------------------------+--------------------+------+----+
+; Device name                                           ; EPM7128SLC84-7     ;      ;    ;
+; Report IO Paths Separately                            ; Off                ;      ;    ;
+; Ignore user-defined clock settings                    ; Off                ;      ;    ;
+; Default hold multicycle                               ; Same as Multicycle ;      ;    ;
+; Cut off feedback from I/O pins                        ; On                 ;      ;    ;
+; Cut off clear and preset signal paths                 ; On                 ;      ;    ;
+; Cut off read during write signal paths                ; On                 ;      ;    ;
+; Cut paths between unrelated clock domains             ; On                 ;      ;    ;
+; Run Minimum Analysis                                  ; On                 ;      ;    ;
+; Use Minimum Timing Models                             ; Off                ;      ;    ;
+; Number of paths to report                             ; 200                ;      ;    ;
+; Number of destination nodes to report                 ; 10                 ;      ;    ;
+; Number of source nodes to report per destination node ; 10                 ;      ;    ;
++-------------------------------------------------------+--------------------+------+----+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Summary                                                                                                                           ;
++----------------------------------------------------------------------------------------------------------------------------------------------------
+; Type                   ; Slack ; Required Time ; Actual Time                      ; From                          ; To                            ;
++------------------------+-------+---------------+----------------------------------+-------------------------------+-------------------------------+
+; Worst-case tsu         ; N/A   ; None          ; 6.000 ns                         ; ns_walk_sw                    ; outputs[7]                    ;
+; Worst-case tco         ; N/A   ; None          ; 9.500 ns                         ; outputs[1]                    ; ewr                           ;
+; Worst-case th          ; N/A   ; None          ; -1.000 ns                        ; ns_walk_sw                    ; outputs[7]                    ;
+; Worst-case minimum tco ; N/A   ; None          ; 4.500 ns                         ; outputs[2]                    ; nsy                           ;
+; Clock Setup: 'clk'     ; N/A   ; None          ; 125.00 MHz ( period = 8.000 ns ) ; ct_mod5:output_timer|count[1] ; ct_mod5:output_timer|count[0] ;
++------------------------+-------+---------------+----------------------------------+-------------------------------+-------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Settings Summary                                                                                                               ;
++---------------------------------------------------------------------------------------------------------------------------------------
+; Clock Node Name ; Clock Setting Name ; Type     ; Fmax Requirement ; Based on ; Multiply Base Fmax by ; Divide Base Fmax by ; Offset ;
++-----------------+--------------------+----------+------------------+----------+-----------------------+---------------------+--------+
+; clk             ;                    ; User Pin ; NONE             ; NONE     ; N/A                   ; N/A                 ; N/A    ;
++-----------------+--------------------+----------+------------------+----------+-----------------------+---------------------+--------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Setup: 'clk'                                                                                                                                                                                                   ;
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+; Slack ; Actual fmax (period)             ; From                          ; To                            ; From Clock ; To Clock ; Required Setup Relationship ; Required Longest P2P Time ; Actual Longest P2P Time ;
++-------+----------------------------------+-------------------------------+-------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; N/A   ; 125.00 MHz ( period = 8.000 ns ) ; ct_mod5:output_timer|count[2] ; outputs[3]                    ; clk        ; clk      ; None                        ; None                      ; None                    ;
+; N/A   ; 125.00 MHz ( period = 8.000 ns ) ; sequence~21                   ; outputs[3]                    ; clk        ; clk      ; None                        ; None                      ; None                    ;
+; N/A   ; 125.00 MHz ( period = 8.000 ns ) ; sequence~20                   ; outputs[3]                    ; clk        ; clk      ; None                        ; None                      ; None                    ;
+; N/A   ; 125.00 MHz ( period = 8.000 ns ) ; sequence~22                   ; outputs[3]                    ; clk        ; clk      ; None                        ; None                      ; None                    ;
+; N/A   ; 125.00 MHz ( period = 8.000 ns ) ; ct_mod5:output_timer|count[2] ; outputs[7]                    ; clk        ; clk      ; None                        ; None                      ; None                    ;
+; N/A   ; 125.00 MHz ( period = 8.000 ns ) ; sequence~21                   ; outputs[7]                    ; clk        ; clk      ; None                        ; None                      ; None                    ;
+; N/A   ; 125.00 MHz ( period = 8.000 ns ) ; sequence~20                   ; outputs[7]                    ; clk        ; clk      ; None                        ; None                      ; None                    ;
+; N/A   ; 125.00 MHz ( period = 8.000 ns ) ; sequence~22                   ; outputs[7]                    ; clk        ; clk      ; None                        ; None                      ; None                    ;
+; N/A   ; 125.00 MHz ( period = 8.000 ns ) ; sequence~21                   ; outputs[1]                    ; clk        ; clk      ; None                        ; None                      ; None                    ;
+; N/A   ; 125.00 MHz ( period = 8.000 ns ) ; sequence~20                   ; outputs[1]                    ; clk        ; clk      ; None                        ; None                      ; None                    ;
+; N/A   ; 125.00 MHz ( period = 8.000 ns ) ; sequence~22                   ; outputs[1]                    ; clk        ; clk      ; None                        ; None                      ; None                    ;
+; N/A   ; 125.00 MHz ( period = 8.000 ns ) ; ct_mod5:output_timer|count[2] ; outputs[9]                    ; clk        ; clk      ; None                        ; None                      ; None                    ;
+; N/A   ; 125.00 MHz ( period = 8.000 ns ) ; sequence~21                   ; outputs[9]                    ; clk        ; clk      ; None                        ; None                      ; None                    ;
+; N/A   ; 125.00 MHz ( period = 8.000 ns ) ; sequence~20                   ; outputs[9]                    ; clk        ; clk      ; None                        ; None                      ; None                    ;
+; N/A   ; 125.00 MHz ( period = 8.000 ns ) ; sequence~22                   ; outputs[9]                    ; clk        ; clk      ; None                        ; None                      ; None                    ;
+; N/A   ; 125.00 MHz ( period = 8.000 ns ) ; ct_mod5:output_timer|count[2] ; outputs[6]                    ; clk        ; clk      ; None                        ; None                      ; None                    ;
+; N/A   ; 125.00 MHz ( period = 8.000 ns ) ; sequence~21                   ; outputs[6]                    ; clk        ; clk      ; None                        ; None                      ; None                    ;
+; N/A   ; 125.00 MHz ( period = 8.000 ns ) ; sequence~20                   ; outputs[6]                    ; clk        ; clk      ; None                        ; None                      ; None                    ;
+; N/A   ; 125.00 MHz ( period = 8.000 ns ) ; sequence~22                   ; outputs[6]                    ; clk        ; clk      ; None                        ; None                      ; None                    ;
+; N/A   ; 125.00 MHz ( period = 8.000 ns ) ; ct_mod5:output_timer|count[2] ; outputs[5]                    ; clk        ; clk      ; None                        ; None                      ; None                    ;
+; N/A   ; 125.00 MHz ( period = 8.000 ns ) ; sequence~21                   ; outputs[5]                    ; clk        ; clk      ; None                        ; None                      ; None                    ;
+; N/A   ; 125.00 MHz ( period = 8.000 ns ) ; sequence~20                   ; outputs[5]                    ; clk        ; clk      ; None                        ; None                      ; None                    ;
+; N/A   ; 125.00 MHz ( period = 8.000 ns ) ; ct_mod5:output_timer|count[2] ; outputs[10]                   ; clk        ; clk      ; None                        ; None                      ; None                    ;
+; N/A   ; 125.00 MHz ( period = 8.000 ns ) ; sequence~21                   ; outputs[10]                   ; clk        ; clk      ; None                        ; None                      ; None                    ;
+; N/A   ; 125.00 MHz ( period = 8.000 ns ) ; sequence~22                   ; outputs[10]                   ; clk        ; clk      ; None                        ; None                      ; None                    ;
+; N/A   ; 125.00 MHz ( period = 8.000 ns ) ; ct_mod5:output_timer|count[2] ; outputs[8]                    ; clk        ; clk      ; None                        ; None                      ; None                    ;
+; N/A   ; 125.00 MHz ( period = 8.000 ns ) ; sequence~21                   ; outputs[8]                    ; clk        ; clk      ; None                        ; None                      ; None                    ;
+; N/A   ; 125.00 MHz ( period = 8.000 ns ) ; sequence~22                   ; outputs[8]                    ; clk        ; clk      ; None                        ; None                      ; None                    ;
+; N/A   ; 125.00 MHz ( period = 8.000 ns ) ; ct_mod5:output_timer|count[2] ; outputs[2]                    ; clk        ; clk      ; None                        ; None                      ; None                    ;
+; N/A   ; 125.00 MHz ( period = 8.000 ns ) ; sequence~21                   ; outputs[2]                    ; clk        ; clk      ; None                        ; None                      ; None                    ;
+; N/A   ; 125.00 MHz ( period = 8.000 ns ) ; sequence~20                   ; outputs[2]                    ; clk        ; clk      ; None                        ; None                      ; None                    ;
+; N/A   ; 125.00 MHz ( period = 8.000 ns ) ; ct_mod5:output_timer|count[2] ; sequence~22                   ; clk        ; clk      ; None                        ; None                      ; None                    ;
+; N/A   ; 125.00 MHz ( period = 8.000 ns ) ; sequence~21                   ; sequence~22                   ; clk        ; clk      ; None                        ; None                      ; None                    ;
+; N/A   ; 125.00 MHz ( period = 8.000 ns ) ; sequence~20                   ; sequence~22                   ; clk        ; clk      ; None                        ; None                      ; None                    ;
+; N/A   ; 125.00 MHz ( period = 8.000 ns ) ; sequence~22                   ; sequence~22                   ; clk        ; clk      ; None                        ; None                      ; None                    ;
+; N/A   ; 125.00 MHz ( period = 8.000 ns ) ; ct_mod5:output_timer|count[2] ; sequence~20                   ; clk        ; clk      ; None                        ; None                      ; None                    ;
+; N/A   ; 125.00 MHz ( period = 8.000 ns ) ; sequence~20                   ; sequence~20                   ; clk        ; clk      ; None                        ; None                      ; None                    ;
+; N/A   ; 125.00 MHz ( period = 8.000 ns ) ; sequence~22                   ; sequence~20                   ; clk        ; clk      ; None                        ; None                      ; None                    ;
+; N/A   ; 125.00 MHz ( period = 8.000 ns ) ; sequence~21                   ; sequence~21                   ; clk        ; clk      ; None                        ; None                      ; None                    ;
+; N/A   ; 125.00 MHz ( period = 8.000 ns ) ; sequence~20                   ; sequence~21                   ; clk        ; clk      ; None                        ; None                      ; None                    ;
+; N/A   ; 125.00 MHz ( period = 8.000 ns ) ; sequence~22                   ; sequence~21                   ; clk        ; clk      ; None                        ; None                      ; None                    ;
+; N/A   ; 125.00 MHz ( period = 8.000 ns ) ; ct_mod5:output_timer|count[0] ; ct_mod5:output_timer|count[1] ; clk        ; clk      ; None                        ; None                      ; None                    ;
+; N/A   ; 125.00 MHz ( period = 8.000 ns ) ; ct_mod5:output_timer|count[1] ; ct_mod5:output_timer|count[1] ; clk        ; clk      ; None                        ; None                      ; None                    ;
+; N/A   ; 125.00 MHz ( period = 8.000 ns ) ; ct_mod5:output_timer|count[0] ; ct_mod5:output_timer|count[2] ; clk        ; clk      ; None                        ; None                      ; None                    ;
+; N/A   ; 125.00 MHz ( period = 8.000 ns ) ; ct_mod5:output_timer|count[2] ; ct_mod5:output_timer|count[2] ; clk        ; clk      ; None                        ; None                      ; None                    ;
+; N/A   ; 125.00 MHz ( period = 8.000 ns ) ; ct_mod5:output_timer|count[1] ; ct_mod5:output_timer|count[2] ; clk        ; clk      ; None                        ; None                      ; None                    ;
+; N/A   ; 125.00 MHz ( period = 8.000 ns ) ; ct_mod5:output_timer|count[0] ; ct_mod5:output_timer|count[0] ; clk        ; clk      ; None                        ; None                      ; None                    ;
+; N/A   ; 125.00 MHz ( period = 8.000 ns ) ; ct_mod5:output_timer|count[2] ; ct_mod5:output_timer|count[0] ; clk        ; clk      ; None                        ; None                      ; None                    ;
+; N/A   ; 125.00 MHz ( period = 8.000 ns ) ; ct_mod5:output_timer|count[1] ; ct_mod5:output_timer|count[0] ; clk        ; clk      ; None                        ; None                      ; None                    ;
++-------+----------------------------------+-------------------------------+-------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+
+
++-------------------------------------------------------------------------+
+; tsu                                                                     ;
++--------------------------------------------------------------------------
+; Slack ; Required tsu ; Actual tsu ; From       ; To          ; To Clock ;
++-------+--------------+------------+------------+-------------+----------+
+; N/A   ; None         ; 6.000 ns   ; ew_walk_sw ; sequence~22 ; clk      ;
+; N/A   ; None         ; 6.000 ns   ; ew_walk_sw ; outputs[9]  ; clk      ;
+; N/A   ; None         ; 6.000 ns   ; ns_walk_sw ; sequence~22 ; clk      ;
+; N/A   ; None         ; 6.000 ns   ; ns_walk_sw ; outputs[7]  ; clk      ;
++-------+--------------+------------+------------+-------------+----------+
+
+
++---------------------------------------------------------------------------+
+; tco                                                                       ;
++----------------------------------------------------------------------------
+; Slack ; Required tco ; Actual tco ; From        ; To         ; From Clock ;
++-------+--------------+------------+-------------+------------+------------+
+; N/A   ; None         ; 9.500 ns   ; outputs[1]  ; ewr        ; clk        ;
+; N/A   ; None         ; 4.500 ns   ; outputs[3]  ; nsg        ; clk        ;
+; N/A   ; None         ; 4.500 ns   ; outputs[7]  ; ns_walk_lt ; clk        ;
+; N/A   ; None         ; 4.500 ns   ; outputs[1]  ; nsr        ; clk        ;
+; N/A   ; None         ; 4.500 ns   ; outputs[9]  ; ew_walk_lt ; clk        ;
+; N/A   ; None         ; 4.500 ns   ; outputs[6]  ; ewg        ; clk        ;
+; N/A   ; None         ; 4.500 ns   ; outputs[5]  ; ewy        ; clk        ;
+; N/A   ; None         ; 4.500 ns   ; outputs[10] ; ew_reset   ; clk        ;
+; N/A   ; None         ; 4.500 ns   ; outputs[8]  ; ns_reset   ; clk        ;
+; N/A   ; None         ; 4.500 ns   ; outputs[2]  ; nsy        ; clk        ;
++-------+--------------+------------+-------------+------------+------------+
+
+
++-------------------------------------------------------------------------------+
+; th                                                                            ;
++--------------------------------------------------------------------------------
+; Minimum Slack ; Required th ; Actual th ; From       ; To          ; To Clock ;
++---------------+-------------+-----------+------------+-------------+----------+
+; N/A           ; None        ; -1.000 ns ; ew_walk_sw ; sequence~22 ; clk      ;
+; N/A           ; None        ; -1.000 ns ; ew_walk_sw ; outputs[9]  ; clk      ;
+; N/A           ; None        ; -1.000 ns ; ns_walk_sw ; sequence~22 ; clk      ;
+; N/A           ; None        ; -1.000 ns ; ns_walk_sw ; outputs[7]  ; clk      ;
++---------------+-------------+-----------+------------+-------------+----------+
+
+
++-------------------------------------------------------------------------------------------+
+; Minimum tco                                                                               ;
++--------------------------------------------------------------------------------------------
+; Minimum Slack ; Required Min tco ; Actual Min tco ; From        ; To         ; From Clock ;
++---------------+------------------+----------------+-------------+------------+------------+
+; N/A           ; None             ; 4.500 ns       ; outputs[2]  ; nsy        ; clk        ;
+; N/A           ; None             ; 4.500 ns       ; outputs[8]  ; ns_reset   ; clk        ;
+; N/A           ; None             ; 4.500 ns       ; outputs[10] ; ew_reset   ; clk        ;
+; N/A           ; None             ; 4.500 ns       ; outputs[5]  ; ewy        ; clk        ;
+; N/A           ; None             ; 4.500 ns       ; outputs[6]  ; ewg        ; clk        ;
+; N/A           ; None             ; 4.500 ns       ; outputs[9]  ; ew_walk_lt ; clk        ;
+; N/A           ; None             ; 4.500 ns       ; outputs[1]  ; nsr        ; clk        ;
+; N/A           ; None             ; 4.500 ns       ; outputs[7]  ; ns_walk_lt ; clk        ;
+; N/A           ; None             ; 4.500 ns       ; outputs[3]  ; nsg        ; clk        ;
+; N/A           ; None             ; 9.500 ns       ; outputs[1]  ; ewr        ; clk        ;
++---------------+------------------+----------------+-------------+------------+------------+
+
+
++---------------------------+
+; Timing Analyzer Messages  ;
++---------------------------+
+Info: *******************************************************************
+Info: Running Quartus II Timing Analyzer
+    Info: Version 4.0 Build 190 1/28/2004 SJ Full Version
+    Info: Processing started: Fri Jul 16 15:56:28 2004
+Info: Command: quartus_tan --import_settings_files=off --export_settings_files=off traffic_walk -c traffic_walk
+Info: Started post-fitting delay annotation
+Info: Delay annotation completed successfully
+Warning: Found pins functioning as undefined clocks and/or memory enables
+    Info: Assuming node clk is an undefined clock
+Info: Clock clk has Internal fmax of 125.0 MHz between source register ct_mod5:output_timer|count[2] and destination register outputs[3] (period= 8.0 ns)
+    Info: + Longest register to register delay is 4.000 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LC10; Fanout = 14; REG Node = 'ct_mod5:output_timer|count[2]'
+        Info: 2: + IC(1.000 ns) + CELL(3.000 ns) = 4.000 ns; Loc. = LC16; Fanout = 1; REG Node = 'outputs[3]'
+        Info: Total cell delay = 3.000 ns ( 75.00 % )
+        Info: Total interconnect delay = 1.000 ns ( 25.00 % )
+    Info: - Smallest clock skew is 0.000 ns
+        Info: + Shortest clock path from clock clk to destination register is 1.500 ns
+            Info: 1: + IC(0.000 ns) + CELL(1.500 ns) = 1.500 ns; Loc. = Pin_83; Fanout = 15; CLK Node = 'clk'
+            Info: 2: + IC(0.000 ns) + CELL(0.000 ns) = 1.500 ns; Loc. = LC16; Fanout = 1; REG Node = 'outputs[3]'
+            Info: Total cell delay = 1.500 ns ( 100.00 % )
+        Info: - Longest clock path from clock clk to source register is 1.500 ns
+            Info: 1: + IC(0.000 ns) + CELL(1.500 ns) = 1.500 ns; Loc. = Pin_83; Fanout = 15; CLK Node = 'clk'
+            Info: 2: + IC(0.000 ns) + CELL(0.000 ns) = 1.500 ns; Loc. = LC10; Fanout = 14; REG Node = 'ct_mod5:output_timer|count[2]'
+            Info: Total cell delay = 1.500 ns ( 100.00 % )
+    Info: + Micro clock to output delay of source is 1.000 ns
+    Info: + Micro setup delay of destination is 3.000 ns
+Info: tsu for register sequence~22 (data pin = ew_walk_sw, clock pin = clk) is 6.000 ns
+    Info: + Longest pin to register delay is 4.500 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.500 ns) = 0.500 ns; Loc. = Pin_81; Fanout = 2; PIN Node = 'ew_walk_sw'
+        Info: 2: + IC(1.000 ns) + CELL(3.000 ns) = 4.500 ns; Loc. = LC4; Fanout = 12; REG Node = 'sequence~22'
+        Info: Total cell delay = 3.500 ns ( 77.78 % )
+        Info: Total interconnect delay = 1.000 ns ( 22.22 % )
+    Info: + Micro setup delay of destination is 3.000 ns
+    Info: - Shortest clock path from clock clk to destination register is 1.500 ns
+        Info: 1: + IC(0.000 ns) + CELL(1.500 ns) = 1.500 ns; Loc. = Pin_83; Fanout = 15; CLK Node = 'clk'
+        Info: 2: + IC(0.000 ns) + CELL(0.000 ns) = 1.500 ns; Loc. = LC4; Fanout = 12; REG Node = 'sequence~22'
+        Info: Total cell delay = 1.500 ns ( 100.00 % )
+Info: tco from clock clk to destination pin ewr through register outputs[1] is 9.500 ns
+    Info: + Longest clock path from clock clk to source register is 1.500 ns
+        Info: 1: + IC(0.000 ns) + CELL(1.500 ns) = 1.500 ns; Loc. = Pin_83; Fanout = 15; CLK Node = 'clk'
+        Info: 2: + IC(0.000 ns) + CELL(0.000 ns) = 1.500 ns; Loc. = LC17; Fanout = 2; REG Node = 'outputs[1]'
+        Info: Total cell delay = 1.500 ns ( 100.00 % )
+    Info: + Micro clock to output delay of source is 1.000 ns
+    Info: + Longest register to pin delay is 7.000 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LC17; Fanout = 2; REG Node = 'outputs[1]'
+        Info: 2: + IC(1.000 ns) + CELL(4.000 ns) = 5.000 ns; Loc. = LC19; Fanout = 1; COMB Node = 'outputs[1]~1'
+        Info: 3: + IC(0.000 ns) + CELL(2.000 ns) = 7.000 ns; Loc. = Pin_21; Fanout = 0; PIN Node = 'ewr'
+        Info: Total cell delay = 6.000 ns ( 85.71 % )
+        Info: Total interconnect delay = 1.000 ns ( 14.29 % )
+Info: th for register sequence~22 (data pin = ew_walk_sw, clock pin = clk) is -1.000 ns
+    Info: + Longest clock path from clock clk to destination register is 1.500 ns
+        Info: 1: + IC(0.000 ns) + CELL(1.500 ns) = 1.500 ns; Loc. = Pin_83; Fanout = 15; CLK Node = 'clk'
+        Info: 2: + IC(0.000 ns) + CELL(0.000 ns) = 1.500 ns; Loc. = LC4; Fanout = 12; REG Node = 'sequence~22'
+        Info: Total cell delay = 1.500 ns ( 100.00 % )
+    Info: + Micro hold delay of destination is 2.000 ns
+    Info: - Shortest pin to register delay is 4.500 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.500 ns) = 0.500 ns; Loc. = Pin_81; Fanout = 2; PIN Node = 'ew_walk_sw'
+        Info: 2: + IC(1.000 ns) + CELL(3.000 ns) = 4.500 ns; Loc. = LC4; Fanout = 12; REG Node = 'sequence~22'
+        Info: Total cell delay = 3.500 ns ( 77.78 % )
+        Info: Total interconnect delay = 1.000 ns ( 22.22 % )
+Info: Minimum tco from clock clk to destination pin nsy through register outputs[2] is 4.500 ns
+    Info: + Shortest clock path from clock clk to source register is 1.500 ns
+        Info: 1: + IC(0.000 ns) + CELL(1.500 ns) = 1.500 ns; Loc. = Pin_83; Fanout = 15; CLK Node = 'clk'
+        Info: 2: + IC(0.000 ns) + CELL(0.000 ns) = 1.500 ns; Loc. = LC3; Fanout = 1; REG Node = 'outputs[2]'
+        Info: Total cell delay = 1.500 ns ( 100.00 % )
+    Info: + Micro clock to output delay of source is 1.000 ns
+    Info: + Shortest register to pin delay is 2.000 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LC3; Fanout = 1; REG Node = 'outputs[2]'
+        Info: 2: + IC(0.000 ns) + CELL(2.000 ns) = 2.000 ns; Loc. = Pin_12; Fanout = 0; PIN Node = 'nsy'
+        Info: Total cell delay = 2.000 ns ( 100.00 % )
+Info: Quartus II Timing Analyzer was successful. 0 errors, 1 warning
+    Info: Processing ended: Fri Jul 16 15:56:29 2004
+    Info: Elapsed time: 00:00:00
+
+

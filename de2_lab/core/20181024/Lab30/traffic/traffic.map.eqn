@@ -1,0 +1,125 @@
+--B1_count[0] is ct_mod5:light_timer|count[0]
+B1_count[0]_p1_out = B1_count[2] & !B1_count[1] & !B1_count[0];
+B1_count[0]_or_out = B1_count[0]_p1_out;
+B1_count[0]_reg_input = !B1_count[0]_or_out;
+B1_count[0] = TFFE(B1_count[0]_reg_input, GLOBAL(clk), GLOBAL(reset), , );
+
+
+--B1_count[1] is ct_mod5:light_timer|count[1]
+B1_count[1]_or_out = B1_count[0];
+B1_count[1]_reg_input = B1_count[1]_or_out;
+B1_count[1] = TFFE(B1_count[1]_reg_input, GLOBAL(clk), GLOBAL(reset), , );
+
+
+--B1_count[2] is ct_mod5:light_timer|count[2]
+B1_count[2]_p1_out = B1_count[0] & B1_count[1];
+B1_count[2]_p2_out = !B1_count[0] & !B1_count[1] & B1_count[2];
+B1_count[2]_or_out = B1_count[2]_p1_out # B1_count[2]_p2_out;
+B1_count[2]_reg_input = B1_count[2]_or_out;
+B1_count[2] = TFFE(B1_count[2]_reg_input, GLOBAL(clk), GLOBAL(reset), , );
+
+
+--A1L61Q is sequence~20
+A1L61Q_p1_out = !A1L61Q & B1_count[2];
+A1L61Q_or_out = A1L61Q_p1_out;
+A1L61Q_reg_input = A1L61Q_or_out;
+A1L61Q = DFFE(A1L61Q_reg_input, GLOBAL(clk), GLOBAL(reset), , );
+
+
+--A1L71Q is sequence~21
+A1L71Q_or_out = A1L61Q;
+A1L71Q_reg_input = A1L71Q_or_out;
+A1L71Q = TFFE(A1L71Q_reg_input, GLOBAL(clk), GLOBAL(reset), , );
+
+
+--lights[5] is lights[5]
+lights[5]_or_out = A1L71Q;
+lights[5]_reg_input = A1L61Q $ lights[5]_or_out;
+lights[5] = DFFE(lights[5]_reg_input, GLOBAL(clk), GLOBAL(reset), , );
+
+
+--lights[4] is lights[4]
+lights[4]_p1_out = A1L71Q & !A1L61Q & B1_count[2];
+lights[4]_or_out = lights[4]_p1_out;
+lights[4]_reg_input = !(lights[4]_or_out);
+lights[4] = DFFE(lights[4]_reg_input, GLOBAL(clk), , reset, );
+
+
+--lights[1] is lights[1]
+lights[1]_p1_out = !A1L71Q & !A1L61Q & B1_count[2];
+lights[1]_or_out = lights[1]_p1_out;
+lights[1]_reg_input = !(lights[1]_or_out);
+lights[1] = DFFE(lights[1]_reg_input, GLOBAL(clk), , reset, );
+
+
+--lights[3] is lights[3]
+lights[3]_p1_out = !A1L71Q & !A1L61Q;
+lights[3]_p2_out = A1L71Q & A1L61Q;
+lights[3]_p3_out = !A1L61Q & B1_count[2];
+lights[3]_or_out = lights[3]_p1_out # lights[3]_p2_out # lights[3]_p3_out;
+lights[3]_reg_input = lights[3]_or_out;
+lights[3] = DFFE(lights[3]_reg_input, GLOBAL(clk), , reset, );
+
+
+--lights[0] is lights[0]
+lights[0]_p1_out = !A1L71Q & A1L61Q;
+lights[0]_p2_out = A1L71Q & !A1L61Q;
+lights[0]_p3_out = !A1L71Q & B1_count[2];
+lights[0]_or_out = lights[0]_p1_out # lights[0]_p2_out # lights[0]_p3_out;
+lights[0]_reg_input = lights[0]_or_out;
+lights[0] = DFFE(lights[0]_reg_input, GLOBAL(clk), GLOBAL(reset), , );
+
+
+--A1L11 is lights[5]~1
+A1L11_or_out = !lights[5];
+A1L11 = A1L11_or_out;
+
+
+--clk is clk
+--operation mode is input
+
+clk = INPUT();
+
+
+--reset is reset
+--operation mode is input
+
+reset = INPUT();
+
+
+--nsr is nsr
+--operation mode is output
+
+nsr = OUTPUT(lights[5]);
+
+
+--nsy is nsy
+--operation mode is output
+
+nsy = OUTPUT(lights[4]);
+
+
+--ewy is ewy
+--operation mode is output
+
+ewy = OUTPUT(lights[1]);
+
+
+--nsg is nsg
+--operation mode is output
+
+nsg = OUTPUT(lights[3]);
+
+
+--ewr is ewr
+--operation mode is output
+
+ewr = OUTPUT(A1L11);
+
+
+--ewg is ewg
+--operation mode is output
+
+ewg = OUTPUT(lights[0]);
+
+

@@ -1,0 +1,590 @@
+/*
+WARNING: Do NOT edit the input and output ports in this file in a text
+editor if you plan to continue editing the block that represents it in
+the Block Editor! File corruption is VERY likely to occur.
+*/
+
+/*
+Copyright (C) 1991-2004 Altera Corporation
+Any  megafunction  design,  and related netlist (encrypted  or  decrypted),
+support information,  device programming or simulation file,  and any other
+associated  documentation or information  provided by  Altera  or a partner
+under  Altera's   Megafunction   Partnership   Program  may  be  used  only
+to program  PLD  devices (but not masked  PLD  devices) from  Altera.   Any
+other  use  of such  megafunction  design,  netlist,  support  information,
+device programming or simulation file,  or any other  related documentation
+or information  is prohibited  for  any  other purpose,  including, but not
+limited to  modification,  reverse engineering,  de-compiling, or use  with
+any other  silicon devices,  unless such use is  explicitly  licensed under
+a separate agreement with  Altera  or a megafunction partner.  Title to the
+intellectual property,  including patents,  copyrights,  trademarks,  trade
+secrets,  or maskworks,  embodied in any such megafunction design, netlist,
+support  information,  device programming or simulation file,  or any other
+related documentation or information provided by  Altera  or a megafunction
+partner, remains with Altera, the megafunction partner, or their respective
+licensors. No other licenses, including any licenses needed under any third
+party's intellectual property, are provided herein.
+*/
+
+HEADER
+{
+	VERSION = 1;
+	TIME_UNIT = ns;
+	SIMULATION_TIME = 0.0;
+	GRID_PHASE = 0.0;
+	GRID_PERIOD = 10.0;
+	GRID_DUTY_CYCLE = 50;
+}
+
+USER_TYPE("__sequence")
+{
+	VALUES = "s0", "s1", "s2", "s3", "s4", "s5", "XXX";
+}
+
+SIGNAL("reset")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "";
+}
+
+SIGNAL("ns_walk_sw")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "";
+}
+
+SIGNAL("ew_walk_sw")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "";
+}
+
+SIGNAL("clk")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "";
+}
+
+SIGNAL("nsr")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "";
+}
+
+SIGNAL("nsy")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "";
+}
+
+SIGNAL("nsg")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "";
+}
+
+GROUP("north_south")
+{
+	MEMBERS = "nsr", "nsy", "nsg";
+}
+
+SIGNAL("ns_walk_lt")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "";
+}
+
+SIGNAL("ns_reset")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "";
+}
+
+SIGNAL("ewr")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "";
+}
+
+SIGNAL("ewy")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "";
+}
+
+SIGNAL("ewg")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "";
+}
+
+GROUP("east_west")
+{
+	MEMBERS = "ewr", "ewy", "ewg";
+}
+
+SIGNAL("ew_walk_lt")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "";
+}
+
+SIGNAL("ew_reset")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "";
+}
+
+SIGNAL("sequence")
+{
+	VALUE_TYPE = ENUM;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = MACHINE;
+	PARENT = "";
+	ENUM_NAME = "__sequence";
+}
+
+TRANSITION_LIST("reset")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 20.0;
+		LEVEL 1 FOR 1980.0;
+	}
+}
+
+TRANSITION_LIST("ns_walk_sw")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 1000.0;
+		LEVEL 1 FOR 660.0;
+		LEVEL 0 FOR 340.0;
+	}
+}
+
+TRANSITION_LIST("ew_walk_sw")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 220.0;
+		LEVEL 1 FOR 460.0;
+		LEVEL 0 FOR 1320.0;
+	}
+}
+
+TRANSITION_LIST("clk")
+{
+	NODE
+	{
+		REPEAT = 1;
+		NODE
+		{
+			REPEAT = 50;
+			LEVEL 0 FOR 20.0;
+			LEVEL 1 FOR 20.0;
+		}
+	}
+}
+
+TRANSITION_LIST("nsr")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 264.5;
+		NODE
+		{
+			REPEAT = 4;
+			LEVEL 1 FOR 200.0;
+			LEVEL 0 FOR 200.0;
+		}
+		LEVEL 1 FOR 135.5;
+	}
+}
+
+TRANSITION_LIST("nsy")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 1 FOR 424.5;
+		NODE
+		{
+			REPEAT = 3;
+			LEVEL 0 FOR 40.0;
+			LEVEL 1 FOR 360.0;
+		}
+		LEVEL 0 FOR 40.0;
+		LEVEL 1 FOR 335.5;
+	}
+}
+
+TRANSITION_LIST("nsg")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 1 FOR 264.5;
+		NODE
+		{
+			REPEAT = 4;
+			LEVEL 0 FOR 160.0;
+			LEVEL 1 FOR 240.0;
+		}
+		LEVEL 0 FOR 135.5;
+	}
+}
+
+TRANSITION_LIST("ns_walk_lt")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 1 FOR 1064.5;
+		LEVEL 0 FOR 160.0;
+		LEVEL 1 FOR 240.0;
+		LEVEL 0 FOR 160.0;
+		LEVEL 1 FOR 375.5;
+	}
+}
+
+TRANSITION_LIST("ns_reset")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 1 FOR 1224.5;
+		LEVEL 0 FOR 40.0;
+		LEVEL 1 FOR 360.0;
+		LEVEL 0 FOR 40.0;
+		LEVEL 1 FOR 335.5;
+	}
+}
+
+TRANSITION_LIST("ewr")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 1 FOR 264.5;
+		NODE
+		{
+			REPEAT = 4;
+			LEVEL 0 FOR 200.0;
+			LEVEL 1 FOR 200.0;
+		}
+		LEVEL 0 FOR 135.5;
+	}
+}
+
+TRANSITION_LIST("ewy")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 1 FOR 224.5;
+		NODE
+		{
+			REPEAT = 4;
+			LEVEL 0 FOR 40.0;
+			LEVEL 1 FOR 360.0;
+		}
+		LEVEL 0 FOR 40.0;
+		LEVEL 1 FOR 135.5;
+	}
+}
+
+TRANSITION_LIST("ewg")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 224.5;
+		NODE
+		{
+			REPEAT = 4;
+			LEVEL 1 FOR 240.0;
+			LEVEL 0 FOR 160.0;
+		}
+		LEVEL 1 FOR 175.5;
+	}
+}
+
+TRANSITION_LIST("ew_walk_lt")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 1 FOR 464.5;
+		LEVEL 0 FOR 160.0;
+		LEVEL 1 FOR 1375.5;
+	}
+}
+
+TRANSITION_LIST("ew_reset")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 1 FOR 624.5;
+		LEVEL 0 FOR 40.0;
+		LEVEL 1 FOR 1335.5;
+	}
+}
+
+TRANSITION_LIST("sequence")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL s0 FOR 222.5;
+		LEVEL s1 FOR 40.0;
+		LEVEL s2 FOR 160.0;
+		LEVEL s3 FOR 40.0;
+		LEVEL s4 FOR 160.0;
+		LEVEL s1 FOR 40.0;
+		LEVEL s2 FOR 160.0;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL s3 FOR 40.0;
+			LEVEL s0 FOR 160.0;
+			LEVEL s1 FOR 40.0;
+			LEVEL s5 FOR 160.0;
+		}
+		LEVEL s3 FOR 40.0;
+		LEVEL s0 FOR 160.0;
+		LEVEL s1 FOR 40.0;
+		LEVEL s2 FOR 137.5;
+	}
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "reset";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 0;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "ns_walk_sw";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 1;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "ew_walk_sw";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 2;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "clk";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 3;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "north_south";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 4;
+	TREE_LEVEL = 0;
+	CHILDREN = 5, 6, 7;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "nsr";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 5;
+	TREE_LEVEL = 1;
+	PARENT = 4;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "nsy";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 6;
+	TREE_LEVEL = 1;
+	PARENT = 4;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "nsg";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 7;
+	TREE_LEVEL = 1;
+	PARENT = 4;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "ns_walk_lt";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 8;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "ns_reset";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 9;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "east_west";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 10;
+	TREE_LEVEL = 0;
+	CHILDREN = 11, 12, 13;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "ewr";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 11;
+	TREE_LEVEL = 1;
+	PARENT = 10;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "ewy";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 12;
+	TREE_LEVEL = 1;
+	PARENT = 10;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "ewg";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 13;
+	TREE_LEVEL = 1;
+	PARENT = 10;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "ew_walk_lt";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 14;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "ew_reset";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 15;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "sequence";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 16;
+	TREE_LEVEL = 0;
+}
+
+TIME_BAR
+{
+	TIME = 8650;
+	MASTER = TRUE;
+}
+;

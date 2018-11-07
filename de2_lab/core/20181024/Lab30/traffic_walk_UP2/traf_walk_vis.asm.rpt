@@ -1,0 +1,118 @@
+Assembler report for traf_walk_vis
+Fri Jul 16 16:35:16 2004
+Version 4.0 Build 190 1/28/2004 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Assembler Summary
+  3. Assembler Settings
+  4. Assembler Generated Files
+  5. Assembler Device Options: c:/qdesigns/labs/lab30/traffic_walk_up2/traf_walk_vis.pof
+  6. Assembler Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2004 Altera Corporation
+Any  megafunction  design,  and related netlist (encrypted  or  decrypted),
+support information,  device programming or simulation file,  and any other
+associated  documentation or information  provided by  Altera  or a partner
+under  Altera's   Megafunction   Partnership   Program  may  be  used  only
+to program  PLD  devices (but not masked  PLD  devices) from  Altera.   Any
+other  use  of such  megafunction  design,  netlist,  support  information,
+device programming or simulation file,  or any other  related documentation
+or information  is prohibited  for  any  other purpose,  including, but not
+limited to  modification,  reverse engineering,  de-compiling, or use  with
+any other  silicon devices,  unless such use is  explicitly  licensed under
+a separate agreement with  Altera  or a megafunction partner.  Title to the
+intellectual property,  including patents,  copyrights,  trademarks,  trade
+secrets,  or maskworks,  embodied in any such megafunction design, netlist,
+support  information,  device programming or simulation file,  or any other
+related documentation or information provided by  Altera  or a megafunction
+partner, remains with Altera, the megafunction partner, or their respective
+licensors. No other licenses, including any licenses needed under any third
+party's intellectual property, are provided herein.
+
+
+
++---------------------------------------------------------------+
+; Assembler Summary                                             ;
++-----------------------+---------------------------------------+
+; Assembler Status      ; Successful - Fri Jul 16 16:35:16 2004 ;
+; Revision Name         ; traf_walk_vis                         ;
+; Top-level Entity Name ; traf_walk_vis                         ;
+; Family                ; MAX7000S                              ;
+; Device                ; EPM7128SLC84-7                        ;
++-----------------------+---------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------+
+; Assembler Settings                                                                                               ;
++-------------------------------------------------------------------------------------------------------------------
+; Option                                                                                ; Setting  ; Default Value ;
++---------------------------------------------------------------------------------------+----------+---------------+
+; Generate Hexadecimal (Intel-format) Output File (.hexout) For Configuration Device    ; Off      ; Off           ;
+; Generate a compressed Jam STAPL Byte Code 2.0 File (.jbc) For Configuration Device    ; On       ; On            ;
+; Generate an uncompressed Jam STAPL Byte Code 2.0 File (.jbc) For Configuration Device ; Off      ; Off           ;
+; Generate a JEDEC STAPL Format File (.jam) For Configuration Device                    ; Off      ; Off           ;
+; Generate In System Configuration File (.isc) For Configuration Device                 ; Off      ; Off           ;
+; Generate Serial Vector Format File (.svf) For Configuration Device                    ; Off      ; Off           ;
+; Generate a compressed Jam STAPL Byte Code 2.0 File (.jbc) for Target Device           ; On       ; On            ;
+; Generate an uncompressed Jam STAPL Byte Code 2.0 File (.jbc) for Target Device        ; Off      ; Off           ;
+; Generate a JEDEC STAPL Format File (.jam) for Target Device                           ; Off      ; Off           ;
+; Generate In System Configuration File (.isc) for Target Device                        ; Off      ; Off           ;
+; Generate Serial Vector Format File (.svf) for Target Device                           ; Off      ; Off           ;
+; Hexadecimal Output File count direction                                               ; Up       ; Up            ;
+; Hexadecimal Output File start address                                                 ; 0        ; 0             ;
+; Generate Hexadecimal (Intel-Format) Output File (.hexout) for Target Device           ; Off      ; Off           ;
+; Generate Raw Binary File (.rbf) For Target Device                                     ; Off      ; Off           ;
+; Generate Tabular Text File (.ttf) For Target Device                                   ; Off      ; Off           ;
+; Configuration device auto user code                                                   ; off      ; off           ;
+; Security bit                                                                          ; off      ; off           ;
+; Auto user code                                                                        ; off      ; off           ;
+; JTAG user code for target device                                                      ; Ffff     ; Ffff          ;
+; Divide clock frequency by                                                             ; 1        ; 1             ;
+; Clock frequency of the configuration device                                           ; 10 MHz   ; 10 MHz        ;
+; Clock source for configuration device                                                 ; Internal ; Internal      ;
+; Compression mode                                                                      ; Off      ; Off           ;
++---------------------------------------------------------------------------------------+----------+---------------+
+
+
++-----------------------------------------------------------+
+; Assembler Generated Files                                 ;
++------------------------------------------------------------
+; File Name                                                 ;
++-----------------------------------------------------------+
+; c:/qdesigns/labs/lab30/traffic_walk_up2/traf_walk_vis.pof ;
++-----------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------+
+; Assembler Device Options: c:/qdesigns/labs/lab30/traffic_walk_up2/traf_walk_vis.pof ;
++--------------------------------------------------------------------------------------
+; Option         ; Setting                                                            ;
++----------------+--------------------------------------------------------------------+
+; Device         ; EPM7128SLC84-7                                                     ;
+; JTAG usercode  ; 0x00000000                                                         ;
+; Checksum       ; 0x001DD759                                                         ;
++----------------+--------------------------------------------------------------------+
+
+
++---------------------+
+; Assembler Messages  ;
++---------------------+
+Info: *******************************************************************
+Info: Running Quartus II Assembler
+    Info: Version 4.0 Build 190 1/28/2004 SJ Full Version
+    Info: Processing started: Fri Jul 16 16:35:15 2004
+Info: Command: quartus_asm --import_settings_files=off --export_settings_files=off traf_walk_vis -c traf_walk_vis
+Info: Quartus II Assembler was successful. 0 errors, 0 warnings
+    Info: Processing ended: Fri Jul 16 16:35:16 2004
+    Info: Elapsed time: 00:00:01
+
+

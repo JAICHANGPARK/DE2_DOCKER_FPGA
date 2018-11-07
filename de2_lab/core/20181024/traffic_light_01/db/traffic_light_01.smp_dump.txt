@@ -1,0 +1,7 @@
+
+State Machine - |traffic_light_01|traffic:inst5|sequence
+Name sequence.s3 sequence.s2 sequence.s1 sequence.s0 
+sequence.s0 0 0 0 0 
+sequence.s1 0 0 1 1 
+sequence.s2 0 1 0 1 
+sequence.s3 1 0 0 1 

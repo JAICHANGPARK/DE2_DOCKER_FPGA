@@ -1,0 +1,27 @@
+--------------------------------------------------------------------------------------
+Timing Analyzer Summary
+--------------------------------------------------------------------------------------
+
+Type           : Worst-case tco
+Slack          : N/A
+Required Time  : None
+Actual Time    : 9.500 ns
+From           : lights[5]
+To             : ewr
+
+Type           : Worst-case minimum tco
+Slack          : N/A
+Required Time  : None
+Actual Time    : 4.500 ns
+From           : lights[5]
+To             : nsr
+
+Type           : Clock Setup: 'clk'
+Slack          : N/A
+Required Time  : None
+Actual Time    : 125.00 MHz ( period = 8.000 ns )
+From           : ct_mod5:light_timer|count[1]
+To             : ct_mod5:light_timer|count[0]
+
+--------------------------------------------------------------------------------------
+

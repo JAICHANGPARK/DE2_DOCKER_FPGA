@@ -1,0 +1,222 @@
+Analysis & Synthesis report for traffic_walk
+Fri Jul 16 15:56:20 2004
+Version 4.0 Build 190 1/28/2004 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Analysis & Synthesis Default Parameter Settings
+  5. Hierarchy
+  6. State Machine - sequence
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Analysis & Synthesis Equations
+  9. Analysis & Synthesis Files Read
+ 10. Analysis & Synthesis Resource Usage Summary
+ 11. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2004 Altera Corporation
+Any  megafunction  design,  and related netlist (encrypted  or  decrypted),
+support information,  device programming or simulation file,  and any other
+associated  documentation or information  provided by  Altera  or a partner
+under  Altera's   Megafunction   Partnership   Program  may  be  used  only
+to program  PLD  devices (but not masked  PLD  devices) from  Altera.   Any
+other  use  of such  megafunction  design,  netlist,  support  information,
+device programming or simulation file,  or any other  related documentation
+or information  is prohibited  for  any  other purpose,  including, but not
+limited to  modification,  reverse engineering,  de-compiling, or use  with
+any other  silicon devices,  unless such use is  explicitly  licensed under
+a separate agreement with  Altera  or a megafunction partner.  Title to the
+intellectual property,  including patents,  copyrights,  trademarks,  trade
+secrets,  or maskworks,  embodied in any such megafunction design, netlist,
+support  information,  device programming or simulation file,  or any other
+related documentation or information provided by  Altera  or a megafunction
+partner, remains with Altera, the megafunction partner, or their respective
+licensors. No other licenses, including any licenses needed under any third
+party's intellectual property, are provided herein.
+
+
+
++---------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                        ;
++-----------------------------+---------------------------------------+
+; Analysis & Synthesis Status ; Successful - Fri Jul 16 15:56:19 2004 ;
+; Revision Name               ; traffic_walk                          ;
+; Top-level Entity Name       ; traffic_walk                          ;
+; Family                      ; MAX7000S                              ;
+; Total macrocells            ; 16                                    ;
+; Total pins                  ; 14                                    ;
++-----------------------------+---------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                       ;
++------------------------------------------------------------------------------------------------------
+; Option                                                               ; Setting      ; Default Value ;
++----------------------------------------------------------------------+--------------+---------------+
+; Top-level entity name                                                ; traffic_walk ;               ;
+; Family name                                                          ; MAX7000S     ; Stratix       ;
+; Auto Resource Sharing                                                ; Off          ; Off           ;
+; Remove Duplicate Logic                                               ; On           ; On            ;
+; Auto Open-Drain Pins                                                 ; On           ; On            ;
+; Auto Parallel Expanders                                              ; On           ; On            ;
+; Parallel Expander Chain Length -- MAX 7000B/7000AE/3000A/7000S/7000A ; 4            ; 4             ;
+; Auto Logic Cell Insertion                                            ; On           ; On            ;
+; Allow XOR Gate Usage                                                 ; On           ; On            ;
+; Optimization Technique -- MAX 7000B/7000AE/3000A                     ; Speed        ; Speed         ;
+; Limit AHDL Integers to 32 Bits                                       ; Off          ; Off           ;
+; Ignore SOFT Buffers -- MAX 7000B/7000AE/3000A/7000S/7000A            ; Off          ; Off           ;
+; Ignore LCELL Buffers -- MAX 7000B/7000AE/3000A/7000S/7000A           ; Auto         ; Auto          ;
+; Ignore ROW GLOBAL Buffers                                            ; Off          ; Off           ;
+; Ignore GLOBAL Buffers                                                ; Off          ; Off           ;
+; Ignore CASCADE Buffers                                               ; Off          ; Off           ;
+; Ignore CARRY Buffers                                                 ; Off          ; Off           ;
+; Remove Duplicate Registers                                           ; On           ; On            ;
+; Remove Redundant Logic Cells                                         ; Off          ; Off           ;
+; Power-Up Don't Care                                                  ; On           ; On            ;
+; NOT Gate Push-Back                                                   ; On           ; On            ;
+; State Machine Processing                                             ; Auto         ; Auto          ;
+; VHDL Version                                                         ; VHDL93       ; VHDL93        ;
+; Verilog Version                                                      ; Verilog_2001 ; Verilog_2001  ;
+; Preserve fewer node names                                            ; On           ; On            ;
+; Disk space/compilation speed tradeoff                                ; Normal       ; Normal        ;
+; Create Debugging Nodes for IP Cores                                  ; off          ; off           ;
++----------------------------------------------------------------------+--------------+---------------+
+
+
++-------------------------------------------------+
+; Analysis & Synthesis Default Parameter Settings ;
++--------------------------------------------------
+; Name               ; Setting                    ;
++--------------------+----------------------------+
+; CARRY_CHAIN        ; MANUAL                     ;
+; CASCADE_CHAIN      ; MANUAL                     ;
+; OPTIMIZE_FOR_SPEED ; 9                          ;
+; STYLE              ; FAST                       ;
++--------------------+----------------------------+
+
+
++------------+
+; Hierarchy  ;
++------------+
+traffic_walk
+ |-- ct_mod5:output_timer
+
+
++-------------------------------------------------------+
+; State Machine - sequence                              ;
++--------------------------------------------------------
+; Name        ; sequence~22 ; sequence~21 ; sequence~20 ;
++-------------+-------------+-------------+-------------+
+; sequence.s0 ; 0           ; 0           ; 0           ;
+; sequence.s1 ; 0           ; 0           ; 1           ;
+; sequence.s2 ; 0           ; 1           ; 0           ;
+; sequence.s3 ; 0           ; 1           ; 1           ;
+; sequence.s4 ; 1           ; 0           ; 0           ;
+; sequence.s5 ; 1           ; 1           ; 0           ;
++-------------+-------------+-------------+-------------+
+
+
++-------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                 ;
++--------------------------------------------------------------------------------------
+; Compilation Hierarchy Node ; Macrocells ; Pins ; Full Hierarchy Name                ;
++----------------------------+------------+------+------------------------------------+
+; |traffic_walk              ; 16         ; 14   ; |traffic_walk                      ;
+;    |ct_mod5:output_timer|  ; 3          ; 0    ; |traffic_walk|ct_mod5:output_timer ;
++----------------------------+------------+------+------------------------------------+
+
+
++---------------------------------+
+; Analysis & Synthesis Equations  ;
++---------------------------------+
+The equations can be found in c:/qdesigns/labs/lab30/traffic_walk/traffic_walk.map.eqn.
+
+
++---------------------------------+
+; Analysis & Synthesis Files Read ;
++----------------------------------
+; File Name        ; Read         ;
++------------------+--------------+
+; ct_mod5.vhd      ; Read         ;
+; traffic_walk.vhd ; Read         ;
++------------------+--------------+
+
+
++---------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary ;
++----------------------------------------------
+; Resource             ; Usage                ;
++----------------------+----------------------+
+; Logic cells          ; 16                   ;
+; Total registers      ; 15                   ;
+; I/O pins             ; 14                   ;
+; Maximum fan-out node ; clk                  ;
+; Maximum fan-out      ; 15                   ;
+; Total fan-out        ; 93                   ;
+; Average fan-out      ; 3.10                 ;
++----------------------+----------------------+
+
+
++--------------------------------+
+; Analysis & Synthesis Messages  ;
++--------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II Analysis & Synthesis
+    Info: Version 4.0 Build 190 1/28/2004 SJ Full Version
+    Info: Processing started: Fri Jul 16 15:56:15 2004
+Info: Command: quartus_map --import_settings_files=on --export_settings_files=off traffic_walk -c traffic_walk
+Info: Found 2 design units and 1 entities in source file ct_mod5.vhd
+    Info: Found design unit 1: ct_mod5-a
+    Info: Found entity 1: ct_mod5
+Info: Found 2 design units and 1 entities in source file traffic_walk.vhd
+    Info: Found design unit 1: traffic_walk-a
+    Info: Found entity 1: traffic_walk
+Warning: VHDL Process Statement warning at traffic_walk.vhd(28): signal reset is in statement, but is not in sensitivity list
+Info: VHDL Case Statement information at traffic_walk.vhd(75): OTHERS choice is never selected
+Warning: VHDL Process Statement warning at traffic_walk.vhd(79): signal outputs is in statement, but is not in sensitivity list
+Warning: VHDL Process Statement warning at traffic_walk.vhd(80): signal outputs is in statement, but is not in sensitivity list
+Warning: VHDL Process Statement warning at traffic_walk.vhd(81): signal outputs is in statement, but is not in sensitivity list
+Warning: VHDL Process Statement warning at traffic_walk.vhd(82): signal outputs is in statement, but is not in sensitivity list
+Warning: VHDL Process Statement warning at traffic_walk.vhd(83): signal outputs is in statement, but is not in sensitivity list
+Warning: VHDL Process Statement warning at traffic_walk.vhd(84): signal outputs is in statement, but is not in sensitivity list
+Warning: VHDL Process Statement warning at traffic_walk.vhd(85): signal outputs is in statement, but is not in sensitivity list
+Warning: VHDL Process Statement warning at traffic_walk.vhd(86): signal outputs is in statement, but is not in sensitivity list
+Warning: VHDL Process Statement warning at traffic_walk.vhd(87): signal outputs is in statement, but is not in sensitivity list
+Warning: VHDL Process Statement warning at traffic_walk.vhd(88): signal outputs is in statement, but is not in sensitivity list
+Info: State machine |traffic_walk|sequence contains 6 states and 0 state bits
+Info: Selected Auto state machine encoding method for state machine |traffic_walk|sequence
+Info: Encoding result for state machine |traffic_walk|sequence
+    Info: Completed encoding using 3 state bits
+        Info: Encoded state bit sequence~22
+        Info: Encoded state bit sequence~21
+        Info: Encoded state bit sequence~20
+    Info: State |traffic_walk|sequence.s0 uses code string 000
+    Info: State |traffic_walk|sequence.s1 uses code string 001
+    Info: State |traffic_walk|sequence.s2 uses code string 010
+    Info: State |traffic_walk|sequence.s3 uses code string 011
+    Info: State |traffic_walk|sequence.s4 uses code string 100
+    Info: State |traffic_walk|sequence.s5 uses code string 110
+Info: Registers with preset signals will power-up high
+Info: Duplicate registers merged to single register
+    Info: Duplicate register outputs[4] merged to single register outputs[1], power-up level changed
+Info: Promoted pin-driven signal(s) to global signal
+    Info: Promoted clock signal driven by pin clk to global clock signal
+    Info: Promoted clear signal driven by pin reset to global clear signal
+Info: Implemented 30 device resources after synthesis - the final resource count might be different
+    Info: Implemented 4 input pins
+    Info: Implemented 10 output pins
+    Info: Implemented 16 macrocells
+Info: Quartus II Analysis & Synthesis was successful. 0 errors, 11 warnings
+    Info: Processing ended: Fri Jul 16 15:56:19 2004
+    Info: Elapsed time: 00:00:04
+
+

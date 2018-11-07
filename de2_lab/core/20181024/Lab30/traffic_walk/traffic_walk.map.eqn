@@ -1,0 +1,208 @@
+--B1_count[0] is ct_mod5:output_timer|count[0]
+B1_count[0]_p1_out = B1_count[2] & !B1_count[1] & !B1_count[0];
+B1_count[0]_or_out = B1_count[0]_p1_out;
+B1_count[0]_reg_input = !B1_count[0]_or_out;
+B1_count[0] = TFFE(B1_count[0]_reg_input, GLOBAL(clk), GLOBAL(reset), , );
+
+
+--A1L72Q is sequence~21
+A1L72Q_p1_out = A1L62Q & !A1L72Q;
+A1L72Q_p2_out = A1L62Q & !A1L82Q;
+A1L72Q_or_out = A1L72Q_p1_out # A1L72Q_p2_out;
+A1L72Q_reg_input = A1L72Q_or_out;
+A1L72Q = TFFE(A1L72Q_reg_input, GLOBAL(clk), GLOBAL(reset), , );
+
+
+--B1_count[1] is ct_mod5:output_timer|count[1]
+B1_count[1]_or_out = B1_count[0];
+B1_count[1]_reg_input = B1_count[1]_or_out;
+B1_count[1] = TFFE(B1_count[1]_reg_input, GLOBAL(clk), GLOBAL(reset), , );
+
+
+--B1_count[2] is ct_mod5:output_timer|count[2]
+B1_count[2]_p1_out = B1_count[0] & B1_count[1];
+B1_count[2]_p2_out = !B1_count[0] & !B1_count[1] & B1_count[2];
+B1_count[2]_or_out = B1_count[2]_p1_out # B1_count[2]_p2_out;
+B1_count[2]_reg_input = B1_count[2]_or_out;
+B1_count[2] = TFFE(B1_count[2]_reg_input, GLOBAL(clk), GLOBAL(reset), , );
+
+
+--outputs[2] is outputs[2]
+outputs[2]_p1_out = B1_count[2] & !A1L62Q & A1L72Q;
+outputs[2]_or_out = outputs[2]_p1_out;
+outputs[2]_reg_input = !(outputs[2]_or_out);
+outputs[2] = DFFE(outputs[2]_reg_input, GLOBAL(clk), , reset, );
+
+
+--A1L82Q is sequence~22
+A1L82Q_p1_out = A1L82Q & !B1_count[2];
+A1L82Q_p2_out = ns_walk_sw & A1L62Q & !A1L72Q;
+A1L82Q_p3_out = A1L62Q & A1L72Q & ew_walk_sw;
+A1L82Q_or_out = A1L82Q_p1_out # A1L82Q_p2_out # A1L82Q_p3_out;
+A1L82Q_reg_input = A1L82Q_or_out;
+A1L82Q = DFFE(A1L82Q_reg_input, GLOBAL(clk), GLOBAL(reset), , );
+
+
+--outputs[8] is outputs[8]
+outputs[8]_p1_out = B1_count[2] & A1L72Q & A1L82Q;
+outputs[8]_or_out = outputs[8]_p1_out;
+outputs[8]_reg_input = !(outputs[8]_or_out);
+outputs[8] = DFFE(outputs[8]_reg_input, GLOBAL(clk), , reset, );
+
+
+--outputs[10] is outputs[10]
+outputs[10]_p1_out = !A1L72Q & A1L82Q & B1_count[2];
+outputs[10]_or_out = outputs[10]_p1_out;
+outputs[10]_reg_input = !(outputs[10]_or_out);
+outputs[10] = DFFE(outputs[10]_reg_input, GLOBAL(clk), , reset, );
+
+
+--A1L62Q is sequence~20
+A1L62Q_p1_out = B1_count[2] & !A1L62Q;
+A1L62Q_p2_out = B1_count[2] & A1L82Q;
+A1L62Q_or_out = A1L62Q_p1_out # A1L62Q_p2_out;
+A1L62Q_reg_input = A1L62Q_or_out;
+A1L62Q = DFFE(A1L62Q_reg_input, GLOBAL(clk), GLOBAL(reset), , );
+
+
+--outputs[5] is outputs[5]
+outputs[5]_p1_out = !A1L62Q & !A1L72Q & B1_count[2];
+outputs[5]_or_out = outputs[5]_p1_out;
+outputs[5]_reg_input = !(outputs[5]_or_out);
+outputs[5] = DFFE(outputs[5]_reg_input, GLOBAL(clk), , reset, );
+
+
+--outputs[6] is outputs[6]
+outputs[6]_p1_out = A1L72Q & !A1L62Q;
+outputs[6]_p2_out = !A1L62Q & B1_count[2];
+outputs[6]_p3_out = !A1L72Q & A1L62Q;
+outputs[6]_p4_out = A1L62Q & A1L82Q;
+outputs[6]_or_out = outputs[6]_p1_out # outputs[6]_p2_out # outputs[6]_p3_out # outputs[6]_p4_out;
+outputs[6]_reg_input = outputs[6]_or_out;
+outputs[6] = DFFE(outputs[6]_reg_input, GLOBAL(clk), GLOBAL(reset), , );
+
+
+--outputs[9] is outputs[9]
+outputs[9]_p1_out = !A1L82Q & A1L72Q & A1L62Q & ew_walk_sw;
+outputs[9]_p2_out = A1L82Q & !A1L72Q & !A1L62Q & !B1_count[2];
+outputs[9]_or_out = outputs[9]_p1_out # outputs[9]_p2_out;
+outputs[9]_reg_input = !(outputs[9]_or_out);
+outputs[9] = DFFE(outputs[9]_reg_input, GLOBAL(clk), , reset, );
+
+
+--outputs[1] is outputs[1]
+outputs[1]_p1_out = A1L62Q & A1L72Q;
+outputs[1]_p2_out = !A1L62Q & !A1L72Q;
+outputs[1]_p3_out = !A1L72Q & A1L82Q;
+outputs[1]_or_out = outputs[1]_p1_out # outputs[1]_p2_out # outputs[1]_p3_out;
+outputs[1]_reg_input = !(outputs[1]_or_out);
+outputs[1] = DFFE(outputs[1]_reg_input, GLOBAL(clk), GLOBAL(reset), , );
+
+
+--outputs[7] is outputs[7]
+outputs[7]_p1_out = A1L82Q & A1L72Q & !B1_count[2] & !A1L62Q;
+outputs[7]_p2_out = !A1L82Q & !A1L72Q & A1L62Q & ns_walk_sw;
+outputs[7]_or_out = outputs[7]_p1_out # outputs[7]_p2_out;
+outputs[7]_reg_input = !(outputs[7]_or_out);
+outputs[7] = DFFE(outputs[7]_reg_input, GLOBAL(clk), , reset, );
+
+
+--outputs[3] is outputs[3]
+outputs[3]_p0_out = !A1L62Q & !A1L72Q;
+outputs[3]_p1_out = !A1L62Q & B1_count[2];
+outputs[3]_p2_out = A1L62Q & A1L82Q;
+outputs[3]_p3_out = A1L62Q & A1L72Q;
+outputs[3]_or_out = outputs[3]_p0_out # outputs[3]_p1_out # outputs[3]_p2_out # outputs[3]_p3_out;
+outputs[3]_reg_input = outputs[3]_or_out;
+outputs[3] = DFFE(outputs[3]_reg_input, GLOBAL(clk), , reset, );
+
+
+--A1L61 is outputs[1]~1
+A1L61_or_out = !outputs[1];
+A1L61 = A1L61_or_out;
+
+
+--clk is clk
+--operation mode is input
+
+clk = INPUT();
+
+
+--reset is reset
+--operation mode is input
+
+reset = INPUT();
+
+
+--ns_walk_sw is ns_walk_sw
+--operation mode is input
+
+ns_walk_sw = INPUT();
+
+
+--ew_walk_sw is ew_walk_sw
+--operation mode is input
+
+ew_walk_sw = INPUT();
+
+
+--nsy is nsy
+--operation mode is output
+
+nsy = OUTPUT(outputs[2]);
+
+
+--ns_reset is ns_reset
+--operation mode is output
+
+ns_reset = OUTPUT(outputs[8]);
+
+
+--ew_reset is ew_reset
+--operation mode is output
+
+ew_reset = OUTPUT(outputs[10]);
+
+
+--ewy is ewy
+--operation mode is output
+
+ewy = OUTPUT(outputs[5]);
+
+
+--ewg is ewg
+--operation mode is output
+
+ewg = OUTPUT(outputs[6]);
+
+
+--ew_walk_lt is ew_walk_lt
+--operation mode is output
+
+ew_walk_lt = OUTPUT(outputs[9]);
+
+
+--nsr is nsr
+--operation mode is output
+
+nsr = OUTPUT(outputs[1]);
+
+
+--ns_walk_lt is ns_walk_lt
+--operation mode is output
+
+ns_walk_lt = OUTPUT(outputs[7]);
+
+
+--nsg is nsg
+--operation mode is output
+
+nsg = OUTPUT(outputs[3]);
+
+
+--ewr is ewr
+--operation mode is output
+
+ewr = OUTPUT(A1L61);
+
+

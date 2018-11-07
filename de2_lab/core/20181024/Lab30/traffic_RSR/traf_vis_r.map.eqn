@@ -1,0 +1,381 @@
+--D1_dffs[0] is clkdiv:clock_divider|lpm_counter:count_rtl_0|dffs[0]
+D1_dffs[0]_reg_input = VCC;
+D1_dffs[0] = TFFE(D1_dffs[0]_reg_input, GLOBAL(clk), , , );
+
+
+--D1_dffs[1] is clkdiv:clock_divider|lpm_counter:count_rtl_0|dffs[1]
+D1_dffs[1]_or_out = D1_dffs[0];
+D1_dffs[1]_reg_input = D1_dffs[1]_or_out;
+D1_dffs[1] = TFFE(D1_dffs[1]_reg_input, GLOBAL(clk), , , );
+
+
+--D1_dffs[2] is clkdiv:clock_divider|lpm_counter:count_rtl_0|dffs[2]
+D1_dffs[2]_p1_out = D1_dffs[1] & D1_dffs[0];
+D1_dffs[2]_or_out = D1_dffs[2]_p1_out;
+D1_dffs[2]_reg_input = D1_dffs[2]_or_out;
+D1_dffs[2] = TFFE(D1_dffs[2]_reg_input, GLOBAL(clk), , , );
+
+
+--D1_dffs[3] is clkdiv:clock_divider|lpm_counter:count_rtl_0|dffs[3]
+D1_dffs[3]_p1_out = D1_dffs[2] & D1_dffs[1] & D1_dffs[0];
+D1_dffs[3]_or_out = D1_dffs[3]_p1_out;
+D1_dffs[3]_reg_input = D1_dffs[3]_or_out;
+D1_dffs[3] = TFFE(D1_dffs[3]_reg_input, GLOBAL(clk), , , );
+
+
+--D1_dffs[4] is clkdiv:clock_divider|lpm_counter:count_rtl_0|dffs[4]
+D1_dffs[4]_p1_out = D1_dffs[3] & D1_dffs[2] & D1_dffs[1] & D1_dffs[0];
+D1_dffs[4]_or_out = D1_dffs[4]_p1_out;
+D1_dffs[4]_reg_input = D1_dffs[4]_or_out;
+D1_dffs[4] = TFFE(D1_dffs[4]_reg_input, GLOBAL(clk), , , );
+
+
+--D1_dffs[5] is clkdiv:clock_divider|lpm_counter:count_rtl_0|dffs[5]
+D1_dffs[5]_p1_out = D1_dffs[4] & D1_dffs[3] & D1_dffs[2] & D1_dffs[1] & D1_dffs[0];
+D1_dffs[5]_or_out = D1_dffs[5]_p1_out;
+D1_dffs[5]_reg_input = D1_dffs[5]_or_out;
+D1_dffs[5] = TFFE(D1_dffs[5]_reg_input, GLOBAL(clk), , , );
+
+
+--D1_dffs[6] is clkdiv:clock_divider|lpm_counter:count_rtl_0|dffs[6]
+D1_dffs[6]_p1_out = D1_dffs[5] & D1_dffs[4] & D1_dffs[3] & D1_dffs[2] & D1_dffs[1] & D1_dffs[0];
+D1_dffs[6]_or_out = D1_dffs[6]_p1_out;
+D1_dffs[6]_reg_input = D1_dffs[6]_or_out;
+D1_dffs[6] = TFFE(D1_dffs[6]_reg_input, GLOBAL(clk), , , );
+
+
+--D1_dffs[7] is clkdiv:clock_divider|lpm_counter:count_rtl_0|dffs[7]
+D1_dffs[7]_p1_out = D1_dffs[6] & D1_dffs[5] & D1_dffs[4] & D1_dffs[3] & D1_dffs[2] & D1_dffs[1] & D1_dffs[0];
+D1_dffs[7]_or_out = D1_dffs[7]_p1_out;
+D1_dffs[7]_reg_input = D1_dffs[7]_or_out;
+D1_dffs[7] = TFFE(D1_dffs[7]_reg_input, GLOBAL(clk), , , );
+
+
+--D1_dffs[8] is clkdiv:clock_divider|lpm_counter:count_rtl_0|dffs[8]
+D1_dffs[8]_p1_out = D1_dffs[7] & D1_dffs[6] & D1_dffs[5] & D1_dffs[4] & D1_dffs[3] & D1_dffs[2] & D1_dffs[1] & D1_dffs[0];
+D1_dffs[8]_or_out = D1_dffs[8]_p1_out;
+D1_dffs[8]_reg_input = D1_dffs[8]_or_out;
+D1_dffs[8] = TFFE(D1_dffs[8]_reg_input, GLOBAL(clk), , , );
+
+
+--D1_dffs[9] is clkdiv:clock_divider|lpm_counter:count_rtl_0|dffs[9]
+D1_dffs[9]_p1_out = D1_dffs[8] & D1_dffs[7] & D1_dffs[6] & D1_dffs[5] & D1_dffs[4] & D1_dffs[3] & D1_dffs[2] & D1_dffs[1] & D1_dffs[0];
+D1_dffs[9]_or_out = D1_dffs[9]_p1_out;
+D1_dffs[9]_reg_input = D1_dffs[9]_or_out;
+D1_dffs[9] = TFFE(D1_dffs[9]_reg_input, GLOBAL(clk), , , );
+
+
+--D1_dffs[10] is clkdiv:clock_divider|lpm_counter:count_rtl_0|dffs[10]
+D1_dffs[10]_p1_out = D1_dffs[9] & D1_dffs[8] & D1_dffs[7] & D1_dffs[6] & D1_dffs[5] & D1_dffs[4] & D1_dffs[3] & D1_dffs[2] & D1_dffs[1] & D1_dffs[0];
+D1_dffs[10]_or_out = D1_dffs[10]_p1_out;
+D1_dffs[10]_reg_input = D1_dffs[10]_or_out;
+D1_dffs[10] = TFFE(D1_dffs[10]_reg_input, GLOBAL(clk), , , );
+
+
+--D1_dffs[11] is clkdiv:clock_divider|lpm_counter:count_rtl_0|dffs[11]
+D1_dffs[11]_p1_out = D1_dffs[10] & D1_dffs[9] & D1_dffs[8] & D1_dffs[7] & D1_dffs[6] & D1_dffs[5] & D1_dffs[4] & D1_dffs[3] & D1_dffs[2] & D1_dffs[1] & D1_dffs[0];
+D1_dffs[11]_or_out = D1_dffs[11]_p1_out;
+D1_dffs[11]_reg_input = D1_dffs[11]_or_out;
+D1_dffs[11] = TFFE(D1_dffs[11]_reg_input, GLOBAL(clk), , , );
+
+
+--D1_dffs[12] is clkdiv:clock_divider|lpm_counter:count_rtl_0|dffs[12]
+D1_dffs[12]_p1_out = D1_dffs[11] & D1_dffs[10] & D1_dffs[9] & D1_dffs[8] & D1_dffs[7] & D1_dffs[6] & D1_dffs[5] & D1_dffs[4] & D1_dffs[3] & D1_dffs[2] & D1_dffs[1] & D1_dffs[0];
+D1_dffs[12]_or_out = D1_dffs[12]_p1_out;
+D1_dffs[12]_reg_input = D1_dffs[12]_or_out;
+D1_dffs[12] = TFFE(D1_dffs[12]_reg_input, GLOBAL(clk), , , );
+
+
+--D1_dffs[13] is clkdiv:clock_divider|lpm_counter:count_rtl_0|dffs[13]
+D1_dffs[13]_p1_out = D1_dffs[12] & D1_dffs[11] & D1_dffs[10] & D1_dffs[9] & D1_dffs[8] & D1_dffs[7] & D1_dffs[6] & D1_dffs[5] & D1_dffs[4] & D1_dffs[3] & D1_dffs[2] & D1_dffs[1] & D1_dffs[0];
+D1_dffs[13]_or_out = D1_dffs[13]_p1_out;
+D1_dffs[13]_reg_input = D1_dffs[13]_or_out;
+D1_dffs[13] = TFFE(D1_dffs[13]_reg_input, GLOBAL(clk), , , );
+
+
+--D1_dffs[14] is clkdiv:clock_divider|lpm_counter:count_rtl_0|dffs[14]
+D1_dffs[14]_p1_out = D1_dffs[13] & D1_dffs[12] & D1_dffs[11] & D1_dffs[10] & D1_dffs[9] & D1_dffs[8] & D1_dffs[7] & D1_dffs[6] & D1_dffs[5] & D1_dffs[4] & D1_dffs[3] & D1_dffs[2] & D1_dffs[1] & D1_dffs[0];
+D1_dffs[14]_or_out = D1_dffs[14]_p1_out;
+D1_dffs[14]_reg_input = D1_dffs[14]_or_out;
+D1_dffs[14] = TFFE(D1_dffs[14]_reg_input, GLOBAL(clk), , , );
+
+
+--D1_dffs[15] is clkdiv:clock_divider|lpm_counter:count_rtl_0|dffs[15]
+D1_dffs[15]_p1_out = D1_dffs[14] & D1_dffs[13] & D1_dffs[12] & D1_dffs[11] & D1_dffs[10] & D1_dffs[9] & D1_dffs[8] & D1_dffs[7] & D1_dffs[6] & D1_dffs[5] & D1_dffs[4] & D1_dffs[3] & D1_dffs[2] & D1_dffs[1] & D1_dffs[0];
+D1_dffs[15]_or_out = D1_dffs[15]_p1_out;
+D1_dffs[15]_reg_input = D1_dffs[15]_or_out;
+D1_dffs[15] = TFFE(D1_dffs[15]_reg_input, GLOBAL(clk), , , );
+
+
+--D1_dffs[16] is clkdiv:clock_divider|lpm_counter:count_rtl_0|dffs[16]
+D1_dffs[16]_p1_out = D1_dffs[15] & D1_dffs[14] & D1_dffs[13] & D1_dffs[12] & D1_dffs[11] & D1_dffs[10] & D1_dffs[9] & D1_dffs[8] & D1_dffs[7] & D1_dffs[6] & D1_dffs[5] & D1_dffs[4] & D1_dffs[3] & D1_dffs[2] & D1_dffs[1] & D1_dffs[0];
+D1_dffs[16]_or_out = D1_dffs[16]_p1_out;
+D1_dffs[16]_reg_input = D1_dffs[16]_or_out;
+D1_dffs[16] = TFFE(D1_dffs[16]_reg_input, GLOBAL(clk), , , );
+
+
+--D1_dffs[17] is clkdiv:clock_divider|lpm_counter:count_rtl_0|dffs[17]
+D1_dffs[17]_p1_out = D1_dffs[16] & D1_dffs[15] & D1_dffs[14] & D1_dffs[13] & D1_dffs[12] & D1_dffs[11] & D1_dffs[10] & D1_dffs[9] & D1_dffs[8] & D1_dffs[7] & D1_dffs[6] & D1_dffs[5] & D1_dffs[4] & D1_dffs[3] & D1_dffs[2] & D1_dffs[1] & D1_dffs[0];
+D1_dffs[17]_or_out = D1_dffs[17]_p1_out;
+D1_dffs[17]_reg_input = D1_dffs[17]_or_out;
+D1_dffs[17] = TFFE(D1_dffs[17]_reg_input, GLOBAL(clk), , , );
+
+
+--D1_dffs[18] is clkdiv:clock_divider|lpm_counter:count_rtl_0|dffs[18]
+D1_dffs[18]_p1_out = D1_dffs[17] & D1_dffs[16] & D1_dffs[15] & D1_dffs[14] & D1_dffs[13] & D1_dffs[12] & D1_dffs[11] & D1_dffs[10] & D1_dffs[9] & D1_dffs[8] & D1_dffs[7] & D1_dffs[6] & D1_dffs[5] & D1_dffs[4] & D1_dffs[3] & D1_dffs[2] & D1_dffs[1] & D1_dffs[0];
+D1_dffs[18]_or_out = D1_dffs[18]_p1_out;
+D1_dffs[18]_reg_input = D1_dffs[18]_or_out;
+D1_dffs[18] = TFFE(D1_dffs[18]_reg_input, GLOBAL(clk), , , );
+
+
+--D1_dffs[19] is clkdiv:clock_divider|lpm_counter:count_rtl_0|dffs[19]
+D1_dffs[19]_p1_out = D1_dffs[18] & D1_dffs[17] & D1_dffs[16] & D1_dffs[15] & D1_dffs[14] & D1_dffs[13] & D1_dffs[12] & D1_dffs[11] & D1_dffs[10] & D1_dffs[9] & D1_dffs[8] & D1_dffs[7] & D1_dffs[6] & D1_dffs[5] & D1_dffs[4] & D1_dffs[3] & D1_dffs[2] & D1_dffs[1] & D1_dffs[0];
+D1_dffs[19]_or_out = D1_dffs[19]_p1_out;
+D1_dffs[19]_reg_input = D1_dffs[19]_or_out;
+D1_dffs[19] = TFFE(D1_dffs[19]_reg_input, GLOBAL(clk), , , );
+
+
+--D1_dffs[20] is clkdiv:clock_divider|lpm_counter:count_rtl_0|dffs[20]
+D1_dffs[20]_p1_out = D1_dffs[19] & D1_dffs[18] & D1_dffs[17] & D1_dffs[16] & D1_dffs[15] & D1_dffs[14] & D1_dffs[13] & D1_dffs[12] & D1_dffs[11] & D1_dffs[10] & D1_dffs[9] & D1_dffs[8] & D1_dffs[7] & D1_dffs[6] & D1_dffs[5] & D1_dffs[4] & D1_dffs[3] & D1_dffs[2] & D1_dffs[1] & D1_dffs[0];
+D1_dffs[20]_or_out = D1_dffs[20]_p1_out;
+D1_dffs[20]_reg_input = D1_dffs[20]_or_out;
+D1_dffs[20] = TFFE(D1_dffs[20]_reg_input, GLOBAL(clk), , , );
+
+
+--D1_dffs[21] is clkdiv:clock_divider|lpm_counter:count_rtl_0|dffs[21]
+D1_dffs[21]_p1_out = D1_dffs[20] & D1_dffs[19] & D1_dffs[18] & D1_dffs[17] & D1_dffs[16] & D1_dffs[15] & D1_dffs[14] & D1_dffs[13] & D1_dffs[12] & D1_dffs[11] & D1_dffs[10] & D1_dffs[9] & D1_dffs[8] & D1_dffs[7] & D1_dffs[6] & D1_dffs[5] & D1_dffs[4] & D1_dffs[3] & D1_dffs[2] & D1_dffs[1] & D1_dffs[0];
+D1_dffs[21]_or_out = D1_dffs[21]_p1_out;
+D1_dffs[21]_reg_input = D1_dffs[21]_or_out;
+D1_dffs[21] = TFFE(D1_dffs[21]_reg_input, GLOBAL(clk), , , );
+
+
+--E1_count[0] is traffic_r:traffic_controller|ct_mod5:light_timer|count[0]
+E1_count[0]_p1_out = E1_count[2] & !E1_count[1] & !E1_count[0];
+E1_count[0]_or_out = E1_count[0]_p1_out;
+E1_count[0]_reg_input = !E1_count[0]_or_out;
+E1_count[0] = TFFE(E1_count[0]_reg_input, D1_dffs[21], GLOBAL(reset), , );
+
+
+--E1_count[1] is traffic_r:traffic_controller|ct_mod5:light_timer|count[1]
+E1_count[1]_or_out = E1_count[0];
+E1_count[1]_reg_input = E1_count[1]_or_out;
+E1_count[1] = TFFE(E1_count[1]_reg_input, D1_dffs[21], GLOBAL(reset), , );
+
+
+--E1_count[2] is traffic_r:traffic_controller|ct_mod5:light_timer|count[2]
+E1_count[2]_p1_out = E1_count[0] & E1_count[1];
+E1_count[2]_p2_out = !E1_count[0] & !E1_count[1] & E1_count[2];
+E1_count[2]_or_out = E1_count[2]_p1_out # E1_count[2]_p2_out;
+E1_count[2]_reg_input = E1_count[2]_or_out;
+E1_count[2] = TFFE(E1_count[2]_reg_input, D1_dffs[21], GLOBAL(reset), , );
+
+
+--C1L8Q is traffic_r:traffic_controller|sequence~20
+C1L8Q_p1_out = !C1L8Q & E1_count[2];
+C1L8Q_or_out = C1L8Q_p1_out;
+C1L8Q_reg_input = C1L8Q_or_out;
+C1L8Q = DFFE(C1L8Q_reg_input, D1_dffs[21], GLOBAL(reset), , );
+
+
+--C1L9Q is traffic_r:traffic_controller|sequence~21
+C1L9Q_or_out = C1L8Q;
+C1L9Q_reg_input = C1L9Q_or_out;
+C1L9Q = TFFE(C1L9Q_reg_input, D1_dffs[21], GLOBAL(reset), , );
+
+
+--C1_lights[5] is traffic_r:traffic_controller|lights[5]
+C1_lights[5]_or_out = !C1L9Q;
+C1_lights[5]_reg_input = C1L8Q $ C1_lights[5]_or_out;
+C1_lights[5] = DFFE(C1_lights[5]_reg_input, D1_dffs[21], , reset, );
+
+
+--C1_lights[4] is traffic_r:traffic_controller|lights[4]
+C1_lights[4]_p1_out = C1L9Q & !C1L8Q & E1_count[2];
+C1_lights[4]_or_out = C1_lights[4]_p1_out;
+C1_lights[4]_reg_input = C1_lights[4]_or_out;
+C1_lights[4] = DFFE(C1_lights[4]_reg_input, D1_dffs[21], GLOBAL(reset), , );
+
+
+--C1_lights[1] is traffic_r:traffic_controller|lights[1]
+C1_lights[1]_p1_out = !C1L9Q & !C1L8Q & E1_count[2];
+C1_lights[1]_or_out = C1_lights[1]_p1_out;
+C1_lights[1]_reg_input = C1_lights[1]_or_out;
+C1_lights[1] = DFFE(C1_lights[1]_reg_input, D1_dffs[21], GLOBAL(reset), , );
+
+
+--C1_lights[3] is traffic_r:traffic_controller|lights[3]
+C1_lights[3]_p1_out = !C1L9Q & !C1L8Q;
+C1_lights[3]_p2_out = C1L9Q & C1L8Q;
+C1_lights[3]_p4_out = !C1L8Q & E1_count[2];
+C1_lights[3]_or_out = C1_lights[3]_p1_out # C1_lights[3]_p2_out # C1_lights[3]_p4_out;
+C1_lights[3]_reg_input = !(C1_lights[3]_or_out);
+C1_lights[3] = DFFE(C1_lights[3]_reg_input, D1_dffs[21], GLOBAL(reset), , );
+
+
+--C1_lights[0] is traffic_r:traffic_controller|lights[0]
+C1_lights[0]_p0_out = !C1L9Q & E1_count[2];
+C1_lights[0]_p1_out = !C1L9Q & C1L8Q;
+C1_lights[0]_p2_out = C1L9Q & !C1L8Q;
+C1_lights[0]_or_out = C1_lights[0]_p0_out # C1_lights[0]_p1_out # C1_lights[0]_p2_out;
+C1_lights[0]_reg_input = !(C1_lights[0]_or_out);
+C1_lights[0] = DFFE(C1_lights[0]_reg_input, D1_dffs[21], , reset, );
+
+
+--C1L7 is traffic_r:traffic_controller|lights[5]~1
+C1L7_or_out = !C1_lights[5];
+C1L7 = C1L7_or_out;
+
+
+--~GND~0 is ~GND~0
+~GND~0_or_out = GND;
+~GND~0 = ~GND~0_or_out;
+
+
+--~GND~1 is ~GND~1
+~GND~1_or_out = GND;
+~GND~1 = ~GND~1_or_out;
+
+
+--~GND~2 is ~GND~2
+~GND~2_or_out = GND;
+~GND~2 = ~GND~2_or_out;
+
+
+--~GND~3 is ~GND~3
+~GND~3_or_out = GND;
+~GND~3 = ~GND~3_or_out;
+
+
+--~GND~4 is ~GND~4
+~GND~4_or_out = GND;
+~GND~4 = ~GND~4_or_out;
+
+
+--~GND~5 is ~GND~5
+~GND~5_or_out = GND;
+~GND~5 = ~GND~5_or_out;
+
+
+--~GND~6 is ~GND~6
+~GND~6_or_out = GND;
+~GND~6 = ~GND~6_or_out;
+
+
+--~GND~7 is ~GND~7
+~GND~7_or_out = GND;
+~GND~7 = ~GND~7_or_out;
+
+
+--~GND~8 is ~GND~8
+~GND~8_or_out = GND;
+~GND~8 = ~GND~8_or_out;
+
+
+--clk is clk
+--operation mode is input
+
+clk = INPUT();
+
+
+--reset is reset
+--operation mode is input
+
+reset = INPUT();
+
+
+--unused[1] is unused[1]
+--operation mode is output
+
+unused[1] = OUTPUT(~GND~0);
+
+
+--unused[2] is unused[2]
+--operation mode is output
+
+unused[2] = OUTPUT(~GND~1);
+
+
+--unused[3] is unused[3]
+--operation mode is output
+
+unused[3] = OUTPUT(~GND~2);
+
+
+--unused[4] is unused[4]
+--operation mode is output
+
+unused[4] = OUTPUT(~GND~3);
+
+
+--unused[5] is unused[5]
+--operation mode is output
+
+unused[5] = OUTPUT(~GND~4);
+
+
+--unused[6] is unused[6]
+--operation mode is output
+
+unused[6] = OUTPUT(~GND~5);
+
+
+--unused[7] is unused[7]
+--operation mode is output
+
+unused[7] = OUTPUT(~GND~6);
+
+
+--unused[8] is unused[8]
+--operation mode is output
+
+unused[8] = OUTPUT(~GND~7);
+
+
+--unused[9] is unused[9]
+--operation mode is output
+
+unused[9] = OUTPUT(~GND~8);
+
+
+--tick is tick
+--operation mode is output
+
+tick = OUTPUT(D1_dffs[21]);
+
+
+--nsr is nsr
+--operation mode is output
+
+nsr = OUTPUT(C1_lights[5]);
+
+
+--nsy is nsy
+--operation mode is output
+
+nsy = OUTPUT(C1_lights[4]);
+
+
+--ewy is ewy
+--operation mode is output
+
+ewy = OUTPUT(C1_lights[1]);
+
+
+--nsg is nsg
+--operation mode is output
+
+nsg = OUTPUT(C1_lights[3]);
+
+
+--ewr is ewr
+--operation mode is output
+
+ewr = OUTPUT(C1L7);
+
+
+--ewg is ewg
+--operation mode is output
+
+ewg = OUTPUT(C1_lights[0]);
+
+

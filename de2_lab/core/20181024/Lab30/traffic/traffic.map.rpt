@@ -1,0 +1,213 @@
+Analysis & Synthesis report for traffic
+Fri Jul 16 15:54:09 2004
+Version 4.0 Build 190 1/28/2004 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Analysis & Synthesis Default Parameter Settings
+  5. Hierarchy
+  6. State Machine - sequence
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Analysis & Synthesis Equations
+  9. Analysis & Synthesis Files Read
+ 10. Analysis & Synthesis Resource Usage Summary
+ 11. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2004 Altera Corporation
+Any  megafunction  design,  and related netlist (encrypted  or  decrypted),
+support information,  device programming or simulation file,  and any other
+associated  documentation or information  provided by  Altera  or a partner
+under  Altera's   Megafunction   Partnership   Program  may  be  used  only
+to program  PLD  devices (but not masked  PLD  devices) from  Altera.   Any
+other  use  of such  megafunction  design,  netlist,  support  information,
+device programming or simulation file,  or any other  related documentation
+or information  is prohibited  for  any  other purpose,  including, but not
+limited to  modification,  reverse engineering,  de-compiling, or use  with
+any other  silicon devices,  unless such use is  explicitly  licensed under
+a separate agreement with  Altera  or a megafunction partner.  Title to the
+intellectual property,  including patents,  copyrights,  trademarks,  trade
+secrets,  or maskworks,  embodied in any such megafunction design, netlist,
+support  information,  device programming or simulation file,  or any other
+related documentation or information provided by  Altera  or a megafunction
+partner, remains with Altera, the megafunction partner, or their respective
+licensors. No other licenses, including any licenses needed under any third
+party's intellectual property, are provided herein.
+
+
+
++---------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                        ;
++-----------------------------+---------------------------------------+
+; Analysis & Synthesis Status ; Successful - Fri Jul 16 15:54:09 2004 ;
+; Revision Name               ; traffic                               ;
+; Top-level Entity Name       ; traffic                               ;
+; Family                      ; MAX7000S                              ;
+; Total macrocells            ; 11                                    ;
+; Total pins                  ; 8                                     ;
++-----------------------------+---------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                       ;
++------------------------------------------------------------------------------------------------------
+; Option                                                               ; Setting      ; Default Value ;
++----------------------------------------------------------------------+--------------+---------------+
+; Top-level entity name                                                ; traffic      ;               ;
+; Family name                                                          ; MAX7000S     ; Stratix       ;
+; Auto Resource Sharing                                                ; Off          ; Off           ;
+; Remove Duplicate Logic                                               ; On           ; On            ;
+; Auto Open-Drain Pins                                                 ; On           ; On            ;
+; Auto Parallel Expanders                                              ; On           ; On            ;
+; Parallel Expander Chain Length -- MAX 7000B/7000AE/3000A/7000S/7000A ; 4            ; 4             ;
+; Auto Logic Cell Insertion                                            ; On           ; On            ;
+; Allow XOR Gate Usage                                                 ; On           ; On            ;
+; Optimization Technique -- MAX 7000B/7000AE/3000A                     ; Speed        ; Speed         ;
+; Limit AHDL Integers to 32 Bits                                       ; Off          ; Off           ;
+; Ignore SOFT Buffers -- MAX 7000B/7000AE/3000A/7000S/7000A            ; Off          ; Off           ;
+; Ignore LCELL Buffers -- MAX 7000B/7000AE/3000A/7000S/7000A           ; Auto         ; Auto          ;
+; Ignore ROW GLOBAL Buffers                                            ; Off          ; Off           ;
+; Ignore GLOBAL Buffers                                                ; Off          ; Off           ;
+; Ignore CASCADE Buffers                                               ; Off          ; Off           ;
+; Ignore CARRY Buffers                                                 ; Off          ; Off           ;
+; Remove Duplicate Registers                                           ; On           ; On            ;
+; Remove Redundant Logic Cells                                         ; Off          ; Off           ;
+; Power-Up Don't Care                                                  ; On           ; On            ;
+; NOT Gate Push-Back                                                   ; On           ; On            ;
+; State Machine Processing                                             ; Auto         ; Auto          ;
+; VHDL Version                                                         ; VHDL93       ; VHDL93        ;
+; Verilog Version                                                      ; Verilog_2001 ; Verilog_2001  ;
+; Preserve fewer node names                                            ; On           ; On            ;
+; Disk space/compilation speed tradeoff                                ; Normal       ; Normal        ;
+; Create Debugging Nodes for IP Cores                                  ; off          ; off           ;
++----------------------------------------------------------------------+--------------+---------------+
+
+
++-------------------------------------------------+
+; Analysis & Synthesis Default Parameter Settings ;
++--------------------------------------------------
+; Name               ; Setting                    ;
++--------------------+----------------------------+
+; CARRY_CHAIN        ; MANUAL                     ;
+; CASCADE_CHAIN      ; MANUAL                     ;
+; OPTIMIZE_FOR_SPEED ; 9                          ;
+; STYLE              ; FAST                       ;
++--------------------+----------------------------+
+
+
++------------+
+; Hierarchy  ;
++------------+
+traffic
+ |-- ct_mod5:light_timer
+
+
++-----------------------------------------+
+; State Machine - sequence                ;
++------------------------------------------
+; Name        ; sequence~21 ; sequence~20 ;
++-------------+-------------+-------------+
+; sequence.s0 ; 0           ; 0           ;
+; sequence.s1 ; 0           ; 1           ;
+; sequence.s2 ; 1           ; 0           ;
+; sequence.s3 ; 1           ; 1           ;
++-------------+-------------+-------------+
+
+
++-------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                           ;
++--------------------------------------------------------------------------------
+; Compilation Hierarchy Node ; Macrocells ; Pins ; Full Hierarchy Name          ;
++----------------------------+------------+------+------------------------------+
+; |traffic                   ; 11         ; 8    ; |traffic                     ;
+;    |ct_mod5:light_timer|   ; 3          ; 0    ; |traffic|ct_mod5:light_timer ;
++----------------------------+------------+------+------------------------------+
+
+
++---------------------------------+
+; Analysis & Synthesis Equations  ;
++---------------------------------+
+The equations can be found in c:/qdesigns/labs/lab30/traffic/traffic.map.eqn.
+
+
++---------------------------------+
+; Analysis & Synthesis Files Read ;
++----------------------------------
+; File Name   ; Read              ;
++-------------+-------------------+
+; ct_mod5.vhd ; Read              ;
+; traffic.vhd ; Read              ;
++-------------+-------------------+
+
+
++---------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary ;
++----------------------------------------------
+; Resource             ; Usage                ;
++----------------------+----------------------+
+; Logic cells          ; 11                   ;
+; Total registers      ; 10                   ;
+; I/O pins             ; 8                    ;
+; Maximum fan-out node ; clk                  ;
+; Maximum fan-out      ; 10                   ;
+; Total fan-out        ; 51                   ;
+; Average fan-out      ; 2.68                 ;
++----------------------+----------------------+
+
+
++--------------------------------+
+; Analysis & Synthesis Messages  ;
++--------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II Analysis & Synthesis
+    Info: Version 4.0 Build 190 1/28/2004 SJ Full Version
+    Info: Processing started: Fri Jul 16 15:54:03 2004
+Info: Command: quartus_map --import_settings_files=on --export_settings_files=off traffic -c traffic
+Info: Found 2 design units and 1 entities in source file ct_mod5.vhd
+    Info: Found design unit 1: ct_mod5-a
+    Info: Found entity 1: ct_mod5
+Info: Found 2 design units and 1 entities in source file traffic.vhd
+    Info: Found design unit 1: traffic-a
+    Info: Found entity 1: traffic
+Warning: VHDL Process Statement warning at traffic.vhd(27): signal reset is in statement, but is not in sensitivity list
+Info: VHDL Case Statement information at traffic.vhd(50): OTHERS choice is never selected
+Warning: VHDL Process Statement warning at traffic.vhd(54): signal lights is in statement, but is not in sensitivity list
+Warning: VHDL Process Statement warning at traffic.vhd(55): signal lights is in statement, but is not in sensitivity list
+Warning: VHDL Process Statement warning at traffic.vhd(56): signal lights is in statement, but is not in sensitivity list
+Warning: VHDL Process Statement warning at traffic.vhd(57): signal lights is in statement, but is not in sensitivity list
+Warning: VHDL Process Statement warning at traffic.vhd(58): signal lights is in statement, but is not in sensitivity list
+Warning: VHDL Process Statement warning at traffic.vhd(59): signal lights is in statement, but is not in sensitivity list
+Info: State machine |traffic|sequence contains 4 states and 0 state bits
+Info: Selected Auto state machine encoding method for state machine |traffic|sequence
+Info: Encoding result for state machine |traffic|sequence
+    Info: Completed encoding using 2 state bits
+        Info: Encoded state bit sequence~21
+        Info: Encoded state bit sequence~20
+    Info: State |traffic|sequence.s0 uses code string 00
+    Info: State |traffic|sequence.s1 uses code string 01
+    Info: State |traffic|sequence.s2 uses code string 10
+    Info: State |traffic|sequence.s3 uses code string 11
+Info: Registers with preset signals will power-up high
+Info: Duplicate registers merged to single register
+    Info: Duplicate register lights[2] merged to single register lights[5], power-up level changed
+Info: Promoted pin-driven signal(s) to global signal
+    Info: Promoted clock signal driven by pin clk to global clock signal
+    Info: Promoted clear signal driven by pin reset to global clear signal
+Info: Implemented 19 device resources after synthesis - the final resource count might be different
+    Info: Implemented 2 input pins
+    Info: Implemented 6 output pins
+    Info: Implemented 11 macrocells
+Info: Quartus II Analysis & Synthesis was successful. 0 errors, 7 warnings
+    Info: Processing ended: Fri Jul 16 15:54:09 2004
+    Info: Elapsed time: 00:00:05
+
+

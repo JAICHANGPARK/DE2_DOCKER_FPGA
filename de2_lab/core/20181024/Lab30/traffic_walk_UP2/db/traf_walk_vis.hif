@@ -1,0 +1,232 @@
+Version 4.0 Build 190 1/28/2004 SJ Full Version
+26
+OFF
+OFF
+OFF
+OFF
+OFF
+# entity
+traf_walk_vis
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+traf_walk_vis.vhd
+964456032
+4
+# storage
+db|traf_walk_vis(0).cnf
+db|traf_walk_vis(0).cnf
+# internal_option {
+AUTO_RESOURCE_SHARING
+OFF
+PRESERVE_REGISTER
+OFF
+DUP_REG_EXTRACTION
+ON
+DUP_LOGIC_EXTRACTION
+ON
+}
+# end
+# entity
+clkdiv
+# architecture
+A:divider
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+clkdiv.vhd
+1090012764
+4
+# storage
+db|traf_walk_vis(1).cnf
+db|traf_walk_vis(1).cnf
+# internal_option {
+AUTO_RESOURCE_SHARING
+OFF
+PRESERVE_REGISTER
+OFF
+DUP_REG_EXTRACTION
+ON
+DUP_LOGIC_EXTRACTION
+ON
+}
+# user_parameter {
+width
+25
+PARAMETER_DEC
+USR
+}
+# end
+# entity
+traffic_walk
+# architecture
+A:a
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+traffic_walk.vhd
+964453522
+4
+# storage
+db|traf_walk_vis(2).cnf
+db|traf_walk_vis(2).cnf
+# internal_option {
+AUTO_RESOURCE_SHARING
+OFF
+PRESERVE_REGISTER
+OFF
+DUP_REG_EXTRACTION
+ON
+DUP_LOGIC_EXTRACTION
+ON
+}
+# end
+# entity
+ct_mod5
+# architecture
+A:a
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+ct_mod5.vhd
+964448134
+4
+# storage
+db|traf_walk_vis(3).cnf
+db|traf_walk_vis(3).cnf
+# internal_option {
+AUTO_RESOURCE_SHARING
+OFF
+PRESERVE_REGISTER
+OFF
+DUP_REG_EXTRACTION
+ON
+DUP_LOGIC_EXTRACTION
+ON
+}
+# end
+# entity
+lpm_counter
+# case_insensitive
+# source_file
+..|..|..|..|quartusv40|libraries|megafunctions|lpm_counter.tdf
+1074670120
+6
+# storage
+db|traf_walk_vis(4).cnf
+db|traf_walk_vis(4).cnf
+# user_parameter {
+AUTO_CARRY_CHAINS
+ON
+AUTO_CARRY
+USR
+IGNORE_CARRY_BUFFERS
+OFF
+IGNORE_CARRY
+USR
+AUTO_CASCADE_CHAINS
+ON
+AUTO_CASCADE
+USR
+IGNORE_CASCADE_BUFFERS
+OFF
+IGNORE_CASCADE
+USR
+LPM_WIDTH
+25
+PARAMETER_UNKNOWN
+USR
+LPM_DIRECTION
+UP
+PARAMETER_UNKNOWN
+USR
+LPM_MODULUS
+0
+PARAMETER_UNKNOWN
+DEF
+LPM_AVALUE
+0
+PARAMETER_UNKNOWN
+DEF
+LPM_SVALUE
+0
+PARAMETER_UNKNOWN
+DEF
+DEVICE_FAMILY
+MAX7000S
+PARAMETER_UNKNOWN
+USR
+CARRY_CHAIN
+MANUAL
+PARAMETER_UNKNOWN
+USR
+CARRY_CHAIN_LENGTH
+48
+CARRY_CHAIN_LENGTH
+USR
+NOT_GATE_PUSH_BACK
+ON
+NOT_GATE_PUSH_BACK
+USR
+CARRY_CNT_EN
+SMART
+PARAMETER_UNKNOWN
+DEF
+LABWIDE_SCLR
+ON
+PARAMETER_UNKNOWN
+DEF
+USE_NEW_VERSION
+TRUE
+PARAMETER_UNKNOWN
+DEF
+CBXI_PARAMETER
+NOTHING
+PARAMETER_UNKNOWN
+DEF
+}
+# used_port {
+clock
+q24
+}
+# include_file {
+..|..|..|..|quartusv40|libraries|megafunctions|lpm_constant.inc
+1065256542
+..|..|..|..|quartusv40|libraries|megafunctions|lpm_decode.inc
+1065256678
+..|..|..|..|quartusv40|libraries|megafunctions|lpm_add_sub.inc
+1065256194
+..|..|..|..|quartusv40|libraries|megafunctions|cmpconst.inc
+1065254792
+..|..|..|..|quartusv40|libraries|megafunctions|lpm_compare.inc
+1065256472
+..|..|..|..|quartusv40|libraries|megafunctions|lpm_counter.inc
+1065256608
+..|..|..|..|quartusv40|libraries|megafunctions|dffeea.inc
+1065255374
+..|..|..|..|quartusv40|libraries|megafunctions|alt_synch_counter.inc
+1065250482
+..|..|..|..|quartusv40|libraries|megafunctions|alt_synch_counter_f.inc
+1065250540
+..|..|..|..|quartusv40|libraries|megafunctions|alt_counter_f10ke.inc
+1065249380
+..|..|..|..|quartusv40|libraries|megafunctions|alt_counter_stratix.inc
+1065249434
+..|..|..|..|quartusv40|libraries|megafunctions|aglobal.inc
+1067299770
+}
+# end
+# complete
+

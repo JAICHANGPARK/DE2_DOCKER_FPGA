@@ -1,0 +1,29 @@
+|traffic
+clk => lights[5].CLK
+clk => lights[4].CLK
+clk => lights[3].CLK
+clk => lights[2].CLK
+clk => lights[1].CLK
+clk => lights[0].CLK
+clk => ct_mod5:light_timer.clk
+clk => sequence~0.IN1
+reset => i4.IN0
+reset => ct_mod5:light_timer.reset
+nsr <= lights[5].DB_MAX_OUTPUT_PORT_TYPE
+nsy <= lights[4].DB_MAX_OUTPUT_PORT_TYPE
+nsg <= lights[3].DB_MAX_OUTPUT_PORT_TYPE
+ewr <= lights[2].DB_MAX_OUTPUT_PORT_TYPE
+ewy <= lights[1].DB_MAX_OUTPUT_PORT_TYPE
+ewg <= lights[0].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|traffic|ct_mod5:light_timer
+clk => count[1].CLK
+clk => count[0].CLK
+clk => count[2].CLK
+reset => i4.IN0
+q[0] <= count[0].DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= count[1].DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= count[2].DB_MAX_OUTPUT_PORT_TYPE
+
+

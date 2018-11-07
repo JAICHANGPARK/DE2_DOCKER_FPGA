@@ -1,0 +1,61 @@
+Version 4.0 Build 190 1/28/2004 SJ Full Version
+26
+OFF
+OFF
+OFF
+OFF
+OFF
+# entity
+traffic_walk
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+traffic_walk.vhd
+1090011334
+4
+# storage
+db|traffic_walk(0).cnf
+db|traffic_walk(0).cnf
+# internal_option {
+AUTO_RESOURCE_SHARING
+OFF
+PRESERVE_REGISTER
+OFF
+DUP_REG_EXTRACTION
+ON
+DUP_LOGIC_EXTRACTION
+ON
+}
+# end
+# entity
+ct_mod5
+# architecture
+A:a
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+ct_mod5.vhd
+964448134
+4
+# storage
+db|traffic_walk(1).cnf
+db|traffic_walk(1).cnf
+# internal_option {
+AUTO_RESOURCE_SHARING
+OFF
+PRESERVE_REGISTER
+OFF
+DUP_REG_EXTRACTION
+ON
+DUP_LOGIC_EXTRACTION
+ON
+}
+# end
+# complete
+

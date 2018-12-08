@@ -1,0 +1,55 @@
+<internal_error>
+	<executable>quartus.exe</executable>
+	<sub_system>unknown</sub_system>
+	<file>unknown</file>
+	<line>0</line>
+	<callstack>
+	0x767f23b2: USER32 + 0x123b2 (PtInRect + 0x50)
+	0x767f213e: USER32 + 0x1213e (IsProcessDPIAware + 0x40)
+	0x767ebadd: USER32 + 0xbadd (CharLowerW + 0x88)
+	0x73ba1e5f: UxTheme + 0x1e5f
+	0x73ba5dd9: UxTheme + 0x5dd9 (Ordinal45 + 0x6cf)
+	0x767ec67e: USER32 + 0xc67e (EnumDesktopsW + 0x1e)
+	0x767fc4b6: USER32 + 0x1c4b6 (gapfnScSendMessage + 0x1ce)
+	0x767fc5b6: USER32 + 0x1c5b6 (gapfnScSendMessage + 0x2ce)
+	0x767f1b00: USER32 + 0x11b00 (PeekMessageA + 0x18b)
+	0x76812bbd: USER32 + 0x32bbd (CallWindowProcA + 0x1a)
+	0x6ab8b147: mfc90 + 0x5b147
+	0x6ab8ba5f: mfc90 + 0x5ba5f
+	0x6ab8a63c: mfc90 + 0x5a63c
+	0x6ab8a8c8: mfc90 + 0x5a8c8
+	0x6ab885b2: mfc90 + 0x585b2
+	0x767fc4b6: USER32 + 0x1c4b6 (gapfnScSendMessage + 0x1ce)
+	0x767fc5b6: USER32 + 0x1c5b6 (gapfnScSendMessage + 0x2ce)
+	0x767f4edd: USER32 + 0x14edd (GetScrollBarInfo + 0xfc)
+	0x767f4f4c: USER32 + 0x14f4c (GetScrollBarInfo + 0x16b)
+	0x77456b3d: ntdll + 0x46b3d (KiUserCallbackDispatcher + 0x2d)
+	0x100062ac: GCL_AFC + 0x62ac (?OnWndMsg@AFC_NESTED_FRAME@@UAEHIIJPAJ@Z + 0x3c)
+	0x6ab8ba48: mfc90 + 0x5ba48
+	0x6ab8a63c: mfc90 + 0x5a63c
+	0x6ab8a8c8: mfc90 + 0x5a8c8
+	0x6ab885b2: mfc90 + 0x585b2
+	0x767fc4b6: USER32 + 0x1c4b6 (gapfnScSendMessage + 0x1ce)
+	0x767fc5b6: USER32 + 0x1c5b6 (gapfnScSendMessage + 0x2ce)
+	0x767f5263: USER32 + 0x15263 (DefWindowProcW + 0x218)
+	0x767ead70: USER32 + 0xad70 (SendMessageA + 0x48)
+	0x00b1636b: GCL_CUI + 0x636b (?relay_mouse_message_to_view@CUI_TOOLTIP@@IAIXHVCPoint@@@Z + 0x4b)
+	0x6ab8ba48: mfc90 + 0x5ba48
+	0x6ab8a63c: mfc90 + 0x5a63c
+	0x6ab8a8c8: mfc90 + 0x5a8c8
+	0x6ab885b2: mfc90 + 0x585b2
+	0x767fc4b6: USER32 + 0x1c4b6 (gapfnScSendMessage + 0x1ce)
+	0x767fc5b6: USER32 + 0x1c5b6 (gapfnScSendMessage + 0x2ce)
+	0x767f5263: USER32 + 0x15263 (DefWindowProcW + 0x218)
+	0x767ead70: USER32 + 0xad70 (SendMessageA + 0x48)
+	0x0b7565ce: prj_ppl + 0x265ce (prj_ppl_dll_get_template_classes + 0xfdae)
+	0x6ab8a8c8: mfc90 + 0x5a8c8
+	</callstack>
+	<error>Current editor: STED, ASE, RPW</error>
+	<date>Wed Nov 21 11:56:10 2018</date>
+	<version>Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition</version>
+	<full_error>Stack Overflow
+Current editor: STED, ASE, RPW
+Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition </full_error>
+</internal_error>
+

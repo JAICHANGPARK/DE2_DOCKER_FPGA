@@ -1,0 +1,93 @@
+# -------------------------------------------------------------------------- #
+#
+# Copyright (C) 1991-2009 Altera Corporation
+# Your use of Altera Corporation's design tools, logic functions 
+# and other software and tools, and its AMPP partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Altera Program License 
+# Subscription Agreement, Altera MegaCore Function License 
+# Agreement, or other applicable license agreement, including, 
+# without limitation, that your use is for the sole purpose of 
+# programming logic devices manufactured by Altera and sold by 
+# Altera or its authorized distributors.  Please refer to the 
+# applicable agreement for further details.
+#
+# -------------------------------------------------------------------------- #
+#
+# Quartus II
+# Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
+# Date created = 11:30:23  November 21, 2018
+#
+# -------------------------------------------------------------------------- #
+#
+# Notes:
+#
+# 1) The default values for assignments are stored in the file:
+#		my_adc_assignment_defaults.qdf
+#    If this file doesn't exist, see file:
+#		assignment_defaults.qdf
+#
+# 2) Altera recommends that you do not modify this file. This
+#    file is updated automatically by the Quartus II software
+#    and any changes you make may be lost or overwritten.
+#
+# -------------------------------------------------------------------------- #
+
+
+set_global_assignment -name FAMILY ACEX1K
+set_global_assignment -name DEVICE "EP1K100QC208-3"
+set_global_assignment -name TOP_LEVEL_ENTITY my_adc
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION "9.0 SP2"
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "11:30:23  NOVEMBER 21, 2018"
+set_global_assignment -name LAST_QUARTUS_VERSION "9.0 SP2"
+set_global_assignment -name USE_GENERATED_PHYSICAL_CONSTRAINTS OFF -section_id eda_blast_fpga
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
+set_global_assignment -name VHDL_FILE my_adc.vhd
+set_global_assignment -name MISC_FILE "C:/Users/5E406/Desktop/대학원/2018_11_21/CODE/02_adc/my_adc.dpf"
+set_global_assignment -name FLEX10K_DEVICE_IO_STANDARD LVTTL/LVCMOS
+set_location_assignment PIN_79 -to clk
+set_location_assignment PIN_115 -to set
+set_location_assignment PIN_114 -to up
+set_location_assignment PIN_113 -to dn
+set_location_assignment PIN_157 -to sel_seg[0]
+set_location_assignment PIN_158 -to sel_seg[1]
+set_location_assignment PIN_159 -to sel_seg[2]
+set_location_assignment PIN_160 -to sel_seg[3]
+set_location_assignment PIN_161 -to sel_seg[4]
+set_location_assignment PIN_162 -to sel_seg[5]
+set_location_assignment PIN_163 -to sel_seg[6]
+set_location_assignment PIN_164 -to sel_seg[7]
+set_location_assignment PIN_166 -to dis_seg[0]
+set_location_assignment PIN_167 -to dis_seg[1]
+set_location_assignment PIN_168 -to dis_seg[2]
+set_location_assignment PIN_169 -to dis_seg[3]
+set_location_assignment PIN_170 -to dis_seg[4]
+set_location_assignment PIN_172 -to dis_seg[5]
+set_location_assignment PIN_173 -to dis_seg[6]
+set_location_assignment PIN_174 -to dis_seg[7]
+set_location_assignment PIN_26 -to rd
+set_location_assignment PIN_24 -to o_clk
+set_location_assignment PIN_16 -to ad_in[0]
+set_location_assignment PIN_15 -to ad_in[1]
+set_location_assignment PIN_14 -to ad_in[2]
+set_location_assignment PIN_13 -to ad_in[3]
+set_location_assignment PIN_12 -to ad_in[4]
+set_location_assignment PIN_11 -to ad_in[5]
+set_location_assignment PIN_10 -to ad_in[6]
+set_location_assignment PIN_9 -to ad_in[7]
+set_location_assignment PIN_7 -to decr
+set_location_assignment PIN_207 -to eoc
+set_location_assignment PIN_27 -to fan_run
+set_location_assignment PIN_205 -to wr
+set_location_assignment PIN_191 -to led_fan
+set_location_assignment PIN_190 -to led_set
+set_global_assignment -name USE_CONFIGURATION_DEVICE ON
+set_global_assignment -name ON_CHIP_BITSTREAM_DECOMPRESSION OFF
+set_global_assignment -name RESERVE_ALL_UNUSED_PINS "AS INPUT TRI-STATED"
+set_global_assignment -name RESERVE_ALL_UNUSED_PINS_NO_OUTPUT_GND "AS INPUT TRI-STATED"
+set_global_assignment -name MISC_FILE "C:/Users/5E405-01/Desktop/대학원/2018_11_21/CODE/02_adc/my_adc.dpf"
+set_global_assignment -name MISC_FILE "C:/Users/5E405-01/Desktop/대학원/2018_12_06/02_adc/my_adc.dpf"
+set_global_assignment -name MISC_FILE "C:/Users/5E405-01/Documents/2018_12_06/02_adc/my_adc.dpf"
